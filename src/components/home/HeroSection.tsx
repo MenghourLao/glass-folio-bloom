@@ -8,9 +8,7 @@ export default function HeroSection() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
             Simple Booking Solutions for <span className="text-primary">Next Event</span>
           </h1>
-          <p className="text-lg text-muted-foreground mb-8 mx-auto max-w-2xl">
-            BookMe+ streamlines your scheduling process with an intuitive platform designed for professionals who value their time and client experience.
-          </p>
+          <p className="text-lg text-muted-foreground mb-8 mx-auto max-w-2xl">Streamline registration, maximize attendance, and create unforgettable experiences with the most powerful event management platform.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="rounded-full">
               <Link to="/case-studies" className="flex items-center gap-2">
