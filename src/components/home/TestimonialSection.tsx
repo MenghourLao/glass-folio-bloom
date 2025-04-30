@@ -1,3 +1,4 @@
+
 export default function TestimonialSection() {
   const testimonials = [{
     quote: "BookMe+ has transformed how I manage my client appointments. The interface is intuitive and my clients love how easy it is to book sessions.",

@@ -1,3 +1,4 @@
+
 import { Calendar, Users, Settings } from "lucide-react";
 export default function FeatureSection() {
   const features = [{

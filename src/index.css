@@ -7,13 +7,13 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 0%; /* Black background */
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
+    --card: 0 0% 0%;
     --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 0 0% 100%;
+    --popover: 0 0% 0%;
     --popover-foreground: 222.2 84% 4.9%;
 
     --primary: 248 90% 66%;
@@ -103,7 +103,7 @@
 
 @layer components {
   .glass {
-    @apply backdrop-blur-lg bg-white/10 dark:bg-black/20 border border-white/20 dark:border-white/10;
+    @apply backdrop-blur-lg bg-black/80 dark:bg-black/80 border border-white/20 dark:border-white/10;
   }
   
   .glass-card {
