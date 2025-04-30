@@ -1,5 +1,5 @@
 
-import { Music, Football, Mic, PaintRoller, HandHeart, Video } from "lucide-react";
+import { Music, Mic, PaintRoller, HandHeart, Video, Trophy } from "lucide-react";
 import React from 'react';
 
 export default function EventTypesSection() {
@@ -10,7 +10,7 @@ export default function EventTypesSection() {
       image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Football className="h-10 w-10 text-primary" />,
+      icon: <Trophy className="h-10 w-10 text-primary" />,
       title: "Sports",
       image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80"
     },
