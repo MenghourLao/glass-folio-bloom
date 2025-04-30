@@ -1,15 +1,19 @@
+
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-secondary/50 dark:bg-secondary/30 backdrop-blur-sm">
+  
+  return (
+    <footer className="bg-black dark:bg-black border-t border-white/10">
       <div className="container mx-auto py-12 px-4 bg-transparent">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {/* Company Info */}
           <div>
             <h3 className="font-poppins font-bold text-lg mb-4">BookMe+</h3>
             <p className="text-muted-foreground mb-6">
-              abc
+              The ultimate platform for event management, helping organizers create unforgettable experiences.
             </p>
             <div className="flex space-x-4">
               <a href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
@@ -72,7 +76,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 text-sm text-muted-foreground flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/10 mt-8 pt-8 text-sm text-muted-foreground flex flex-col md:flex-row justify-between items-center">
           <p>&copy; {currentYear} BookMe+. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex space-x-6">
             <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
@@ -81,5 +85,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 }

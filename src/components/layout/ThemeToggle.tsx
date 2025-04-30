@@ -4,52 +4,72 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
 export default function ThemeToggle() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // We're using light mode as an explicit toggle state now
+  // since default is dark/black
+  const [isLightMode, setIsLightMode] = useState(false);
 
-  // Check for OS-level dark mode preference
+  // Initial theme setup based on localStorage or OS preference
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+    // By default we want dark/black mode
+    // Only switch to light mode if explicitly saved
+    if (savedTheme === "light") {
+      document.documentElement.classList.add("light");
+      setIsLightMode(true);
+    } else {
+      // By default, remove any light class
+      document.documentElement.classList.remove("light");
+      setIsLightMode(false);
+    }
+  }, []);
+
+  // Listen for OS theme preference changes
   useEffect(() => {
     const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    setIsDarkMode(darkModeQuery.matches || document.documentElement.classList.contains("dark"));
-
-    const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
+    
+    const handleChange = (e: MediaQueryListEvent) => {
+      // Only apply OS preference if user hasn't set explicit preference
+      if (!localStorage.getItem("theme")) {
+        setIsLightMode(!e.matches);
+        if (!e.matches) {
+          document.documentElement.classList.add("light");
+        } else {
+          document.documentElement.classList.remove("light");
+        }
+      }
+    };
+    
     darkModeQuery.addEventListener("change", handleChange);
     return () => darkModeQuery.removeEventListener("change", handleChange);
   }, []);
 
   // Toggle theme
   const toggleTheme = () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode);
+    const newMode = !isLightMode;
+    setIsLightMode(newMode);
     
     if (newMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
+      document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.remove("light");
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "dark");
     }
   };
-
-  // Load user preference from localStorage on mount
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
-    if (savedTheme === "dark" || (savedTheme === null && prefersDark)) {
-      document.documentElement.classList.add("dark");
-      setIsDarkMode(true);
-    }
-  }, []);
 
   return (
     <Button 
       variant="ghost" 
       size="icon" 
       onClick={toggleTheme}
-      aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={isLightMode ? "Switch to dark mode" : "Switch to light mode"}
       className="rounded-full"
     >
-      {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+      {isLightMode ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
     </Button>
   );
 }
