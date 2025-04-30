@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/home/HeroSection";
 import FeatureSection from "@/components/home/FeatureSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
@@ -6,10 +5,8 @@ import OrganizersSection from "@/components/home/OrganizersSection";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function Home() {
-  return (
-    <div className="flex flex-col w-full">
+  return <div className="flex flex-col w-full">
       <div className="bg-gradient-to-b from-black via-black to-blue-900">
         <HeroSection />
         <OrganizersSection />
@@ -18,7 +15,7 @@ export default function Home() {
       <TestimonialSection />
       
       {/* CTA Section */}
-      <section className="container mx-auto py-20 px-4 text-center bg-black">
+      <section className="container mx-auto py-20 px-4 text-center bg-transparent">
         <div className="glass-card p-8 md:p-12 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to simplify your booking process?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -31,6 +28,5 @@ export default function Home() {
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 }
