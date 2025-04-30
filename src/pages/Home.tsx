@@ -15,7 +15,7 @@ export default function Home() {
       <TestimonialSection />
       
       {/* CTA Section */}
-      <section className="container mx-auto py-20 px-4 text-center bg-inherit">
+      <section className="container mx-auto py-20 px-4 text-center bg-inherit rounded-3xl">
         <div className="glass-card p-8 md:p-12 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to simplify your booking process?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
