@@ -16,10 +16,10 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full glass animate-fade-in">
+    <header className="sticky top-0 z-50 w-full animate-fade-in">
       <div className="container mx-auto py-4 px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-poppins font-bold text-xl md:text-2xl text-primary">BookMe+</span>
+          <span className="font-poppins font-bold text-xl md:text-2xl text-white">BookMe+</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -28,15 +28,14 @@ export default function Header() {
             <Link 
               key={item.name}
               to={item.path}
-              className="font-poppins text-sm font-medium transition-colors hover:text-primary"
+              className="font-poppins text-sm font-medium transition-colors hover:text-primary text-white"
             >
               {item.name}
             </Link>
           ))}
           <div className="flex items-center space-x-1">
-            <ThemeToggle />
-            <Button className="font-medium rounded-full">
-              Get Started
+            <Button variant="outline" className="font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black">
+              Sell your ticket
             </Button>
           </div>
         </nav>
@@ -49,7 +48,7 @@ export default function Header() {
             size="icon"
             onClick={() => setIsNavOpen(!isNavOpen)}
             aria-label="Toggle menu"
-            className="rounded-full"
+            className="rounded-full text-white"
           >
             {isNavOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
@@ -64,13 +63,13 @@ export default function Header() {
               key={item.name}
               to={item.path}
               onClick={() => setIsNavOpen(false)}
-              className="font-poppins font-medium py-2 transition-colors hover:text-primary"
+              className="font-poppins font-medium py-2 transition-colors hover:text-primary text-white"
             >
               {item.name}
             </Link>
           ))}
-          <Button className="w-full font-medium rounded-full mt-4">
-            Get Started
+          <Button variant="outline" className="w-full font-medium rounded-full mt-4 text-white bg-transparent border border-white hover:bg-white hover:text-black">
+            Sell your ticket
           </Button>
         </nav>
       )}
