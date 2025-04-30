@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "luc
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-secondary/50 dark:bg-secondary/30 backdrop-blur-sm">
-      <div className="container mx-auto py-12 px-4 bg-black">
+      <div className="container mx-auto py-12 px-4 bg-inherit">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {/* Company Info */}
           <div>

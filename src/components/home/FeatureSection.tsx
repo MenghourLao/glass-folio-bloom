@@ -13,7 +13,7 @@ export default function FeatureSection() {
     title: "Customization",
     description: "Tailor the booking experience to match your brand with our flexible customization options."
   }];
-  return <section className="container mx-auto md:py-24 rounded-sm px-0 py-0 bg-transparent">
+  return <section className="container mx-auto md:py-24 rounded-sm px-0 py-0 bg-inherit">
       <div className="text-center mb-16 mx-0">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Event Organizers love BookMe+</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
