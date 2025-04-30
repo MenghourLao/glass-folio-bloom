@@ -14,15 +14,15 @@ export default function FeatureSection() {
     description: "Tailor the booking experience to match your brand with our flexible customization options."
   }];
   return <section className="container mx-auto py-16 md:py-24 px-4 rounded bg-black">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose BookMe+</h2>
+      <div className="text-center mb-16 mx-0">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Event Organizers love BookMe+</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Our platform offers everything you need to manage appointments effortlessly and create a seamless booking experience for your clients.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {features.map((feature, index) => <div key={index} className="glass-card p-6 md:p-8 flex flex-col items-center text-center">
+        {features.map((feature, index) => <div key={index} className="glass-card p-6 md:p-8 flex flex-col items-center text-center px-[32px] mx-0 my-0 rounded-3xl">
             <div className="mb-4 p-3 rounded-full bg-primary/10">
               {feature.icon}
             </div>
