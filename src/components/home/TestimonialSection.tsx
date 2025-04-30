@@ -15,8 +15,8 @@ export default function TestimonialSection() {
     position: "Creative Studio Owner",
     avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=faces"
   }];
-  return <section className="backdrop-blur-sm py-16 md:py-24 bg-black">
-      <div className="container mx-auto px-4">
+  return <section className="backdrop-blur-sm py-16 md:py-24 bg-black rounded-sm">
+      <div className="container mx-auto px-4 rounded-sm">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
