@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function HeroSection() {
   return (
     <section 
-      className="relative py-20 md:py-28 px-4 mx-0 rounded-none overflow-hidden bg-cover bg-center"
+      className="relative h-screen px-4 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center"
       style={{
         backgroundImage: `url('https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//hero_img.png')`,
         backgroundSize: 'cover',
