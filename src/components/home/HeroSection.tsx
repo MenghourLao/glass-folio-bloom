@@ -17,9 +17,7 @@ export default function HeroSection() {
                 View Case Studies <ArrowRight size={16} />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full">
-              <Link to="/pricing">View Pricing</Link>
-            </Button>
+            
           </div>
         </div>
         <div className="glass-card p-6 md:p-8 relative">
