@@ -9,6 +9,15 @@ export default function HeroSection() {
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-blue-900 z-0"></div>
       
+      {/* Hero Image */}
+      <div className="absolute inset-0 z-0 opacity-30">
+        <img 
+          src="https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//hero_img.png" 
+          alt="Event management hero" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
       <div className="container mx-auto relative z-10">
         {/* Platform Label */}
         <div className="flex justify-center mb-8">
