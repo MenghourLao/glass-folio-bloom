@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 export default function HeroSection() {
-  return <section className="container py-20 md:py-28 px-4 mx-0 rounded-none bg-inherit">
+  return <section className="container py-20 md:py-28 px-4 mx-0 rounded-none bg-black">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
         <div className="lg:col-span-2 text-center lg:text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
