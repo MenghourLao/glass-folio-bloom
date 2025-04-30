@@ -13,9 +13,6 @@ export default function HeroSection() {
         backgroundPosition: 'center'
       }}
     >
-      {/* Gradient Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-blue-900/70 z-0"></div>
-      
       <div className="container mx-auto relative z-10">
         {/* Platform Label */}
         <div className="flex justify-center mb-8">
