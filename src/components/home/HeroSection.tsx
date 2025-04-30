@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
         <div className="lg:col-span-2 text-center lg:text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-            Simple Booking Solutions for <span className="text-primary">Modern Businesses</span>
+            Simple Booking Solutions for <span className="text-primary">Next Event</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8 mx-auto max-w-2xl">
             BookMe+ streamlines your scheduling process with an intuitive platform designed for professionals who value their time and client experience.
