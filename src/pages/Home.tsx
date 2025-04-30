@@ -1,12 +1,17 @@
+
 import HeroSection from "@/components/home/HeroSection";
 import FeatureSection from "@/components/home/FeatureSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
+import OrganizersSection from "@/components/home/OrganizersSection";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+
 export default function Home() {
-  return <div className="animate-fade-in">
+  return (
+    <div className="animate-fade-in">
       <HeroSection />
+      <OrganizersSection />
       <FeatureSection />
       <TestimonialSection />
       
@@ -24,5 +29,6 @@ export default function Home() {
           </Button>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 }
