@@ -1,49 +1,68 @@
+
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-type OrganizerProps = {
+
+// Replace individual organizers with partner logos
+type PartnerLogoProps = {
   name: string;
-  role: string;
-  image: string;
+  logo: string;
+  url: string;
 };
-const organizers: OrganizerProps[] = [{
-  name: "Alex Johnson",
-  role: "Event Director",
-  image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
-}, {
-  name: "Sarah Williams",
-  role: "Marketing Lead",
-  image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80"
-}, {
-  name: "Michael Chen",
-  role: "Technical Director",
-  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
-}];
+
+const partnerLogos: PartnerLogoProps[] = [
+  {
+    name: "TEDx",
+    logo: "/lovable-uploads/e6a4ef5f-7af8-4950-9383-ed28c65d732d.png",
+    url: "#tedx"
+  },
+  {
+    name: "RUN SAI",
+    logo: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&w=800&q=80",
+    url: "#runsai"
+  },
+  {
+    name: "CODE-C",
+    logo: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    url: "#codec"
+  },
+  {
+    name: "Sabay",
+    logo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+    url: "#sabay"
+  },
+  {
+    name: "The Platform",
+    logo: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&w=800&q=80",
+    url: "#platform"
+  }
+];
+
 export default function OrganizersSection() {
-  return <section className="container py-20 px-4 bg-inherit">
+  return (
+    <section className="container py-20 px-4 bg-inherit">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Awesome Organizers</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">OUR AWESOME ORGANIZERS</h2>
         <p className="text-muted-foreground mx-auto max-w-2xl">
-          Meet the talented team behind BookMe+ who make extraordinary events happen
+          Trusted by the world's best event organizers
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {organizers.map((organizer, index) => <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div className="h-64 overflow-hidden">
-              <img src={organizer.image} alt={organizer.name} className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300" />
-            </div>
-            <CardContent className="p-6 text-center">
-              <h3 className="font-bold text-xl mb-1">{organizer.name}</h3>
-              <p className="text-muted-foreground mb-4">{organizer.role}</p>
-              <Button variant="outline" size="sm" className="rounded-full">
-                <Link to="/contact" className="flex items-center gap-1">
-                  Contact <ArrowRight size={14} />
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>)}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+        {partnerLogos.map((partner, index) => (
+          <Link 
+            key={index}
+            to={partner.url}
+            className="flex items-center justify-center h-24 transition-opacity duration-300 hover:opacity-80"
+          >
+            <img 
+              src={partner.logo} 
+              alt={partner.name} 
+              className="max-h-full max-w-full object-contain filter brightness-0 invert" 
+              title={partner.name}
+            />
+          </Link>
+        ))}
       </div>
-    </section>;
+    </section>
+  );
 }
