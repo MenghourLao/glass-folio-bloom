@@ -1,9 +1,8 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 export default function HeroSection() {
-  return <section className="container mx-auto py-20 md:py-28 px-4 bg-black">
+  return <section className="container py-20 md:py-28 px-4 mx-0 rounded-none bg-[#0aff0a]">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
         <div className="lg:col-span-2 text-center lg:text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
@@ -20,11 +19,7 @@ export default function HeroSection() {
             </Button>
           </div>
         </div>
-        <div className="glass-card p-6 md:p-8 relative">
-          <div className="aspect-square w-full rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="Person using BookMe+ on laptop" className="w-4/5 h-4/5 object-cover rounded-lg shadow-lg" />
-          </div>
-        </div>
+        
       </div>
     </section>;
 }
