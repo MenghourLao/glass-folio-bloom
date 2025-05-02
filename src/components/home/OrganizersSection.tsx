@@ -65,23 +65,23 @@ export default function OrganizersSection() {
   }, []);
 
   return (
-    <section className="container mx-auto py-16 px-4">
-      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Our Awesome Organizers</h2>
-      
-      <div className="relative overflow-hidden w-full">
-        {/* Single carousel row with reduced spacing */}
-        <div className="flex w-[200%]" ref={carouselRef}>
-          {[...partnerLogos, ...partnerLogos].map((partner, index) => (
-            <Link key={index} to={partner.url} className="block flex-none w-[16.666%]">
-              <Card className="h-24 flex items-center justify-center border-0 bg-transparent shadow-none mx-1">
-                <CardContent className="p-2 flex items-center justify-center h-full w-full">
-                  <img src={partner.logo} alt={partner.name} className="max-h-16 max-w-full object-contain" />
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
+ <section className="container mx-auto py-16 px-4">
+  <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Our Awesome Organizers</h2>
+
+  <div className="relative overflow-hidden w-full">
+    <div className="flex w-[200%]" ref={carouselRef}>
+      {[...partnerLogos, ...partnerLogos].map((partner, index) => (
+        <Link key={index} to={partner.url} className="block flex-none w-[16.666%]">
+          <Card className="h-24 flex items-center justify-center border-0 bg-transparent shadow-none mx-[2px]">
+            <CardContent className="p-1 flex items-center justify-center h-full w-full">
+              <img src={partner.logo} alt={partner.name} className="max-h-16 max-w-full object-contain" />
+            </CardContent>
+          </Card>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 }
