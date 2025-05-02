@@ -1,33 +1,37 @@
-
 import { useState, FormEvent } from "react";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-
 export default function Contact() {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: ""
   });
-  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    
+
     // Simulate form submission success
     toast({
       title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
+      description: "We'll get back to you as soon as possible."
     });
-    
+
     // Reset form
     setFormData({
       name: "",
@@ -36,9 +40,7 @@ export default function Contact() {
       message: ""
     });
   };
-
-  return (
-    <div className="animate-fade-in">
+  return <div className="animate-fade-in">
       <section className="container mx-auto py-16 md:py-24 px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Get In Touch</h1>
         <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto text-center">
@@ -54,7 +56,7 @@ export default function Contact() {
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 text-primary mt-1 mr-3" />
                   <div>
-                    <p className="font-medium">Our Location</p>
+                    <p className="font-medium">Location</p>
                     <address className="not-italic text-muted-foreground">
                       123 Design Street<br />
                       Creative City, 10001
@@ -111,29 +113,13 @@ export default function Contact() {
                   <label htmlFor="name" className="block text-sm font-medium mb-1">
                     Your Name <span className="text-primary">*</span>
                   </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-lg bg-background border border-input focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
-                  />
+                  <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} className="w-full px-4 py-2 rounded-lg bg-background border border-input focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-1">
                     Your Email <span className="text-primary">*</span>
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-lg bg-background border border-input focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
-                  />
+                  <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-2 rounded-lg bg-background border border-input focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" />
                 </div>
               </div>
               
@@ -141,14 +127,7 @@ export default function Contact() {
                 <label htmlFor="subject" className="block text-sm font-medium mb-1">
                   Subject <span className="text-primary">*</span>
                 </label>
-                <select
-                  id="subject"
-                  name="subject"
-                  required
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 rounded-lg bg-background border border-input focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
-                >
+                <select id="subject" name="subject" required value={formData.subject} onChange={handleChange} className="w-full px-4 py-2 rounded-lg bg-background border border-input focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors">
                   <option value="">Select a subject</option>
                   <option value="General Inquiry">General Inquiry</option>
                   <option value="Sales Question">Sales Question</option>
@@ -161,15 +140,7 @@ export default function Contact() {
                 <label htmlFor="message" className="block text-sm font-medium mb-1">
                   Your Message <span className="text-primary">*</span>
                 </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 rounded-lg bg-background border border-input focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
-                ></textarea>
+                <textarea id="message" name="message" required rows={5} value={formData.message} onChange={handleChange} className="w-full px-4 py-2 rounded-lg bg-background border border-input focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"></textarea>
               </div>
               
               <Button type="submit" size="lg" className="rounded-full">
@@ -181,6 +152,5 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 }
