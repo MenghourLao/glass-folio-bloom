@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Zap } from "lucide-react";
@@ -6,12 +5,12 @@ import ThemeToggle from "./ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { Toggle } from "@/components/ui/toggle";
 import { useTheme } from "@/hooks/useTheme";
-
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation();
-  const { theme } = useTheme();
-  
+  const {
+    theme
+  } = useTheme();
   const navItems = [{
     name: "Home",
     path: "/"
@@ -25,7 +24,6 @@ export default function Header() {
     name: "Contact",
     path: "/contact"
   }];
-  
   return <header className="sticky top-0 z-50 w-full animate-fade-in">
       <div className="container mx-auto py-4 px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
@@ -34,7 +32,7 @@ export default function Header() {
 
         {/* Center-aligned Glassmorphism Navigation */}
         <nav className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
-          <div className="glass rounded-full backdrop-blur-xl border-white/20 dark:border-white/10 my-[16px] px-[32px] py-[16px] transition-all duration-300">
+          <div className="glass rounded-full backdrop-blur-xl border-white/20 dark:border-white/10 my-[16px] px-[32px] py-[16px] transition-all duration-300 bg-transparent">
             <ul className="flex items-center space-x-8">
               {navItems.map(item => <li key={item.name}>
                   <Link to={item.path} className={`font-poppins text-sm font-medium transition-colors hover:text-primary ${location.pathname === item.path ? "text-primary" : theme === "light" ? "text-black" : "text-white"}`}>
