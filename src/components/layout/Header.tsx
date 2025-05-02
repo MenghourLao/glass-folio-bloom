@@ -1,12 +1,13 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -19,26 +20,39 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full animate-fade-in">
       <div className="container mx-auto py-4 px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-poppins font-bold text-xl md:text-2xl text-white">BookMe+</span>
+          <img 
+            src="https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//bmplus+logo.png" 
+            alt="BookMe+ Logo" 
+            className="h-9 md:h-10" 
+          />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <Link 
-              key={item.name}
-              to={item.path}
-              className="font-poppins text-sm font-medium transition-colors hover:text-primary text-white"
-            >
-              {item.name}
-            </Link>
-          ))}
-          <div className="flex items-center space-x-1">
-            <Button variant="outline" className="font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black">
-              Sell your ticket
-            </Button>
+        {/* Center-aligned Glass Style Navigation */}
+        <nav className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+          <div className="glass rounded-full py-2 px-6 backdrop-blur-lg">
+            <ul className="flex items-center space-x-8">
+              {navItems.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    to={item.path}
+                    className={`font-poppins text-sm font-medium transition-colors hover:text-primary ${
+                      location.pathname === item.path ? "text-primary" : "text-white"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </nav>
+
+        {/* Right side buttons */}
+        <div className="hidden md:flex items-center space-x-1">
+          <Button variant="outline" className="font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black">
+            Sell your ticket
+          </Button>
+        </div>
 
         {/* Mobile Navigation Toggle */}
         <div className="flex items-center md:hidden gap-2">
