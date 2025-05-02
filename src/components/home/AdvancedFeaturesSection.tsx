@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Zap, Rocket, Gear, Lightning, ArrowUpRight } from 'lucide-react';
+import { Zap, Rocket, Settings, BoltIcon, ArrowUpRight } from 'lucide-react';
 
 export default function AdvancedFeaturesSection() {
   const features = [
@@ -17,12 +17,12 @@ export default function AdvancedFeaturesSection() {
     {
       title: "Instant Payout",
       description: "Say goodbye to long settlement waits. BookMe+ offers instant payouts, ensuring efficient cash flow management for organizers with every ticket purchase.",
-      icon: <Lightning className="h-6 w-6 text-primary" />
+      icon: <BoltIcon className="h-6 w-6 text-primary" />
     }, 
     {
       title: "Post-Event Data Analysis",
       description: "Gain valuable insights with our post-event data analysis powered by generative AI. Understand attendee behavior from purchasing journey to session check-ins, and feedback.",
-      icon: <Gear className="h-6 w-6 text-primary" />
+      icon: <Settings className="h-6 w-6 text-primary" />
     },
     {
       title: "Integrated Marketing Tools",
@@ -32,7 +32,7 @@ export default function AdvancedFeaturesSection() {
     {
       title: "Advanced Security",
       description: "Keep your events safe with our security features including fraud detection, secure payment processing, and ticket verification to prevent unauthorized reselling.",
-      icon: <Gear className="h-6 w-6 text-primary" />
+      icon: <Settings className="h-6 w-6 text-primary" />
     }
   ];
 
