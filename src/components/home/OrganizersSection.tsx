@@ -28,6 +28,10 @@ const partnerLogos: PartnerLogoProps[] = [{
   name: "Sabay",
   logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//sabay_logo.png",
   url: "#sabay"
+}, {
+  name: "Celebrating Cambodia",
+  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//celebrating_cambo.png",
+  url: "#celebrating-cambodia"
 }];
 
 export default function OrganizersSection() {
