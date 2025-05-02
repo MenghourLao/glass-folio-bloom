@@ -1,12 +1,18 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 export default function HeroSection() {
-  return <section className="relative h-screen px-4 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center" style={{
-    backgroundImage: `url('https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//hero_img.png')`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  }}>
+  return (
+    <section 
+      className="relative h-screen px-4 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center mt-0 pt-16" 
+      style={{
+        backgroundImage: `url('https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//hero_img.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
       <div className="container mx-auto relative z-10 my-0">
         {/* Platform Label */}
         <div className="flex justify-center mb-8">
@@ -21,7 +27,7 @@ export default function HeroSection() {
             EASY TICKETS, SEAMLESS<br />
             <span className="text-primary">EVENTS</span>
           </h1>
-          <p className="text-lg text-white/80 mb-12 mx-auto max-w-2xl">Automate your ticketing effortlessly with BookMe+ , Giving your more time to create unforgettable experiences. </p>
+          <p className="text-lg text-white/80 mb-12 mx-auto max-w-2xl">Automate your ticketing effortlessly with BookMe+ , Giving your more time to create unforgettable experiences. </p>
           <div className="flex justify-center">
             <Button size="lg" className="rounded-full px-8 py-6 text-base">
               <a href="https://api-production.bookme.plus/organizer/events" className="flex items-center gap-2">
@@ -31,5 +37,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
