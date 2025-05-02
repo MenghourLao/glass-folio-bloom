@@ -23,7 +23,7 @@ export default function Header() {
           <img 
             src="https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//bmplus+logo.png" 
             alt="BookMe+ Logo" 
-            className="h-9 md:h-10" 
+            className="h-7 md:h-8" 
           />
         </Link>
 
@@ -48,7 +48,8 @@ export default function Header() {
         </nav>
 
         {/* Right side buttons */}
-        <div className="hidden md:flex items-center space-x-1">
+        <div className="hidden md:flex items-center space-x-3">
+          <ThemeToggle />
           <Button variant="outline" className="font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black">
             Sell your ticket
           </Button>
