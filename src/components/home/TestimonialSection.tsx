@@ -1,24 +1,26 @@
+
 export default function TestimonialSection() {
   const testimonials = [{
-    quote: "BookMe+ has transformed how I manage my client appointments. The interface is intuitive and my clients love how easy it is to book sessions.",
-    author: "Sarah Johnson",
-    position: "Independent Consultant",
+    quote: "Organizing workshops has never been easier since we started using BookMe+. The platform's intuitive design and customizable event pages have streamlined our registration process, making it hassle-free for both our team and participants.",
+    author: "Bill Sokhy CHEA",
+    position: "Director of TEDxPhnomPenh & Startup Grind Cambodia",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces"
   }, {
-    quote: "Since implementing BookMe+, we've seen a 40% reduction in scheduling conflicts and no-shows. It's been a game-changer for our team.",
-    author: "Michael Chen",
-    position: "Wellness Center Director",
+    quote: "Partnering with BookMe+ has streamlined our marathon events, enabling efficient ticket, merch, and bundle sales. The offline check-in functionality ensures smooth bib distribution even in a remote area like Preah Vihear temple, and the instant payout feature truly supports our cash flow needs.",
+    author: "SAI",
+    position: "Founder of RunWithSai",
     avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=faces"
   }, {
-    quote: "The customization options let me perfectly align the booking experience with my brand. My clients consistently comment on how professional it feels.",
-    author: "Elena Rodriguez",
-    position: "Creative Studio Owner",
+    quote: "Partnering with BookMe+ has streamlined the registration process for our diverse audience of students, professionals, and government officers at Cambodia's biggest tech expo. The Organizer App's self-check-in feature significantly reduces manpower needs and eliminates long queues.",
+    author: "Chantra Be",
+    position: "Organizer of Code-C",
     avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=faces"
   }];
+  
   return <section className="backdrop-blur-sm py-16 md:py-24 rounded-sm bg-inherit">
       <div className="container mx-auto px-4 rounded-3xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Organizers Say</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Don't just take our word for it. Here's what professionals using BookMe+ have to say.
           </p>

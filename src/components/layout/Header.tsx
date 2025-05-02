@@ -1,13 +1,13 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Zap } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/useTheme";
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const { theme } = useTheme();
   
@@ -18,9 +18,29 @@ export default function Header() {
     { name: "Contact", path: "/contact" }
   ];
   
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 60) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full animate-fade-in">
-      <div className="container mx-auto py-4 px-4 flex justify-between items-center backdrop-blur-xl bg-black/30 dark:bg-black/40 border-b border-white/10">
+    <header className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 animate-fade-in ${
+      scrolled ? "py-2" : "py-4"
+    }`}>
+      <div className={`container mx-auto px-4 flex justify-between items-center backdrop-blur-xl ${
+        scrolled 
+          ? "bg-black/50 dark:bg-black/60 border-b border-white/10" 
+          : "bg-black/30 dark:bg-black/40 border-b border-white/10"
+      } transition-all duration-300`}>
         <Link to="/" className="flex items-center gap-2">
           <img 
             src="https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//bmplus+logo.png" 
@@ -53,20 +73,24 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Right side buttons with enhanced theme toggle */}
+        {/* Right side buttons - Login & Create Account */}
         <div className="hidden md:flex items-center space-x-3">
-          <ThemeToggle />
+          <Button 
+            variant="ghost" 
+            className="font-medium rounded-full text-white hover:bg-white/10"
+          >
+            Login
+          </Button>
           <Button 
             variant="outline" 
             className="font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
           >
-            <Zap className="mr-2 h-4 w-4" /> Sell your ticket
+            <Zap className="mr-2 h-4 w-4" /> Create an Account
           </Button>
         </div>
 
         {/* Mobile Navigation Toggle */}
-        <div className="flex items-center md:hidden gap-2">
-          <ThemeToggle />
+        <div className="flex items-center md:hidden">
           <Button 
             variant="ghost" 
             size="icon" 
@@ -93,10 +117,16 @@ export default function Header() {
             </Link>
           ))}
           <Button 
-            variant="outline" 
-            className="w-full font-medium rounded-full mt-4 text-white bg-transparent border border-white hover:bg-white hover:text-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
+            variant="ghost" 
+            className="w-full font-medium justify-start text-white hover:bg-white/10 rounded-full"
           >
-            <Zap className="mr-2 h-4 w-4" /> Sell your ticket
+            Login
+          </Button>
+          <Button 
+            variant="outline" 
+            className="w-full font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
+          >
+            <Zap className="mr-2 h-4 w-4" /> Create an Account
           </Button>
         </nav>
       )}

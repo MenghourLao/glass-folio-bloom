@@ -1,5 +1,7 @@
+
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, TiktokIcon } from "lucide-react";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-black dark:bg-black border-t border-white/10">
@@ -12,17 +14,24 @@ export default function Footer() {
               The ultimate platform for event management, helping organizers create unforgettable experiences.
             </p>
             <div className="flex space-x-4">
-              <a href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/bookme.plus" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/bookme.plus" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin size={20} />
+              <a href="https://www.tiktok.com/@bookme.plus" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-muted-foreground hover:text-primary transition-colors">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth="0"
+                  viewBox="0 0 24 24"
+                  height="20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"></path>
+                </svg>
               </a>
             </div>
           </div>
@@ -58,15 +67,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-primary shrink-0 mt-1" />
-                <span className="text-muted-foreground">The Fortune Tower(C7) Olympia City, SH-19, Sangkat Veal Vong, Khan 7 Makara, Phnom Penh, Cambodia, 12309</span>
+                <span className="text-muted-foreground">The Fortune Tower (C7), Olympia City, SH-19, Sangkat Veal Vong, Khan 7 Makara, Phnom Penh, Cambodia, 12309</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-primary shrink-0" />
-                <a href="tel:+11234567890" className="text-muted-foreground hover:text-primary transition-colors">+1 (123) 456-7890</a>
+                <a href="tel:010318316" className="text-muted-foreground hover:text-primary transition-colors">010 318 316</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-primary shrink-0" />
-                <a href="mailto:hello@bookmeplus.com" className="text-muted-foreground hover:text-primary transition-colors">hello@bookmeplus.com</a>
+                <a href="mailto:hello@bookme.plus" className="text-muted-foreground hover:text-primary transition-colors">hello@bookme.plus</a>
               </li>
             </ul>
           </div>

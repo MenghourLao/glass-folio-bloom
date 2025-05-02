@@ -1,38 +1,38 @@
 
 import React from 'react';
-import { Zap, Rocket, Settings, BoltIcon, ArrowUpRight } from 'lucide-react';
+import { Zap, Rocket, Settings, BoltIcon, ArrowUpRight, Ticket, BarChart2, Store, Share2, QrCode, MessageCircle } from 'lucide-react';
 
 export default function AdvancedFeaturesSection() {
   const features = [
     {
-      title: "Smart User Engagement",
-      description: "Engage with your participants like never before. Our tools streamline interactions, from anonymous Q&A sessions to categorized question groups, making moderation a breeze.",
-      icon: <Zap className="h-6 w-6 text-primary" />
+      title: "Smart Ticketing System",
+      description: "Sell, scan, and manage tickets easily.",
+      icon: <Ticket className="h-6 w-6 text-primary" />
     }, 
     {
-      title: "Embedded E-Commerce feature",
-      description: "Customize the event experience with embedded e-commerce. From selecting gear to doorstep delivery, our system ensures a smooth check-in process, even for marathons with thousands of runners.",
-      icon: <Rocket className="h-6 w-6 text-primary" />
+      title: "Real-Time Reporting",
+      description: "Track sales, attendees, and engagement.",
+      icon: <BarChart2 className="h-6 w-6 text-primary" />
     }, 
     {
-      title: "Instant Payout",
-      description: "Say goodbye to long settlement waits. BookMe+ offers instant payouts, ensuring efficient cash flow management for organizers with every ticket purchase.",
-      icon: <BoltIcon className="h-6 w-6 text-primary" />
+      title: "BookMeBusiness Self-Setup",
+      description: "Self-service dashboard to set up events and manage ticket sales anytime.",
+      icon: <Store className="h-6 w-6 text-primary" />
     }, 
     {
-      title: "Post-Event Data Analysis",
-      description: "Gain valuable insights with our post-event data analysis powered by generative AI. Understand attendee behavior from purchasing journey to session check-ins, and feedback.",
-      icon: <Settings className="h-6 w-6 text-primary" />
+      title: "Multi-Channel Sales",
+      description: "Promote across platforms with shareable links.",
+      icon: <Share2 className="h-6 w-6 text-primary" />
     },
     {
-      title: "Integrated Marketing Tools",
-      description: "Promote your events effectively with our built-in marketing suite. Create campaigns, track performance, and optimize your reach all from a single dashboard.",
-      icon: <Rocket className="h-6 w-6 text-primary" />
+      title: "On-site Check-in",
+      description: "QR scan, attendee badge printing, real-time check-in.",
+      icon: <QrCode className="h-6 w-6 text-primary" />
     },
     {
-      title: "Advanced Security",
-      description: "Keep your events safe with our security features including fraud detection, secure payment processing, and ticket verification to prevent unauthorized reselling.",
-      icon: <Settings className="h-6 w-6 text-primary" />
+      title: "After-Sale Support",
+      description: "Refund handling, attendee inquiries, and feedback collection.",
+      icon: <MessageCircle className="h-6 w-6 text-primary" />
     }
   ];
 
