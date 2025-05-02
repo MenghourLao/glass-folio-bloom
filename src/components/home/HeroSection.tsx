@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -18,8 +19,8 @@ export default function HeroSection() {
         {/* Main Heading */}
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-white">
-            Reach a Massive Audience<br />
-            Sell Out Your <span className="text-primary">Next Event</span>
+            EASY TICKETS, SEAMLESS<br />
+            <span className="text-primary">Event</span>
           </h1>
           <p className="text-lg text-white/80 mb-12 mx-auto max-w-2xl">
             Streamline registration, maximize attendance, and create unforgettable experiences with 
@@ -27,9 +28,9 @@ export default function HeroSection() {
           </p>
           <div className="flex justify-center">
             <Button size="lg" className="rounded-full px-8 py-6 text-base">
-              <Link to="/case-studies" className="flex items-center gap-2">
+              <a href="https://api-production.bookme.plus/organizer/events" className="flex items-center gap-2">
                 Create first event <ArrowRight size={16} />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
