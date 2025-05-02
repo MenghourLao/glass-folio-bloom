@@ -1,23 +1,17 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 export default function HeroSection() {
-  return (
-    <section 
-      className="relative h-screen px-4 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center mt-0 pt-16" 
-      style={{
-        backgroundImage: `url('https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//hero_img.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
+  return <section className="relative h-screen px-4 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center mt-0 pt-16" style={{
+    backgroundImage: `url('https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//hero_img.png')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  }}>
       <div className="container mx-auto relative z-10 my-0">
         {/* Platform Label */}
         <div className="flex justify-center mb-8">
           <div className="border border-white/30 rounded-full px-6 py-2 inline-block">
-            <p className="text-white text-sm md:text-base">BookMe+</p>
+            <p className="text-white text-sm md:text-base">Automate</p>
           </div>
         </div>
         
@@ -37,6 +31,5 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
