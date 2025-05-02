@@ -132,11 +132,15 @@
   }
   
   body {
-    @apply bg-background text-foreground font-lato;
+    @apply bg-background text-foreground font-poppins;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins font-medium;
+    @apply font-poppins font-semibold;
+  }
+  
+  p, span, div, li, a {
+    @apply font-poppins;
   }
 }
 
@@ -156,4 +160,27 @@
   .section-padding {
     @apply py-16 md:py-20 lg:py-24;
   }
+  
+  /* Add a class for the infinite logo carousel */
+  .logo-carousel-container {
+    @apply overflow-hidden relative w-full;
+  }
+  
+  .logo-carousel {
+    @apply flex animate-carousel;
+  }
+  
+  @keyframes carousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-carousel {
+    animation: carousel 30s linear infinite;
+  }
 }
+

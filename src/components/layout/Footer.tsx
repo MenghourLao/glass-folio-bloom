@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {/* Company Info */}
           <div>
-            <h3 className="font-poppins font-bold text-lg mb-4">BookMe+</h3>
+            <div className="mb-4">
+              <img 
+                src="https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//bmplus+logo.png" 
+                alt="BookMe+ Logo" 
+                className="h-8 mb-2" 
+              />
+            </div>
             <p className="text-muted-foreground mb-6">
               The ultimate platform for event management, helping organizers create unforgettable experiences.
             </p>
