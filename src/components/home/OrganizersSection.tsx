@@ -10,24 +10,24 @@ type PartnerLogoProps = {
 
 const partnerLogos: PartnerLogoProps[] = [{
   name: "TEDx",
-  logo: "/lovable-uploads/e6a4ef5f-7af8-4950-9383-ed28c65d732d.png",
+  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//ted_logo.png",
   url: "#tedx"
 }, {
   name: "RUN SAI",
-  logo: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&w=800&q=80",
+  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//rws_logo.png",
   url: "#runsai"
 }, {
   name: "CODE-C",
-  logo: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//codec_logo.png",
   url: "#codec"
 }, {
-  name: "Sabay",
-  logo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
-  url: "#sabay"
-}, {
   name: "The Platform",
-  logo: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&w=800&q=80",
+  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//platform_logo.png",
   url: "#platform"
+}, {
+  name: "Sabay",
+  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//sabay_logo.png",
+  url: "#sabay"
 }];
 
 export default function OrganizersSection() {
@@ -37,12 +37,12 @@ export default function OrganizersSection() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {partnerLogos.map((partner, index) => (
           <Link key={index} to={partner.url} className="block">
-            <Card className="h-24 flex items-center justify-center bg-transparent border border-white/20 hover:border-primary/50 transition-all">
+            <Card className="h-24 flex items-center justify-center bg-transparent">
               <CardContent className="p-2 flex items-center justify-center h-full w-full">
                 <img 
                   src={partner.logo} 
                   alt={partner.name} 
-                  className="max-h-16 max-w-full object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" 
+                  className="max-h-16 max-w-full object-contain" 
                 />
               </CardContent>
             </Card>
