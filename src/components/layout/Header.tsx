@@ -38,8 +38,8 @@ export default function Header() {
     }`}>
       <div className={`container mx-auto px-4 flex justify-between items-center transition-all duration-300 ${
         scrolled 
-          ? "glass w-full backdrop-blur-xl border border-white/10 rounded-xl py-3 px-6"
-          : "backdrop-blur-xl border-b border-white/10"
+          ? "glass w-full backdrop-blur-xl rounded-xl py-3 px-6"
+          : "backdrop-blur-xl"
       }`}>
         <Link to="/" className="flex items-center gap-2">
           <img 
