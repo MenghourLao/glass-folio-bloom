@@ -36,11 +36,11 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 animate-fade-in ${
       scrolled ? "py-2" : "py-4"
     }`}>
-      <div className={`container mx-auto px-4 flex justify-between items-center backdrop-blur-xl ${
+      <div className={`container mx-auto px-4 flex justify-between items-center transition-all duration-300 ${
         scrolled 
-          ? "bg-black/50 dark:bg-black/60 border-b border-white/10" 
-          : "bg-black/30 dark:bg-black/40 border-b border-white/10"
-      } transition-all duration-300`}>
+          ? "glass w-full backdrop-blur-xl bg-black/70 dark:bg-black/80 border border-white/10 rounded-xl py-2 px-6"
+          : "backdrop-blur-xl bg-black/30 dark:bg-black/40 border-b border-white/10"
+      }`}>
         <Link to="/" className="flex items-center gap-2">
           <img 
             src="https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//bmplus+logo.png" 
@@ -50,8 +50,12 @@ export default function Header() {
         </Link>
 
         {/* Center-aligned Glassmorphism Navigation */}
-        <nav className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
-          <div className="glass rounded-full backdrop-blur-xl border-white/20 dark:border-white/10 my-[16px] px-[32px] py-[16px] transition-all duration-300 bg-transparent">
+        <nav className={`hidden md:block ${scrolled ? "" : "absolute left-1/2 transform -translate-x-1/2"}`}>
+          <div className={`${
+            scrolled 
+              ? "px-4 py-2"
+              : "glass rounded-full backdrop-blur-xl border-white/20 dark:border-white/10 my-[16px] px-[32px] py-[16px] transition-all duration-300 bg-transparent"
+          }`}>
             <ul className="flex items-center space-x-8">
               {navItems.map(item => (
                 <li key={item.name}>
@@ -105,7 +109,11 @@ export default function Header() {
 
       {/* Mobile Navigation Menu with Glassmorphism */}
       {isNavOpen && (
-        <nav className="md:hidden glass absolute top-full left-0 right-0 py-4 px-6 flex flex-col space-y-4 animate-fade-in backdrop-blur-xl border-t border-white/10">
+        <nav className={`md:hidden absolute top-full left-0 right-0 py-4 px-6 flex flex-col space-y-4 animate-fade-in backdrop-blur-xl ${
+          scrolled 
+            ? "glass bg-black/70 dark:bg-black/80 border border-white/10"
+            : "glass border-t border-white/10"
+        }`}>
           {navItems.map(item => (
             <Link 
               key={item.name} 
