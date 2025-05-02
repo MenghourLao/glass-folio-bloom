@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
-      <div className="bg-gradient-to-b from-black via-black to-blue-900">
+      <div className="bg-black">
         <HeroSection />
         <OrganizersSection />
       </div>
