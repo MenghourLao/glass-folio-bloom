@@ -19,9 +19,9 @@ export default function CtaBanner() {
             </p>
           </div>
           <div className="md:w-1/3 flex justify-center md:justify-end">
-            <Button size="lg" className="rounded-full px-8 py-6 text-base">
+            <Button size="lg" className="rounded-full px-8 py-6 text-base text-white">
               <Link to="/contact" className="flex items-center gap-2">
-                Get Started Now <Send className="ml-1 h-4 w-4" />
+                Create First Event <Send className="ml-1 h-4 w-4" />
               </Link>
             </Button>
           </div>

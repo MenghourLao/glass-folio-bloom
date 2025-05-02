@@ -38,8 +38,8 @@ export default function Header() {
     }`}>
       <div className={`container mx-auto px-4 flex justify-between items-center transition-all duration-300 ${
         scrolled 
-          ? "glass w-full backdrop-blur-xl bg-black/70 dark:bg-black/80 border border-white/10 rounded-xl py-3 px-6"
-          : "backdrop-blur-xl bg-black/30 dark:bg-black/40 border-b border-white/10"
+          ? "glass w-full backdrop-blur-xl border border-white/10 rounded-xl py-3 px-6"
+          : "backdrop-blur-xl border-b border-white/10"
       }`}>
         <Link to="/" className="flex items-center gap-2">
           <img 
@@ -89,7 +89,7 @@ export default function Header() {
             variant="outline" 
             className="font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black py-6"
           >
-            <Zap className="mr-2 h-4 w-4" /> Create an Account
+            <Zap className="mr-2 h-4 w-4" /> Create First Event
           </Button>
         </div>
 
@@ -134,7 +134,7 @@ export default function Header() {
             variant="outline" 
             className="w-full font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
           >
-            <Zap className="mr-2 h-4 w-4" /> Create an Account
+            <Zap className="mr-2 h-4 w-4" /> Create First Event
           </Button>
         </nav>
       )}
