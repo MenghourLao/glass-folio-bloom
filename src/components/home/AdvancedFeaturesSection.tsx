@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Zap, Rocket, Settings, BoltIcon, ArrowUpRight, Ticket, BarChart2, Store, Share2, QrCode, MessageCircle } from 'lucide-react';
+import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 export default function AdvancedFeaturesSection() {
   const features = [
@@ -39,10 +40,14 @@ export default function AdvancedFeaturesSection() {
   // Split features into two rows of 3
   const firstRowFeatures = features.slice(0, 3);
   const secondRowFeatures = features.slice(3, 6);
+  
+  const headingRef = useScrollAnimation<HTMLDivElement>('visible');
+  const firstRowRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
+  const secondRowRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
 
   return (
     <section className="container mx-auto py-20 px-4 bg-inherit">
-      <div className="text-center mb-16 relative">
+      <div ref={headingRef} className="text-center mb-16 relative fade-up">
         <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
           <Zap className="h-4 w-4" />
           <span>POWERED BY AUTOMATION</span>
@@ -52,7 +57,7 @@ export default function AdvancedFeaturesSection() {
       </div>
 
       {/* First row - 3 columns */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div ref={firstRowRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 stagger-children">
         {firstRowFeatures.map((feature, index) => (
           <div key={index} className="glass-card p-8 rounded-3xl hover:shadow-lg transition-all duration-300 group">
             <div className="flex flex-col h-full">
@@ -72,7 +77,7 @@ export default function AdvancedFeaturesSection() {
       </div>
       
       {/* Second row - 3 columns */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div ref={secondRowRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
         {secondRowFeatures.map((feature, index) => (
           <div key={index} className="glass-card p-8 rounded-3xl hover:shadow-lg transition-all duration-300 group">
             <div className="flex flex-col h-full">

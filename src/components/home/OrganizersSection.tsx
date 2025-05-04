@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 type PartnerLogoProps = {
   name: string;
@@ -37,6 +38,7 @@ const partnerLogos: PartnerLogoProps[] = [{
 
 export default function OrganizersSection() {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const headingRef = useScrollAnimation<HTMLHeadingElement>('visible', { threshold: 0.5 });
   
   useEffect(() => {
     const carousel = carouselRef.current;
@@ -61,7 +63,7 @@ export default function OrganizersSection() {
   
   return (
     <section className="w-full py-16">
-      <h2 className="text-xl md:text-2xl font-semibold mb-8 text-center uppercase tracking-tight">
+      <h2 ref={headingRef} className="text-xl md:text-2xl font-semibold mb-8 text-center uppercase tracking-tight fade-up">
         Our Awesome Organizers
       </h2>
       <div className="relative overflow-hidden w-full">

@@ -3,11 +3,14 @@ import { ArrowRight, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import React from 'react';
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 export default function CtaBanner() {
+  const bannerRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.3 });
+  
   return (
     <section className="container mx-auto py-20 px-4 bg-inherit">
-      <div className="glass-card p-10 md:p-16 rounded-3xl relative overflow-hidden">
+      <div ref={bannerRef} className="glass-card p-10 md:p-16 rounded-3xl relative overflow-hidden fade-up">
         {/* Background gradient effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent"></div>
         

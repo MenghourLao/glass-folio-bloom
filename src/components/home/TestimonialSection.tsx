@@ -1,4 +1,6 @@
 
+import useScrollAnimation from "@/hooks/useScrollAnimation";
+
 export default function TestimonialSection() {
   const testimonials = [{
     quote: "Organizing workshops has never been easier since we started using BookMe+. The platform's intuitive design and customizable event pages have streamlined our registration process, making it hassle-free for both our team and participants.",
@@ -17,17 +19,22 @@ export default function TestimonialSection() {
     avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=faces"
   }];
   
-  return <section className="backdrop-blur-sm py-16 md:py-24 rounded-sm bg-inherit">
+  const headingRef = useScrollAnimation<HTMLDivElement>('visible');
+  const testimonialsRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
+  
+  return (
+    <section className="backdrop-blur-sm py-16 md:py-24 rounded-sm bg-inherit">
       <div className="container mx-auto px-4 rounded-3xl">
-        <div className="text-center mb-16">
+        <div ref={headingRef} className="text-center mb-16 fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Organizers Say</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Don't just take our word for it. Here's what professionals using BookMe+ have to say.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => <div key={index} className="glass-card p-6 md:p-8 rounded-3xl">
+        <div ref={testimonialsRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="glass-card p-6 md:p-8 rounded-3xl">
               <div className="flex flex-col h-full">
                 <blockquote className="text-lg italic mb-6 flex-grow">
                   "{testimonial.quote}"
@@ -40,8 +47,10 @@ export default function TestimonialSection() {
                   </div>
                 </div>
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }

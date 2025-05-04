@@ -1,5 +1,8 @@
+
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
+
 export default function FaqSection() {
   const faqs = [{
     question: "How does the booking process work?",
@@ -17,25 +20,33 @@ export default function FaqSection() {
     question: "Is there a mobile app for check-ins?",
     answer: "Yes, we offer a mobile check-in app for organizers and staff to quickly verify tickets using QR code scanning, with both online and offline functionality to ensure smooth operations regardless of internet connectivity."
   }];
-  return <section className="container mx-auto py-20 px-4 bg-inherit">
-      <div className="text-center mb-16">
+  
+  const headingRef = useScrollAnimation<HTMLDivElement>('visible');
+  const accordionRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.2 });
+  
+  return (
+    <section className="container mx-auto py-20 px-4 bg-inherit">
+      <div ref={headingRef} className="text-center mb-16 fade-up">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">YOUR QUESTIONS, ANSWERED</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Find answers to commonly asked questions about BookMe+
         </p>
       </div>
 
-      <div className="max-w-3xl mx-auto glass-card p-8 rounded-3xl">
+      <div ref={accordionRef} className="max-w-3xl mx-auto glass-card p-8 rounded-3xl scale-up">
         <Accordion type="single" collapsible className="w-full">
-          {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`}>
+          {faqs.map((faq, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger className="text-left text-lg font-medium">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 {faq.answer}
               </AccordionContent>
-            </AccordionItem>)}
+            </AccordionItem>
+          ))}
         </Accordion>
       </div>
-    </section>;
+    </section>
+  );
 }
