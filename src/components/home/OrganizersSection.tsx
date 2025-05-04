@@ -50,7 +50,7 @@ export default function OrganizersSection() {
     };
   }, []);
   return <section className="w-full py-16">
-      <h2 className="text-xl font-semibold mb-8 text-center uppercase tracking-widest md:text-2xl">
+      <h2 className="text-xl mb-8 text-center uppercase tracking-widest md:text-2xl font-semibold">
         Our Awesome Organizers
       </h2>
 
