@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
 
 @tailwind base;
@@ -160,28 +161,26 @@
     @apply py-16 md:py-20 lg:py-24;
   }
   
-  /* Logo carousel styles */
-  .logos-container {
+  /* Add a class for the infinite logo carousel */
+  .logo-carousel-container {
     @apply overflow-hidden relative w-full;
-    mask: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
   }
   
-  .logos-slide {
-    @apply flex;
-    gap: 1rem;
+  .logo-carousel {
+    @apply flex animate-carousel;
   }
   
-  .logo-item {
-    @apply flex-none;
-    flex: 0 0 150px;
-  }
-  
-  @keyframes carouselMove {
+  @keyframes carousel {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
     }
   }
+  
+  .animate-carousel {
+    animation: carousel 30s linear infinite;
+  }
 }
+
