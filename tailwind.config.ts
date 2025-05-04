@@ -92,6 +92,11 @@ export default {
         'pulse-slow': {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.8' }
+        },
+        // ✅ Add this keyframe for the logo loop
+        'carouselMove': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' }
         }
       },
       animation: {
@@ -100,7 +105,9 @@ export default {
         'fade-in': 'fade-in 0.3s ease-out',
         'fade-out': 'fade-out 0.3s ease-out',
         'gradient': 'gradient 6s ease infinite',
-        'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
+        'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+        // ✅ Add this animation for the logo loop
+        'carousel': 'carouselMove 30s linear infinite'
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
