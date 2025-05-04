@@ -69,7 +69,7 @@ export default function OrganizersSection() {
   <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Our Awesome Organizers</h2>
 
   <div className="relative overflow-hidden w-full">
-    <div className="flex w-[80%]" ref={carouselRef}>
+    <div className="flex w-[90%]" ref={carouselRef}>
       {[...partnerLogos, ...partnerLogos].map((partner, index) => (
         <Link key={index} to={partner.url} className="block flex-none w-[16.666%]">
           <Card className="h-24 flex items-center justify-center border-0 bg-transparent shadow-none">
