@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -12,10 +13,18 @@ export default function HeroSection() {
         backgroundPosition: "center",
       }}
     >
+      {/* Overlay with texture */}
+      <div 
+        className="absolute inset-0 bg-black/40" 
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")`,
+        }}
+      ></div>
+      
       <div className="container mx-auto relative z-10 my-0">
         {/* Platform Label */}
         <div className="flex justify-center mb-8">
-          <div className="border border-white/30 rounded-full px-6 py-2 inline-block">
+          <div className="border border-white/30 rounded-full px-6 py-2 inline-block backdrop-blur-sm">
             <p className="text-white text-sm md:text-base">Automate</p>
           </div>
         </div>

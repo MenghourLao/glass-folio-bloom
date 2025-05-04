@@ -18,10 +18,17 @@ export default function Home() {
         <OrganizersSection />
       </div>
       
-      <FeatureSection />
+      <div className="texture-grid">
+        <FeatureSection />
+      </div>
+      
       <AdvancedFeaturesSection />
-      <EventTypesSection />
-      <WorkflowSection />
+      
+      <div className="texture-bubbles">
+        <EventTypesSection />
+        <WorkflowSection />
+      </div>
+      
       <TestimonialSection />
       <PricingSection />
       <FaqSection />
