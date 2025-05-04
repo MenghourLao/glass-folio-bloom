@@ -42,20 +42,13 @@ export default function OrganizersSection() {
     const carousel = carouselRef.current;
     if (!carousel) return;
     
-    let animationFrameId: number;
-    let position = 0;
-    
-    const animate = () => {
-      position -= 0.03;
-      if (position <= -100) position = 100;
-      carousel.style.transform = `translateX(${position}%)`;
-      animationFrameId = requestAnimationFrame(animate);
-    };
-    
-    animate();
+    // Add a CSS animation instead of using requestAnimationFrame
+    carousel.style.animation = 'carouselMove 30s linear infinite';
     
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      if (carousel) {
+        carousel.style.animation = '';
+      }
     };
   }, []);
   
@@ -65,16 +58,23 @@ export default function OrganizersSection() {
         Our Awesome Organizers
       </h2>
       <div className="relative overflow-hidden w-full">
-        <div className="flex w-[90%] mx-auto" ref={carouselRef}>
-          {[...partnerLogos, ...partnerLogos].map((partner, index) => (
-            <Link key={index} to={partner.url} className="block flex-none w-[16.666%]">
-              <Card className="h-24 flex items-center justify-center border-0 bg-transparent shadow-none">
-                <CardContent className="p-0 flex items-center justify-center h-full w-full">
-                  <img src={partner.logo} alt={partner.name} className="max-h-16 max-w-full object-contain" />
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
+        <div className="logos-container">
+          <div className="logos-slide" ref={carouselRef}>
+            {/* Duplicate logos for seamless looping */}
+            {[...partnerLogos, ...partnerLogos].map((partner, index) => (
+              <Link key={index} to={partner.url} className="logo-item">
+                <Card className="h-24 flex items-center justify-center border-0 bg-transparent shadow-none">
+                  <CardContent className="p-0 flex items-center justify-center h-full w-full">
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.name} 
+                      className="max-h-16 max-w-full object-contain hover:scale-110 transition-transform duration-300" 
+                    />
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
