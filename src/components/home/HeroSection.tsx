@@ -1,30 +1,8 @@
-import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export default function HeroSection() {
-  // Define color classes and state
-  const colors: string[] = [
-    "text-red-500",
-    "text-blue-500",
-    "text-green-500",
-    "text-yellow-400",
-    "text-pink-500",
-    "text-purple-500"
-  ];
-
-  const [color, setColor] = useState<string>("text-purple-500");
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const randomColor = colors[Math.floor(Math.random() * colors.length)];
-      setColor(randomColor);
-    }, 800);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section
       className="relative h-screen px-4 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center mt-0 pt-16"
@@ -46,12 +24,12 @@ export default function HeroSection() {
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-white">
             EASY TICKETS, SEAMLESS<br />
-            <span className={`${color} transition-colors duration-500 ease-in-out`}>
+            <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient">
               EVENTS
             </span>
           </h1>
           <p className="text-lg text-white/80 mb-12 mx-auto max-w-2xl">
-            Automate your ticketing effortlessly with BookMe+ , Giving your more time to
+            Automate your ticketing effortlessly with BookMe+, giving you more time to
             create unforgettable experiences.
           </p>
           <div className="flex justify-center">
