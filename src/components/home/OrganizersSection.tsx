@@ -66,7 +66,7 @@ export default function OrganizersSection() {
 
   return (
 <section className="w-full py-16">
-  <p className="text-3xl md:text-4xl font-bold mb-12 text-center">Our Awesome Organizers</p>
+  <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Our Awesome Organizers</h2>
 
   <div className="relative overflow-hidden w-full">
     <div className="flex w-[90%]" ref={carouselRef}>
