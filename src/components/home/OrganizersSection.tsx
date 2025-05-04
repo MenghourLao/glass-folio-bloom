@@ -50,9 +50,8 @@ export default function OrganizersSection() {
     };
   }, []);
   return <section className="w-full py-16">
-      <h2 className="text-xl mb-8 text-center uppercase tracking-widest md:text-2xl font-semibold">
-        Our Awesome Organizers
-      </h2>
+     <h2 className="text-xl md:text-2xl font-semibold mb-8 text-center uppercase tracking-tight">
+
 
       <div className="relative overflow-hidden w-full">
         <div className="flex w-[90%]" ref={carouselRef}>
