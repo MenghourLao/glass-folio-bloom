@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -90,8 +91,20 @@ export default {
           '50%': { backgroundPosition: '100% 50%' }
         },
         'pulse-slow': {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.8' }
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.8', transform: 'scale(1.05)' }
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
+        },
+        'glow': {
+          '0%, 100%': { boxShadow: '0 0 10px rgba(149, 128, 255, 0.6), 0 0 20px rgba(149, 128, 255, 0.3)' },
+          '50%': { boxShadow: '0 0 20px rgba(149, 128, 255, 0.8), 0 0 40px rgba(149, 128, 255, 0.5)' }
+        },
+        'blur-in': {
+          '0%': { filter: 'blur(12px)', opacity: '0' },
+          '100%': { filter: 'blur(0)', opacity: '1' }
         }
       },
       animation: {
@@ -100,7 +113,10 @@ export default {
         'fade-in': 'fade-in 0.3s ease-out',
         'fade-out': 'fade-out 0.3s ease-out',
         'gradient': 'gradient 6s ease infinite',
-        'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
+        'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 4s ease-in-out infinite',
+        'blur-in': 'blur-in 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards'
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

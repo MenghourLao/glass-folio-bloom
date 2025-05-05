@@ -133,6 +133,8 @@
   
   body {
     @apply bg-background text-foreground font-poppins;
+    background: linear-gradient(to bottom, #000000, #050118);
+    min-height: 100vh;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -146,11 +148,29 @@
 
 @layer components {
   .glass {
-    @apply backdrop-blur-lg bg-black/80 dark:bg-black/80 border border-white/20 dark:border-white/10;
+    @apply backdrop-blur-xl bg-black/80 dark:bg-black/80 border border-white/10 dark:border-white/10 shadow-[0_8px_32px_rgba(149,128,255,0.1)];
   }
   
   .glass-card {
     @apply glass rounded-2xl shadow-lg;
+  }
+  
+  .futuristic-border {
+    @apply border border-primary/30 relative overflow-hidden;
+  }
+  
+  .futuristic-border::after {
+    content: "";
+    @apply absolute inset-0 border border-primary/10 rounded-xl blur-sm;
+  }
+  
+  .futuristic-glow {
+    @apply relative;
+    box-shadow: 0 0 15px rgba(149, 128, 255, 0.3), 0 0 30px rgba(149, 128, 255, 0.1);
+  }
+
+  .neo-glow {
+    box-shadow: 0 0 15px rgba(149, 128, 255, 0.4), 0 0 30px rgba(149, 128, 255, 0.2), 0 0 45px rgba(149, 128, 255, 0.1);
   }
   
   .container-padding {
@@ -161,7 +181,7 @@
     @apply py-16 md:py-20 lg:py-24;
   }
   
-  /* Add a class for the infinite logo carousel */
+  /* Keep existing logo carousel code */
   .logo-carousel-container {
     @apply overflow-hidden relative w-full;
   }
@@ -183,7 +203,7 @@
     animation: carousel 30s linear infinite;
   }
 
-  /* Scroll animation classes */
+  /* Enhanced scroll animation classes with futuristic flair */
   .fade-up {
     opacity: 0;
     transform: translateY(30px);
@@ -197,7 +217,7 @@
   
   .fade-in {
     opacity: 0;
-    transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   }
   
   .fade-in.visible {
@@ -207,7 +227,7 @@
   .scale-up {
     opacity: 0;
     transform: scale(0.95);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1), transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   }
   
   .scale-up.visible {
@@ -218,9 +238,10 @@
   .stagger-children > * {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
+  /* Keep existing stagger-children animation delays */
   .stagger-children.visible > *:nth-child(1) {
     opacity: 1;
     transform: translateY(0);
@@ -256,4 +277,23 @@
     transform: translateY(0);
     transition-delay: 0.6s;
   }
+}
+
+/* New futuristic animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(149, 128, 255, 0.5), 0 0 10px rgba(149, 128, 255, 0.3); }
+  50% { box-shadow: 0 0 15px rgba(149, 128, 255, 0.8), 0 0 30px rgba(149, 128, 255, 0.5); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
 }
