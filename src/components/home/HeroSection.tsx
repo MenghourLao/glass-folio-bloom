@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -36,7 +37,7 @@ export default function HeroSection() {
             <Button size="lg" className="rounded-full px-8 py-6 text-base">
               <a
                 href="https://api-production.bookme.plus/organizer/events"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 text-white hover:text-purple-200 transition-colors"
               >
                 Create first event <ArrowRight size={16} />
               </a>
