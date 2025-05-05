@@ -1,127 +1,103 @@
-
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 export default function Pricing() {
-  const pricingPlans = [
-    {
-      name: "Basic",
-      price: "$19",
-      period: "per month",
-      description: "Perfect for individuals and small businesses just getting started.",
-      features: [
-        "Up to 3 staff members",
-        "100 bookings per month",
-        "Email notifications",
-        "Basic customization",
-        "Standard support",
-      ],
-      cta: "Get Started",
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$49",
-      period: "per month",
-      description: "Ideal for growing businesses with more advanced needs.",
-      features: [
-        "Up to 10 staff members",
-        "Unlimited bookings",
-        "Email & SMS notifications",
-        "Full customization",
-        "Priority support",
-        "Custom booking pages",
-        "Calendar integrations",
-      ],
-      cta: "Start Free Trial",
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$99",
-      period: "per month",
-      description: "For large organizations requiring maximum flexibility.",
-      features: [
-        "Unlimited staff members",
-        "Unlimited bookings",
-        "Advanced automation",
-        "Custom integrations",
-        "Dedicated account manager",
-        "White-labeling options",
-        "API access",
-        "99.9% uptime SLA",
-      ],
-      cta: "Contact Sales",
-      popular: false,
-    },
-  ];
+  const plans = [{
+    name: "FREE",
+    price: "Free",
+    description: "For getting started",
+    features: ["Ads on E-Ticket", "Sell on Social Networks", "QR Code Check-in Feature", "Attendee Self Check-in", "Offline Check-in Feature", "BM+ Organizer App", "Customizable Event Pages"],
+    addons: ["Tutorial Videos on How to Check-in Attendance for Crews"]
+  }, {
+    name: "GROWTH",
+    price: "10%",
+    description: "Per ticket or min $0.25 service fee",
+    subPrice: "or min $150 fixed fee per event",
+    features: ["All Features in FREE Plan", "E-Ticket Ads Free", "Instant Payout", "Organizer Landing Page", "Business Intelligence Reports"],
+    addons: ["Video Tutorial on How to Book and Pay", "Technical Support: $30 per crew/day", "Telegram & Messenger Broadcasting ($50/month per 500 contacts)"],
+    popular: true
+  }, {
+    name: "ENTERPRISE",
+    price: "Custom",
+    description: "Contact us for custom pricing",
+    features: ["All Features in GROWTH Plan", "Walk-in Ticket Issuing", "Multiple Sessions Check-in", "Telegram Bot Integration with Customized Post-Purchase Flow", "App & Website White Label"]
+  }];
+  
+  const headingRef = useScrollAnimation<HTMLDivElement>('visible');
+  const plansRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
 
   return (
     <div className="animate-fade-in">
       {/* Pricing Hero */}
       <section className="container mx-auto py-16 md:py-24 px-4">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Simple, Transparent Pricing</h1>
+        <div ref={headingRef} className="text-center mb-16 fade-up">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">BOOKME+ PRICING PLANS</h1>
           <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto">
-            Choose the plan that best fits your needs. All plans include a 14-day free trial.
+            Choose the perfect plan for your event needs
           </p>
-          <div className="inline-block rounded-full glass p-1">
-            <div className="flex space-x-1">
-              <button className="px-6 py-2 rounded-full bg-primary text-primary-foreground">
-                Monthly
-              </button>
-              <button className="px-6 py-2 rounded-full text-foreground hover:bg-secondary/50 transition-colors">
-                Yearly (Save 20%)
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {pricingPlans.map((plan, index) => (
+        <div ref={plansRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto stagger-children">
+          {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`glass-card p-6 md:p-8 flex flex-col ${
-                plan.popular ? 'border-primary border-2 relative' : ''
-              }`}
+              className={`glass-card p-8 rounded-3xl flex flex-col h-full relative ${plan.popular ? 'border-primary' : ''}`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
-                  Most Popular
+                <div className="absolute top-0 inset-x-0 -translate-y-1/2 flex justify-center">
+                  <div className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">
+                    Popular
+                  </div>
                 </div>
               )}
-              <div>
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-muted-foreground ml-1">{plan.period}</span>
-                </div>
-                <p className="text-muted-foreground mb-6">{plan.description}</p>
-              </div>
-              <ul className="space-y-3 mb-8 flex-grow">
+              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+              <div className="text-3xl md:text-4xl font-bold mb-2">{plan.price}</div>
+              <p className="text-muted-foreground mb-2">{plan.description}</p>
+              {plan.subPrice && <p className="text-sm text-muted-foreground mb-4">{plan.subPrice}</p>}
+              
+              {/* Features */}
+              <h4 className="font-bold mt-4 mb-3">Features:</h4>
+              <ul className="mb-6 flex-grow space-y-3">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-start">
-                    <Check size={20} className="text-primary shrink-0 mr-2 mt-0.5" />
+                    <div className="mr-3 mt-1">
+                      <Check className="h-5 w-5 text-primary" />
+                    </div>
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
-              <Button 
-                size="lg" 
-                className={`w-full rounded-full ${!plan.popular ? 'bg-primary/90 hover:bg-primary' : ''}`}
-                variant={plan.popular ? "default" : "outline"}
-              >
+              
+              {/* Add-ons if available */}
+              {plan.addons && plan.addons.length > 0 && (
+                <>
+                  <h4 className="font-bold mb-3">Add-ons:</h4>
+                  <ul className="mb-6 space-y-3">
+                    {plan.addons.map((addon, i) => (
+                      <li key={i} className="flex items-start">
+                        <div className="mr-3 mt-1">
+                          <Check className="h-5 w-5 text-primary" />
+                        </div>
+                        <span>{addon}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              
+              <Button variant={plan.popular ? "default" : "outline"} className="w-full mt-auto">
                 <Link to="/contact">
-                  {plan.cta}
+                  Get Started
                 </Link>
               </Button>
             </div>
           ))}
         </div>
         
-        {/* FAQ Section */}
+        {/* FAQ Section - Keeping this from original pricing page */}
         <div className="max-w-3xl mx-auto mt-20">
           <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
           <div className="space-y-6">
