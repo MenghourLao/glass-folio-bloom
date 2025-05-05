@@ -1,3 +1,4 @@
+
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -47,7 +48,7 @@ export default function Pricing() {
               className={`glass-card p-8 rounded-3xl flex flex-col h-full relative ${plan.popular ? 'border-primary' : ''}`}
             >
               {plan.popular && (
-                <div className="absolute top-0 inset-x-0 -translate-y-1/2 flex justify-center">
+                <div className="absolute top-0 left-8 -translate-y-1/2">
                   <div className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">
                     Popular
                   </div>
