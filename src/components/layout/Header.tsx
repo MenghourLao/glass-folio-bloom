@@ -32,13 +32,15 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Always apply the compact header style except on the homepage
+  // The navbar will start in compact mode on all pages except the homepage
   const isHomePage = location.pathname === "/";
+  // On the homepage, the navbar is only compact when scrolled
+  // On other pages, the navbar is always compact
   const useCompactStyle = scrolled || !isHomePage;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 animate-fade-in ${
-      useCompactStyle ? "py-3" : "py-6"
+    <header className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out animate-fade-in ${
+      useCompactStyle ? "py-3 shadow-md" : "py-6"
     }`}>
       <div className={`container mx-auto px-4 flex justify-between items-center transition-all duration-300 ${
         useCompactStyle

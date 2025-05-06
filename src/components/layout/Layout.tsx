@@ -11,7 +11,7 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const location = useLocation();
   
-  // Only add top padding on pages that aren't the homepage
+  // Add top padding on all pages to account for the fixed header
   const isHomePage = location.pathname === "/";
   const needsTopPadding = !isHomePage;
   
