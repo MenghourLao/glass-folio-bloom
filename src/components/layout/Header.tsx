@@ -37,10 +37,10 @@ export default function Header() {
       scrolled ? "py-3" : "py-6"
     }`}>
       <div className={`container mx-auto px-4 flex justify-between items-center transition-all duration-300 ${
-        scrolled 
-          ? "bg-black/90 w-full rounded-xl py-3 px-6"
-          : "bg-black/80"
-      }`}>
+          scrolled 
+            ? "glass w-full rounded-xl py-3 px-6"
+            : ""
+        }`}>
         <Link to="/" className="flex items-center gap-2">
           <img 
             src="https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//bmplus+logo.png" 
@@ -49,12 +49,12 @@ export default function Header() {
           />
         </Link>
 
-        {/* Center-aligned Navigation */}
+        {/* Center-aligned Glassmorphism Navigation */}
         <nav className={`hidden md:block ${scrolled ? "" : "absolute left-1/2 transform -translate-x-1/2"}`}>
           <div className={`${
             scrolled 
               ? "px-4 py-3"
-              : "bg-black/90 border-white/20 dark:border-white/10 rounded-full my-[20px] px-[36px] py-[20px] transition-all duration-300"
+              : "glass rounded-full backdrop-blur-xl border-white/20 dark:border-white/10 my-[20px] px-[36px] py-[20px] transition-all duration-300 bg-transparent"
           }`}>
             <ul className="flex items-center space-x-8">
               {navItems.map(item => (
@@ -107,12 +107,12 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile Navigation Menu with Glassmorphism */}
       {isNavOpen && (
-        <nav className={`md:hidden absolute top-full left-0 right-0 py-4 px-6 flex flex-col space-y-4 animate-fade-in ${
+        <nav className={`md:hidden absolute top-full left-0 right-0 py-4 px-6 flex flex-col space-y-4 animate-fade-in backdrop-blur-xl ${
           scrolled 
-            ? "bg-black/90 border border-white/10"
-            : "bg-black/90 border-t border-white/10"
+            ? "glass bg-black/70 dark:bg-black/80 border border-white/10"
+            : "glass border-t border-white/10"
         }`}>
           {navItems.map(item => (
             <Link 
