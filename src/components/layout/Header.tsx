@@ -38,8 +38,8 @@ export default function Header() {
     }`}>
       <div className={`container mx-auto px-4 flex justify-between items-center transition-all duration-300 ${
         scrolled 
-          ? "glass w-full backdrop-blur-xl rounded-xl py-3 px-6"
-          : "backdrop-blur-xl"
+          ? "bg-black/90 w-full rounded-xl py-3 px-6"
+          : "bg-black/80"
       }`}>
         <Link to="/" className="flex items-center gap-2">
           <img 
@@ -49,12 +49,12 @@ export default function Header() {
           />
         </Link>
 
-        {/* Center-aligned Glassmorphism Navigation */}
+        {/* Center-aligned Navigation */}
         <nav className={`hidden md:block ${scrolled ? "" : "absolute left-1/2 transform -translate-x-1/2"}`}>
           <div className={`${
             scrolled 
               ? "px-4 py-3"
-              : "glass rounded-full backdrop-blur-xl border-white/20 dark:border-white/10 my-[20px] px-[36px] py-[20px] transition-all duration-300 bg-transparent"
+              : "bg-black/90 border-white/20 dark:border-white/10 rounded-full my-[20px] px-[36px] py-[20px] transition-all duration-300"
           }`}>
             <ul className="flex items-center space-x-8">
               {navItems.map(item => (
@@ -107,12 +107,12 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu with Glassmorphism */}
+      {/* Mobile Navigation Menu */}
       {isNavOpen && (
-        <nav className={`md:hidden absolute top-full left-0 right-0 py-4 px-6 flex flex-col space-y-4 animate-fade-in backdrop-blur-xl ${
+        <nav className={`md:hidden absolute top-full left-0 right-0 py-4 px-6 flex flex-col space-y-4 animate-fade-in ${
           scrolled 
-            ? "glass bg-black/70 dark:bg-black/80 border border-white/10"
-            : "glass border-t border-white/10"
+            ? "bg-black/90 border border-white/10"
+            : "bg-black/90 border-t border-white/10"
         }`}>
           {navItems.map(item => (
             <Link 
