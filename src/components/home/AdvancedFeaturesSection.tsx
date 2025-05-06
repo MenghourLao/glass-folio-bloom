@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Zap, Rocket, Settings, BoltIcon, ArrowUpRight, Ticket, BarChart2, Store, Share2, QrCode, MessageCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 export default function AdvancedFeaturesSection() {
@@ -8,32 +8,32 @@ export default function AdvancedFeaturesSection() {
     {
       title: "Smart Ticketing System",
       description: "Sell, scan, and manage tickets easily.",
-      icon: <Ticket className="h-6 w-6 text-primary" />
+      image: "public/lovable-uploads/4bdb757c-5695-47bb-a9ef-8f6b2d942cec.png"
     }, 
     {
       title: "Real-Time Reporting",
       description: "Track sales, attendees, and engagement.",
-      icon: <BarChart2 className="h-6 w-6 text-primary" />
+      image: "public/lovable-uploads/729f738d-ff0e-49ae-9dda-1ea302886c3b.png"
     }, 
     {
       title: "BookMeBusiness Self-Setup",
       description: "Self-service dashboard to set up events and manage ticket sales anytime.",
-      icon: <Store className="h-6 w-6 text-primary" />
+      image: "public/lovable-uploads/aa305379-595f-484b-8f0e-563b2a527892.png"
     }, 
     {
       title: "Multi-Channel Sales",
       description: "Promote across platforms with shareable links.",
-      icon: <Share2 className="h-6 w-6 text-primary" />
+      image: "public/lovable-uploads/d8d89b6d-7119-4e25-a8b2-fc183a6cf346.png"
     },
     {
       title: "On-site Check-in",
       description: "QR scan, attendee badge printing, real-time check-in.",
-      icon: <QrCode className="h-6 w-6 text-primary" />
+      image: "public/lovable-uploads/e374b994-ad31-4d27-a592-d1915baf4963.png"
     },
     {
       title: "After-Sale Support",
       description: "Refund handling, attendee inquiries, and feedback collection.",
-      icon: <MessageCircle className="h-6 w-6 text-primary" />
+      image: "public/lovable-uploads/e2f4c335-9fe7-4994-9ec3-06fec5711d80.png"
     }
   ];
 
@@ -62,11 +62,18 @@ export default function AdvancedFeaturesSection() {
           <div key={index} className="glass-card p-8 rounded-3xl hover:shadow-lg transition-all duration-300 group">
             <div className="flex flex-col h-full">
               <div className="mb-4 flex justify-between items-start">
-                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center">
-                  {feature.icon}
+                <div className="h-20 w-20 flex items-center justify-center">
+                  <img 
+                    src={feature.image} 
+                    alt={feature.title} 
+                    className="w-full h-full object-contain" 
+                  />
                 </div>
                 <div className="opacity-0 group-hover:opacity-100 transition-all">
-                  <ArrowUpRight className="h-5 w-5 text-primary" />
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
+                    <path d="M5 13L13 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M5 5H13V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
@@ -82,11 +89,18 @@ export default function AdvancedFeaturesSection() {
           <div key={index} className="glass-card p-8 rounded-3xl hover:shadow-lg transition-all duration-300 group">
             <div className="flex flex-col h-full">
               <div className="mb-4 flex justify-between items-start">
-                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center">
-                  {feature.icon}
+                <div className="h-20 w-20 flex items-center justify-center">
+                  <img 
+                    src={feature.image} 
+                    alt={feature.title} 
+                    className="w-full h-full object-contain" 
+                  />
                 </div>
                 <div className="opacity-0 group-hover:opacity-100 transition-all">
-                  <ArrowUpRight className="h-5 w-5 text-primary" />
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
+                    <path d="M5 13L13 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M5 5H13V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
