@@ -32,15 +32,16 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Detect if we're on a case study detail page
-  const isCaseStudyDetail = location.pathname.includes('/case-studies/') && location.pathname !== '/case-studies';
+  // Always apply the compact header style except on the homepage
+  const isHomePage = location.pathname === "/";
+  const useCompactStyle = scrolled || !isHomePage;
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 animate-fade-in ${
-      scrolled || isCaseStudyDetail ? "py-3" : "py-6"
+      useCompactStyle ? "py-3" : "py-6"
     }`}>
       <div className={`container mx-auto px-4 flex justify-between items-center transition-all duration-300 ${
-        scrolled || isCaseStudyDetail
+        useCompactStyle
           ? "glass w-full backdrop-blur-xl rounded-xl py-3 px-6"
           : "backdrop-blur-xl"
       }`}>
@@ -53,9 +54,9 @@ export default function Header() {
         </Link>
 
         {/* Center-aligned Glassmorphism Navigation */}
-        <nav className={`hidden md:block ${(scrolled || isCaseStudyDetail) ? "" : "absolute left-1/2 transform -translate-x-1/2"}`}>
+        <nav className={`hidden md:block ${useCompactStyle ? "" : "absolute left-1/2 transform -translate-x-1/2"}`}>
           <div className={`${
-            scrolled || isCaseStudyDetail
+            useCompactStyle
               ? "px-4 py-3"
               : "glass rounded-full backdrop-blur-xl border-white/20 dark:border-white/10 my-[20px] px-[36px] py-[20px] transition-all duration-300 bg-transparent"
           }`}>
@@ -113,7 +114,7 @@ export default function Header() {
       {/* Mobile Navigation Menu with Glassmorphism */}
       {isNavOpen && (
         <nav className={`md:hidden absolute top-full left-0 right-0 py-4 px-6 flex flex-col space-y-4 animate-fade-in backdrop-blur-xl ${
-          scrolled || isCaseStudyDetail
+          useCompactStyle
             ? "glass bg-black/70 dark:bg-black/80 border border-white/10"
             : "glass border-t border-white/10"
         }`}>

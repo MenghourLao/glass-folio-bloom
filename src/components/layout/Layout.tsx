@@ -11,13 +11,14 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const location = useLocation();
   
-  // Check if we're on a case study detail page
-  const isCaseStudyDetail = location.pathname.includes('/case-studies/') && location.pathname !== '/case-studies';
+  // Only add top padding on pages that aren't the homepage
+  const isHomePage = location.pathname === "/";
+  const needsTopPadding = !isHomePage;
   
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className={`flex-grow ${isCaseStudyDetail ? 'pt-20' : ''}`}>
+      <main className={`flex-grow ${needsTopPadding ? 'pt-20' : ''}`}>
         {children}
       </main>
       <Footer />
