@@ -1,6 +1,5 @@
 
 import HeroSection from "@/components/home/HeroSection";
-import FeatureSection from "@/components/home/FeatureSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
 import OrganizersSection from "@/components/home/OrganizersSection";
 import AdvancedFeaturesSection from "@/components/home/AdvancedFeaturesSection";
@@ -18,7 +17,6 @@ export default function Home() {
         <OrganizersSection />
       </div>
       
-      <FeatureSection />
       <AdvancedFeaturesSection />
       <EventTypesSection />
       <WorkflowSection />
