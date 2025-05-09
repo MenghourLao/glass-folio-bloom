@@ -52,7 +52,7 @@ export default function CaseStudies() {
 
   return <div className="animate-fade-in">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-[160px] md:py-24 text-center">
+      <section className="container mx-auto py-[160px] md:py-24 text-center px-0">
         <h1 className="text-4xl font-bold mb-6 text-center md:text-5xl">Case Studies</h1>
         <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto text-center">
           Discover how businesses across different industries have transformed their booking processes with BookMe+.
