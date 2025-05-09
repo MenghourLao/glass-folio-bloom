@@ -52,24 +52,24 @@ export default function CaseStudies() {
 
   return <div className="animate-fade-in">
       {/* Hero Section */}
-      <section className="container md:py-24 px-4 mx-0 my-0 py-[160px]">
+      <section className="container mx-auto px-4 py-[160px] md:py-24 text-center">
         <h1 className="text-4xl font-bold mb-6 text-center md:text-5xl">Case Studies</h1>
         <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto text-center">
           Discover how businesses across different industries have transformed their booking processes with BookMe+.
         </p>
         
         {/* First Row - 2 Columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 max-w-5xl mx-auto">
           {firstRowCases.map(study => <div key={study.id} className="glass-card overflow-hidden">
               <div className="relative">
                 <div className={`absolute inset-0 bg-gradient-to-br ${study.color} mix-blend-multiply`}></div>
                 <img src={study.image} alt={study.title} className="w-full h-64 md:h-80 object-cover" />
               </div>
-              <div className="p-6 md:p-8">
+              <div className="p-6 md:p-8 text-center">
                 <div className="text-sm font-medium text-primary mb-2">{study.category}</div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-3">{study.title}</h2>
                 <p className="text-muted-foreground mb-6">{study.description}</p>
-                <Button variant="outline" className="rounded-full group">
+                <Button variant="outline" className="rounded-full group mx-auto">
                   <Link to={`/case-studies/${study.id}`} className="flex items-center gap-2">
                     Read Case Study
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -80,13 +80,13 @@ export default function CaseStudies() {
         </div>
         
         {/* Second Row - 4 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20 max-w-6xl mx-auto">
           {secondRowCases.map(study => <div key={study.id} className="glass-card overflow-hidden">
               <div className="relative">
                 <div className={`absolute inset-0 bg-gradient-to-br ${study.color} mix-blend-multiply`}></div>
                 <img src={study.image} alt={study.title} className="w-full h-48 object-cover" />
               </div>
-              <div className="p-4 md:p-6">
+              <div className="p-4 md:p-6 text-center">
                 <div className="text-xs font-medium text-primary mb-1">{study.category}</div>
                 <h2 className="text-lg md:text-xl font-bold mb-2">{study.title}</h2>
                 <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{study.description}</p>
@@ -101,12 +101,12 @@ export default function CaseStudies() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center">
+        <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Want to become our next success story?</h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Join the growing list of businesses that have revolutionized their scheduling with BookMe+.
           </p>
-          <Button size="lg" className="rounded-full">
+          <Button size="lg" className="rounded-full mx-auto">
             <Link to="/contact" className="flex items-center gap-2">
               Contact Us Today <ArrowRight size={16} />
             </Link>
