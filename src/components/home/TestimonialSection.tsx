@@ -1,26 +1,27 @@
+
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 export default function TestimonialSection() {
   const testimonials = [{
     quote: "Organizing workshops has never been easier since we started using BookMe+. The platform's intuitive design and customizable event pages have streamlined our registration process, making it hassle-free for both our team and participants.",
     author: "Bill Sokhy CHEA",
     position: "Director of TEDxPhnomPenh & Startup Grind Cambodia",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces"
+    avatar: "public/lovable-uploads/d7ff1baf-f3c1-424c-a4fd-549b615677a8.png"
   }, {
     quote: "Partnering with BookMe+ has streamlined our marathon events, enabling efficient ticket, merch, and bundle sales. The offline check-in functionality ensures smooth bib distribution even in a remote area like Preah Vihear temple, and the instant payout feature truly supports our cash flow needs.",
     author: "SAI",
     position: "Founder of RunWithSai",
-    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=faces"
+    avatar: "public/lovable-uploads/de8de068-a563-44bb-b9c7-b4cc4361e173.png"
   }, {
     quote: "Partnering with BookMe+ has streamlined the registration process for our diverse audience of students, professionals, and government officers at Cambodia's biggest tech expo. The Organizer App's self-check-in feature significantly reduces manpower needs and eliminates long queues.",
     author: "Chantra Be",
     position: "Organizer of Code-C",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=faces"
+    avatar: "public/lovable-uploads/2e3702da-865c-4a72-9e5c-2833e2169906.png"
   }];
   const headingRef = useScrollAnimation<HTMLDivElement>('visible');
   const testimonialsRef = useScrollAnimation<HTMLDivElement>('visible', {
     threshold: 0.1
   });
-  return <section className="backdrop-blur-sm py-16 md:py-24 rounded-sm bg-inherit">
+  return <section className="py-16 md:py-24 rounded-sm bg-inherit">
       <div className="container mx-auto px-4 rounded-3xl">
         <div ref={headingRef} className="text-center mb-16 fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">WHAT OUR ORGANIZERS SAY</h2>
