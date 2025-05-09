@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -28,7 +29,7 @@ export default function CaseStudies() {
     title: "Global Tech Solutions",
     category: "Technology",
     description: "Streamlining meeting scheduling for a tech company with team members across 12 time zones.",
-    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/aa305379-595f-484b-8f0e-563b2a527892.png?raw=true",
+    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&h=500&fit=crop",
     color: "from-yellow-500/20 to-orange-500/20"
   }, {
     id: "urban-fitness",
