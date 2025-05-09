@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Zap } from 'lucide-react';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
@@ -8,32 +7,32 @@ export default function AdvancedFeaturesSection() {
     {
       title: "Smart Ticketing System",
       description: "Sell, scan, and manage tickets easily.",
-      image: "/lovable-uploads/d0af7c80-2795-47de-8ee1-6dce86afb941.png"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Smart%20Ticketing%20System.png?raw=true"
     }, 
     {
       title: "Real-Time Reporting",
       description: "Track sales, attendees, and engagement.",
-      image: "/lovable-uploads/df7bee60-cf9d-477b-ad2c-a28a2967f80d.png"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Real-Time%20Reporting.png?raw=true"
     }, 
     {
       title: "BookMeBusiness Self-Setup",
       description: "Self-service dashboard to set up events and manage ticket sales anytime.",
-      image: "/lovable-uploads/888ed0ee-cd47-4836-bfbc-96da8bf7e4a2.png"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/BookMeBusiness%20Self-Setup.png?raw=true"
     }, 
     {
       title: "Multi-Channel Sales",
       description: "Promote across platforms with shareable links.",
-      image: "/lovable-uploads/9181c984-0193-45db-a6e0-4afaf624a6f4.png"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Multi-Channel%20Sales.png?raw=true"
     },
     {
       title: "On-site Check-in",
       description: "QR scan, attendee badge printing, real-time check-in.",
-      image: "/lovable-uploads/f7480f30-4097-444e-b0b2-0bd4dcd1990e.png"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/On-site%20Check-in.png?raw=true"
     },
     {
       title: "After-Sale Support",
       description: "Refund handling, attendee inquiries, and feedback collection.",
-      image: "/lovable-uploads/9787d030-c318-471a-a841-bb2f7a728db0.png"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/After-Sale%20Support.png?raw=true"
     }
   ];
 

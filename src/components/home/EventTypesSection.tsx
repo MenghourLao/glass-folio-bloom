@@ -1,5 +1,5 @@
 
-import { Music, Mic, PaintRoller, HandHeart, Video, Trophy } from "lucide-react";
+import { Music, Mic, PaintRoller, HandHeart, Trophy } from "lucide-react";
 import React from 'react';
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
@@ -7,27 +7,23 @@ export default function EventTypesSection() {
   const eventTypes = [{
     icon: <Music className="h-10 w-10 text-primary" />,
     title: "Concert",
-    image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=80"
+    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/concert.jpg?raw=true"
   }, {
     icon: <Trophy className="h-10 w-10 text-primary" />,
     title: "Sports",
-    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80"
+    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/sport.jpg?raw=true"
   }, {
     icon: <Mic className="h-10 w-10 text-primary" />,
     title: "Workshop & Meetup",
-    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80"
+    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Workshop%20&%20Meetup.jpg?raw=true"
   }, {
     icon: <PaintRoller className="h-10 w-10 text-primary" />,
     title: "Arts & Exhibitions",
-    image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=800&q=80"
+    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Arts%20&%20Exhibitions.jpg?raw=true"
   }, {
     icon: <HandHeart className="h-10 w-10 text-primary" />,
     title: "Fundraising Events",
-    image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=800&q=80"
-  }, {
-    icon: <Video className="h-10 w-10 text-primary" />,
-    title: "Live",
-    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80"
+    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Fundraising%20Events.jpg?raw=true"
   }];
   
   const headingRef = useScrollAnimation<HTMLDivElement>('visible');
@@ -42,7 +38,7 @@ export default function EventTypesSection() {
         </p>
       </div>
 
-      <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 stagger-children">
+      <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 stagger-children">
         {eventTypes.map((eventType, index) => (
           <div key={index} className="glass-card overflow-hidden rounded-3xl group hover:border-primary/50 transition-all">
             <div className="h-48 overflow-hidden relative">
