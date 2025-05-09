@@ -6,17 +6,17 @@ export default function TestimonialSection() {
     quote: "Organizing workshops has never been easier since we started using BookMe+. The platform's intuitive design and customizable event pages have streamlined our registration process, making it hassle-free for both our team and participants.",
     author: "Bill Sokhy CHEA",
     position: "Director of TEDxPhnomPenh & Startup Grind Cambodia",
-    avatar: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//d7ff1baf-f3c1-424c-a4fd-549b615677a8.png"
+    avatar: "/lovable/d7ff1baf-f3c1-424c-a4fd-549b615677a8.png"
   }, {
     quote: "Partnering with BookMe+ has streamlined our marathon events, enabling efficient ticket, merch, and bundle sales. The offline check-in functionality ensures smooth bib distribution even in a remote area like Preah Vihear temple, and the instant payout feature truly supports our cash flow needs.",
     author: "SAI",
     position: "Founder of RunWithSai",
-    avatar: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//de8de068-a563-44bb-b9c7-b4cc4361e173.png"
+    avatar: "/lovable/de8de068-a563-44bb-b9c7-b4cc4361e173.png"
   }, {
     quote: "Partnering with BookMe+ has streamlined the registration process for our diverse audience of students, professionals, and government officers at Cambodia's biggest tech expo. The Organizer App's self-check-in feature significantly reduces manpower needs and eliminates long queues.",
     author: "Chantra Be",
     position: "Organizer of Code-C",
-    avatar: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//2e3702da-865c-4a72-9e5c-2833e2169906.png"
+    avatar: "/lovable/2e3702da-865c-4a72-9e5c-2833e2169906.png"
   }];
   const headingRef = useScrollAnimation<HTMLDivElement>('visible');
   const testimonialsRef = useScrollAnimation<HTMLDivElement>('visible', {

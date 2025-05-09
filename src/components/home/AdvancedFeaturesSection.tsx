@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Zap } from 'lucide-react';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
@@ -8,32 +7,32 @@ export default function AdvancedFeaturesSection() {
     {
       title: "Smart Ticketing System",
       description: "Sell, scan, and manage tickets easily.",
-      image: "public/lovable-uploads/d0af7c80-2795-47de-8ee1-6dce86afb941.png"
+      image: "/lovable/d0af7c80-2795-47de-8ee1-6dce86afb941.png"
     }, 
     {
       title: "Real-Time Reporting",
       description: "Track sales, attendees, and engagement.",
-      image: "public/lovable-uploads/df7bee60-cf9d-477b-ad2c-a28a2967f80d.png"
+      image: "/lovable/df7bee60-cf9d-477b-ad2c-a28a2967f80d.png"
     }, 
     {
       title: "BookMeBusiness Self-Setup",
       description: "Self-service dashboard to set up events and manage ticket sales anytime.",
-      image: "public/lovable-uploads/888ed0ee-cd47-4836-bfbc-96da8bf7e4a2.png"
+      image: "/lovable/888ed0ee-cd47-4836-bfbc-96da8bf7e4a2.png"
     }, 
     {
       title: "Multi-Channel Sales",
       description: "Promote across platforms with shareable links.",
-      image: "public/lovable-uploads/9181c984-0193-45db-a6e0-4afaf624a6f4.png"
+      image: "/lovable/9181c984-0193-45db-a6e0-4afaf624a6f4.png"
     },
     {
       title: "On-site Check-in",
       description: "QR scan, attendee badge printing, real-time check-in.",
-      image: "public/lovable-uploads/f7480f30-4097-444e-b0b2-0bd4dcd1990e.png"
+      image: "/lovable/f7480f30-4097-444e-b0b2-0bd4dcd1990e.png"
     },
     {
       title: "After-Sale Support",
       description: "Refund handling, attendee inquiries, and feedback collection.",
-      image: "public/lovable-uploads/9787d030-c318-471a-a841-bb2f7a728db0.png"
+      image: "/lovable/9787d030-c318-471a-a841-bb2f7a728db0.png"
     }
   ];
 
