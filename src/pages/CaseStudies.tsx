@@ -2,6 +2,8 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card";
+
 export default function CaseStudies() {
   const caseStudies = [{
     id: "harmony-wellness",
@@ -48,71 +50,81 @@ export default function CaseStudies() {
   }];
 
   // Split the case studies into two rows
-  const firstRowCases = caseStudies.slice(0, 2); // First 2 for the first row
-  const secondRowCases = caseStudies.slice(2); // Remaining 4 for the second row
+  const featuredCases = caseStudies.slice(0, 2); // First 2 for featured row
+  const standardCases = caseStudies.slice(2); // Remaining 4 for standard row
 
-  return <div className="animate-fade-in">
+  return (
+    <div className="animate-fade-in">
       {/* Hero Section */}
-      <section className="container mx-auto py-[160px] md:py-24 text-center px-0">
-        <h1 className="text-4xl font-bold mb-6 text-center md:text-5xl">Case Studies</h1>
+      <section className="container mx-auto py-[120px] md:py-24 px-4">
+        <h1 className="text-4xl font-bold mb-6 text-center md:text-5xl lg:text-6xl">Case Studies</h1>
         <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto text-center">
           Discover how businesses across different industries have transformed their booking processes with BookMe+.
         </p>
         
-        {/* First Row - 2 Columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 max-w-5xl mx-auto">
-          {firstRowCases.map(study => <div key={study.id} className="glass-card overflow-hidden">
+        {/* Featured Case Studies - 2 Columns */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-7xl mx-auto">
+          {featuredCases.map(study => (
+            <Card key={study.id} className="group overflow-hidden border-0 shadow-lg">
               <div className="relative">
-                <div className={`absolute inset-0 bg-gradient-to-br ${study.color} mix-blend-multiply`}></div>
-                <img src={study.image} alt={study.title} className="w-full h-64 md:h-80 object-cover" />
+                <div className={`absolute inset-0 bg-gradient-to-br ${study.color} mix-blend-multiply opacity-60 group-hover:opacity-80 transition-opacity duration-300`}></div>
+                <img src={study.image} alt={study.title} className="w-full h-72 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
               </div>
-              <div className="p-6 md:p-8 text-center">
-                <div className="text-sm font-medium text-primary mb-2">{study.category}</div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-3">{study.title}</h2>
-                <p className="text-muted-foreground mb-6">{study.description}</p>
-                <Button variant="outline" className="rounded-full group mx-auto">
-                  <Link to={`/case-studies/${study.id}`} className="flex items-center gap-2">
-                    Read Case Study
-                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              <CardContent className="p-8 relative z-10 -mt-24 bg-gradient-to-t from-background via-background/95 to-background/80">
+                <span className="inline-block text-sm font-semibold text-primary mb-3 px-3 py-1 rounded-full bg-primary/10">{study.category}</span>
+                <h2 className="text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors">{study.title}</h2>
+                <p className="text-muted-foreground mb-6 text-base md:text-lg">{study.description}</p>
+                <Button variant="outline" className="rounded-full group/btn relative overflow-hidden border-primary/20 hover:border-primary/80">
+                  <Link to={`/case-studies/${study.id}`} className="flex items-center gap-2 px-2">
+                    <span className="relative z-10">Read Case Study</span>
+                    <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform relative z-10" />
+                    <span className="absolute inset-0 bg-primary/10 transform scale-x-0 group-hover/btn:scale-x-100 origin-left transition-transform"></span>
                   </Link>
                 </Button>
-              </div>
-            </div>)}
+              </CardContent>
+            </Card>
+          ))}
         </div>
         
-        {/* Second Row - 4 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20 max-w-6xl mx-auto">
-          {secondRowCases.map(study => <div key={study.id} className="glass-card overflow-hidden">
+        {/* Standard Case Studies - 4 Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20 max-w-7xl mx-auto">
+          {standardCases.map(study => (
+            <Card key={study.id} className="group overflow-hidden border-0 shadow-md h-full flex flex-col">
               <div className="relative">
-                <div className={`absolute inset-0 bg-gradient-to-br ${study.color} mix-blend-multiply`}></div>
-                <img src={study.image} alt={study.title} className="w-full h-48 object-cover" />
+                <div className={`absolute inset-0 bg-gradient-to-br ${study.color} mix-blend-multiply opacity-60 group-hover:opacity-80 transition-opacity duration-300`}></div>
+                <img src={study.image} alt={study.title} className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
               </div>
-              <div className="p-4 md:p-6 text-center">
-                <div className="text-xs font-medium text-primary mb-1">{study.category}</div>
-                <h2 className="text-lg md:text-xl font-bold mb-2">{study.title}</h2>
-                <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{study.description}</p>
-                <Button variant="outline" size="sm" className="rounded-full group w-full">
-                  <Link to={`/case-studies/${study.id}`} className="flex items-center justify-center gap-2">
-                    Read Case Study
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <span className="inline-block text-xs font-semibold text-primary mb-2 px-2 py-0.5 rounded-full bg-primary/10">{study.category}</span>
+                <h2 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{study.title}</h2>
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-grow">{study.description}</p>
+                <Button variant="outline" size="sm" className="rounded-full w-full mt-auto group/btn relative overflow-hidden border-primary/20 hover:border-primary/80">
+                  <Link to={`/case-studies/${study.id}`} className="flex items-center justify-center gap-2 w-full">
+                    <span className="relative z-10">Read Case Study</span>
+                    <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform relative z-10" />
+                    <span className="absolute inset-0 bg-primary/10 transform scale-x-0 group-hover/btn:scale-x-100 origin-left transition-transform"></span>
                   </Link>
                 </Button>
-              </div>
-            </div>)}
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* CTA Section */}
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto bg-primary/5 p-8 rounded-2xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Want to become our next success story?</h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Join the growing list of businesses that have revolutionized their scheduling with BookMe+.
           </p>
-          <Button size="lg" className="rounded-full mx-auto">
+          <Button size="lg" className="rounded-full mx-auto bg-primary hover:bg-primary/90 transition-colors">
             <Link to="/contact" className="flex items-center gap-2">
               Contact Us Today <ArrowRight size={16} />
             </Link>
           </Button>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 }
