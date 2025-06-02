@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 
@@ -11,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <img 
-                src="https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//bmplus+logo.png" 
+                src="https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/bmplus%2Blogo.png" 
                 alt="BookMe+ Logo" 
                 className="h-8 mb-2" 
               />
