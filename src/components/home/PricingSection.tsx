@@ -1,4 +1,3 @@
-
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from 'react';
@@ -30,7 +29,7 @@ export default function PricingSection() {
   const plansRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
   
   return (
-    <section className="container mx-auto py-20 px-4 bg-inherit">
+    <section className="container mx-auto py-20 px-4 bg-inherit hidden">
       <div ref={headingRef} className="text-center mb-16 fade-up">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">BOOKME+ PRICING PLANS</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
