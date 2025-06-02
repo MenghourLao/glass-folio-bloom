@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Zap } from "lucide-react";
@@ -43,7 +42,7 @@ export default function Header() {
         }`}>
         <Link to="/" className="flex items-center gap-2">
           <img 
-            src="https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//bmplus+logo.png" 
+            src="https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/bmplus%2Blogo.png" 
             alt="BookMe+ Logo" 
             className="h-7 md:h-8" 
           />
