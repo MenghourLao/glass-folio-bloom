@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -8,34 +7,34 @@ export default function EventBannerSection() {
   const eventCategories = {
     concert: [
       {
-        title: "Summer Music Festival",
-        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/concert.jpg?raw=true",
+        title: "The Q Solo Concert 2",
+        image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/the%20q%20solo%20concert%202.jpg",
         location: "Central Park",
         date: "July 15, 2024"
       },
       {
-        title: "Jazz Night Live",
-        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=450&fit=crop",
+        title: "The Q Solo Concert",
+        image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/the%20q%20solo%20concert.jpg",
         location: "Blue Note Club",
         date: "June 20, 2024"
       },
       {
-        title: "Rock Concert Series",
-        image: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800&h=450&fit=crop",
+        title: "Twilight Concert",
+        image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/twilight.jpg",
         location: "Madison Square",
         date: "August 5, 2024"
       }
     ],
     sport: [
       {
-        title: "Championship Finals",
-        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/sport.jpg?raw=true",
+        title: "Kep Sea Mountain",
+        image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/Kep%20Sea%20Mountain.jpg",
         location: "Sports Arena",
         date: "September 10, 2024"
       },
       {
-        title: "Marathon Challenge",
-        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=450&fit=crop",
+        title: "Dhamma Century Cup",
+        image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/dhamma%20century%20cub.jpg",
         location: "City Center",
         date: "October 1, 2024"
       },
