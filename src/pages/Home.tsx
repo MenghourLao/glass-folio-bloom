@@ -4,6 +4,7 @@ import TestimonialSection from "@/components/home/TestimonialSection";
 import OrganizersSection from "@/components/home/OrganizersSection";
 import AdvancedFeaturesSection from "@/components/home/AdvancedFeaturesSection";
 import EventTypesSection from "@/components/home/EventTypesSection";
+import EventBannerSection from "@/components/home/EventBannerSection";
 import WorkflowSection from "@/components/home/WorkflowSection";
 import PricingSection from "@/components/home/PricingSection";
 import FaqSection from "@/components/home/FaqSection";
@@ -19,6 +20,7 @@ export default function Home() {
       
       <AdvancedFeaturesSection />
       <EventTypesSection />
+      <EventBannerSection />
       <WorkflowSection />
       <TestimonialSection />
       <PricingSection />
