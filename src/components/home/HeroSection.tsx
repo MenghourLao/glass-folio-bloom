@@ -1,3 +1,4 @@
+
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -16,7 +17,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative h-screen px-4 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center mt-0 pt-16"
+      className="relative h-screen px-2 md:px-4 lg:px-6 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center mt-0 pt-16"
       style={{
         backgroundImage: `url('https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//hero_img.png')`,
         backgroundSize: "cover",

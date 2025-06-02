@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Zap } from "lucide-react";
@@ -35,7 +36,7 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 animate-fade-in ${
       scrolled ? "py-3" : "py-6"
     }`}>
-      <div className={`container mx-auto px-4 flex justify-between items-center transition-all duration-300 ${
+      <div className={`container mx-auto px-2 md:px-4 lg:px-6 flex justify-between items-center transition-all duration-300 ${
           scrolled 
             ? "glass w-full rounded-xl py-3 px-6"
             : ""
@@ -108,7 +109,7 @@ export default function Header() {
 
       {/* Mobile Navigation Menu with Glassmorphism */}
       {isNavOpen && (
-        <nav className={`md:hidden absolute top-full left-0 right-0 py-4 px-6 flex flex-col space-y-4 animate-fade-in backdrop-blur-xl ${
+        <nav className={`md:hidden absolute top-full left-0 right-0 py-4 px-4 flex flex-col space-y-4 animate-fade-in backdrop-blur-xl ${
           scrolled 
             ? "glass bg-black/70 dark:bg-black/80 border border-white/10"
             : "glass border-t border-white/10"
