@@ -251,6 +251,7 @@ export default function EventBannerSection() {
   const contentRef = useScrollAnimation<HTMLDivElement>('visible', {
     threshold: 0.1
   });
+
   return (
     <section className="container mx-auto py-12 md:py-20 px-4 bg-inherit">
       <div ref={headingRef} className="text-center mb-12 md:mb-16 fade-up">
@@ -260,14 +261,26 @@ export default function EventBannerSection() {
 
       <div ref={contentRef} className="fade-up">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          {/* Mobile and tablet responsive tabs */}
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mb-6 md:mb-8 h-auto p-1">
-            <TabsTrigger value="concert" className="text-xs md:text-sm px-2 py-2">Concert</TabsTrigger>
-            <TabsTrigger value="sport" className="text-xs md:text-sm px-2 py-2">Sport</TabsTrigger>
-            <TabsTrigger value="workshop" className="text-xs md:text-sm px-2 py-2 col-span-2 md:col-span-1">Workshop & Meetup</TabsTrigger>
-            <TabsTrigger value="arts" className="text-xs md:text-sm px-2 py-2">Arts & Exhibition</TabsTrigger>
-            <TabsTrigger value="fundraising" className="text-xs md:text-sm px-2 py-2 col-span-2 md:col-span-1 lg:col-span-1">Fundraising Events</TabsTrigger>
-          </TabsList>
+          {/* Improved responsive tabs layout */}
+          <div className="mb-6 md:mb-8">
+            <TabsList className="inline-flex flex-wrap justify-center w-full h-auto p-1 gap-1">
+              <TabsTrigger value="concert" className="text-xs md:text-sm px-3 py-2 whitespace-nowrap">
+                Concert
+              </TabsTrigger>
+              <TabsTrigger value="sport" className="text-xs md:text-sm px-3 py-2 whitespace-nowrap">
+                Sport
+              </TabsTrigger>
+              <TabsTrigger value="workshop" className="text-xs md:text-sm px-3 py-2 whitespace-nowrap">
+                Workshop & Meetup
+              </TabsTrigger>
+              <TabsTrigger value="arts" className="text-xs md:text-sm px-3 py-2 whitespace-nowrap">
+                Arts & Exhibition
+              </TabsTrigger>
+              <TabsTrigger value="fundraising" className="text-xs md:text-sm px-3 py-2 whitespace-nowrap">
+                Fundraising Events
+              </TabsTrigger>
+            </TabsList>
+          </div>
 
           {Object.entries(eventCategories).map(([category, events]) => (
             <TabsContent key={category} value={category}>
