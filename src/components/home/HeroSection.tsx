@@ -24,8 +24,11 @@ export default function HeroSection() {
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+      {/* Animated gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/60 via-black/40 to-pink-900/60 bg-[length:400%_400%] animate-gradient"></div>
+      
+      {/* Static overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/20 backdrop-blur-[0.5px]"></div>
       
       {/* Animated dots/particles */}
       <div className="absolute inset-0 overflow-hidden">
