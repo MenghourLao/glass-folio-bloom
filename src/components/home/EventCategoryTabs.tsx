@@ -9,8 +9,8 @@ interface EventCategoryTabsProps {
 
 export default function EventCategoryTabs({ activeTab }: EventCategoryTabsProps) {
   return (
-    <div className="mb-6 md:mb-8">
-      <TabsList className="inline-flex flex-wrap justify-center w-full h-auto p-1 gap-1">
+    <div className="mb-6 md:mb-8 flex justify-center">
+      <TabsList className="inline-flex flex-wrap h-auto p-1 gap-1">
         <TabsTrigger value="concert" className="text-xs md:text-sm px-3 py-2 whitespace-nowrap">
           Concert
         </TabsTrigger>
