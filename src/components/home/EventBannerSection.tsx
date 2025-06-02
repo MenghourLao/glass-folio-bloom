@@ -206,42 +206,96 @@ export default function EventBannerSection() {
     ],
     arts: [
       {
-        title: "Modern Art Exhibition",
-        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Arts%20&%20Exhibitions.jpg?raw=true",
-        location: "Art Gallery",
-        date: "June 30, 2024"
+        title: "BarCamp BTB 2024",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/barcamp%20btb%202024.jpg?raw=true",
+        location: "Tech Hub",
+        date: "March 15, 2024"
       },
       {
-        title: "Photography Showcase",
-        image: "https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=800&h=450&fit=crop",
+        title: "Bun Phum MDK",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/bun%20phum%20mdk.jpg?raw=true",
         location: "Cultural Center",
-        date: "July 18, 2024"
+        date: "April 12, 2024"
       },
       {
-        title: "Sculpture Garden Tour",
-        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=450&fit=crop",
-        location: "Museum of Arts",
-        date: "August 22, 2024"
+        title: "Bun Phum Mean Jern",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/bun%20phum%20mean%20jern.jpg?raw=true",
+        location: "Traditional Venue",
+        date: "April 18, 2024"
+      },
+      {
+        title: "CAMEX24",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/camex24.jpg?raw=true",
+        location: "Exhibition Center",
+        date: "May 20, 2024"
+      },
+      {
+        title: "Celebrating Cambodia",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/celebrating%20cambodia.jpg?raw=true",
+        location: "National Museum",
+        date: "June 10, 2024"
+      },
+      {
+        title: "Code C",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/code%20c.jpg?raw=true",
+        location: "Innovation Hub",
+        date: "June 25, 2024"
+      },
+      {
+        title: "Coastal Festival",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/constal%20festival.jpg?raw=true",
+        location: "Coastal Park",
+        date: "July 8, 2024"
+      },
+      {
+        title: "Kampung Film Festival",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/kampung%20film%20festival.jpg?raw=true",
+        location: "Cinema Complex",
+        date: "August 15, 2024"
+      },
+      {
+        title: "Khmer Heritage",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/khmer.jpg?raw=true",
+        location: "Heritage Center",
+        date: "September 5, 2024"
+      },
+      {
+        title: "Niyey Arts Show",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/niyey.jpg?raw=true",
+        location: "Art Gallery",
+        date: "September 22, 2024"
+      },
+      {
+        title: "Phnom Penh Plant Exhibition",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/phnom%20penh%20plant.jpg?raw=true",
+        location: "Botanical Garden",
+        date: "October 12, 2024"
       }
     ],
     fundraising: [
       {
-        title: "Charity Gala Night",
-        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Fundraising%20Events.jpg?raw=true",
-        location: "Grand Ballroom",
-        date: "September 25, 2024"
+        title: "Fun Run for Charity",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/fun%20run.jpg?raw=true",
+        location: "City Park",
+        date: "May 15, 2024"
       },
       {
-        title: "Community Support Drive",
-        image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=450&fit=crop",
+        title: "Run by Heart First",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/run%20by%20heart%20first.jpg?raw=true",
         location: "Community Center",
-        date: "October 15, 2024"
+        date: "June 8, 2024"
       },
       {
-        title: "Educational Fund Event",
-        image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=450&fit=crop",
-        location: "School Auditorium",
-        date: "November 8, 2024"
+        title: "ISF Charity Event",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/isf%20charity.jpg?raw=true",
+        location: "Convention Hall",
+        date: "July 20, 2024"
+      },
+      {
+        title: "Run with SAI Virtual Run",
+        image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/runwithsai%20virtual%20run.jpg?raw=true",
+        location: "Virtual Event",
+        date: "August 10, 2024"
       }
     ]
   };
