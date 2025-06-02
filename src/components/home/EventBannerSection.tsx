@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
+
 export default function EventBannerSection() {
   const eventCategories = {
     concert: [{
@@ -250,38 +251,50 @@ export default function EventBannerSection() {
   const contentRef = useScrollAnimation<HTMLDivElement>('visible', {
     threshold: 0.1
   });
-  return <section className="container mx-auto py-20 px-4 bg-inherit">
-      <div ref={headingRef} className="text-center mb-16 fade-up">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">FEATURED EVENTS</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">Relive iconic moments and get ready for exciting events coming your way.</p>
+  return (
+    <section className="container mx-auto py-12 md:py-20 px-4 bg-inherit">
+      <div ref={headingRef} className="text-center mb-12 md:mb-16 fade-up">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">FEATURED EVENTS</h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">Relive iconic moments and get ready for exciting events coming your way.</p>
       </div>
 
       <div ref={contentRef} className="fade-up">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-8">
-            <TabsTrigger value="concert">Concert</TabsTrigger>
-            <TabsTrigger value="sport">Sport</TabsTrigger>
-            <TabsTrigger value="workshop">Workshop & Meetup</TabsTrigger>
-            <TabsTrigger value="arts">Arts & Exhibition</TabsTrigger>
-            <TabsTrigger value="fundraising">Fundraising Events</TabsTrigger>
+          {/* Mobile and tablet responsive tabs */}
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mb-6 md:mb-8 h-auto p-1">
+            <TabsTrigger value="concert" className="text-xs md:text-sm px-2 py-2">Concert</TabsTrigger>
+            <TabsTrigger value="sport" className="text-xs md:text-sm px-2 py-2">Sport</TabsTrigger>
+            <TabsTrigger value="workshop" className="text-xs md:text-sm px-2 py-2 col-span-2 md:col-span-1">Workshop & Meetup</TabsTrigger>
+            <TabsTrigger value="arts" className="text-xs md:text-sm px-2 py-2">Arts & Exhibition</TabsTrigger>
+            <TabsTrigger value="fundraising" className="text-xs md:text-sm px-2 py-2 col-span-2 md:col-span-1 lg:col-span-1">Fundraising Events</TabsTrigger>
           </TabsList>
 
-          {Object.entries(eventCategories).map(([category, events]) => <TabsContent key={category} value={category}>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {events.map((event, index) => <div key={index} className="glass-card overflow-hidden rounded-2xl group hover:border-primary/50 transition-all cursor-pointer">
+          {Object.entries(eventCategories).map(([category, events]) => (
+            <TabsContent key={category} value={category}>
+              {/* Responsive grid: 1 column on mobile, 2 on tablet, 3 on desktop */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                {events.map((event, index) => (
+                  <div key={index} className="glass-card overflow-hidden rounded-2xl group hover:border-primary/50 transition-all cursor-pointer">
                     <AspectRatio ratio={16 / 9}>
-                      <img src={event.image} alt={event.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                      <img 
+                        src={event.image} 
+                        alt={event.title} 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                        <h3 className="text-xl font-bold mb-2">{event.title}</h3>
-                        <p className="text-sm opacity-90 mb-1">{event.location}</p>
-                        <p className="text-sm opacity-75">{event.date}</p>
+                      <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
+                        <h3 className="text-lg md:text-xl font-bold mb-2">{event.title}</h3>
+                        <p className="text-xs md:text-sm opacity-90 mb-1">{event.location}</p>
+                        <p className="text-xs md:text-sm opacity-75">{event.date}</p>
                       </div>
                     </AspectRatio>
-                  </div>)}
+                  </div>
+                ))}
               </div>
-            </TabsContent>)}
+            </TabsContent>
+          ))}
         </Tabs>
       </div>
-    </section>;
+    </section>
+  );
 }
