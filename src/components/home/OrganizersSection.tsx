@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -12,28 +11,28 @@ type PartnerLogoProps = {
 
 const partnerLogos: PartnerLogoProps[] = [{
   name: "TEDx",
-  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//ted_logo_copy.png",
+  logo: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/ted_logo.png?raw=true",
   url: "#tedx"
 }, {
   name: "RUN SAI",
-  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//rws_logo_copy.png",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/rws_logo.png",
   url: "#runsai"
 }, {
-  name: "CODE-C",
-  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//codec_logo.png",
-  url: "#codec"
-}, {
   name: "The Platform",
-  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//platform_logo_copy.png",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/platform_logo.png",
   url: "#platform"
 }, {
   name: "Sabay",
-  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//sabay_logo_copy.png",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/sabay_logo.png",
   url: "#sabay"
 }, {
   name: "Celebrating Cambodia",
-  logo: "https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//celebrating_cambo_copy.png",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/celebrating_logo.png",
   url: "#celebrating-cambodia"
+}, {
+  name: "CODE-C",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/codec_logo.png",
+  url: "#codec"
 }];
 
 export default function OrganizersSection() {
