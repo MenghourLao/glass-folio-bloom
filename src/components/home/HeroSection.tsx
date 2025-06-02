@@ -29,8 +29,23 @@ export default function HeroSection() {
       {/* Static overlay for better text readability */}
       <div className="absolute inset-0 bg-black/20 backdrop-blur-[0.5px]"></div>
       
-      {/* Animated dots/particles */}
+      {/* Animated gradient motion graphics */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Primary moving gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/30 to-transparent bg-[length:200%_100%] animate-gradient-x opacity-70"></div>
+        
+        {/* Secondary diagonal gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-transparent to-pink-500/20 bg-[length:300%_300%] animate-gradient-diagonal"></div>
+        
+        {/* Tertiary radial gradient */}
+        <div className="absolute inset-0 bg-radial-gradient from-cyan-400/10 via-transparent to-purple-600/10 bg-[length:400%_400%] animate-gradient-radial"></div>
+        
+        {/* Floating gradient orbs */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-pink-500/15 to-cyan-400/15 rounded-full blur-3xl animate-float-reverse"></div>
+        <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-gradient-to-br from-yellow-400/10 to-orange-500/10 rounded-full blur-2xl animate-float-diagonal"></div>
+        
+        {/* Original animated dots/particles */}
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-pulse-slow"></div>
         <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary/70 rounded-full animate-pulse-slow" style={{ animationDelay: "0.5s" }}></div>
         <div className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-primary/50 rounded-full animate-pulse-slow" style={{ animationDelay: "0.8s" }}></div>
