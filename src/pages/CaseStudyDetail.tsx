@@ -31,30 +31,30 @@ const caseStudiesData: CaseStudy[] = [
 
       ## Enabling Scalable Race Management for Hybrid Running Events (2023–2025)
 
-      # 📊 Overview
+      # Overview
 
       **Client**: Run With Sai
       **Project Duration**: August 13, 2023 – September 14, 2024
       **Event Types**: Road Runs, Trail Runs, Virtual Challenges
       **Scope**: Ticketing, Check-in, Registration, Payment Integration, Crew Support
 
-      # 🔗 Objective
+      # Objective
 
       To deliver a seamless, scalable solution for managing event registration, payments, ticketing, and check-in for **8 multi-format running events** across Cambodia, while supporting both in-person and virtual participants.
 
-      # 🚀 What We Delivered
+      # What We Delivered
 
       ## Platform Features & Customization
 
-      - **Direct ABA Pay Integration**: Secure, fast participant payments.
-      - **e-BIB Generation**: Auto-generated race bibs tailored to race distance.
-      - **Telegram Integration**: Real-time alerts for each booking.
-      - **Ticket Sharing**: Native sharing via Messenger, Telegram, and more.
-      - **Offline Check-in**: Operator Mode for seamless on-site validation.
-      - **QR Code Privacy**: Hide/show option for safe social media sharing.
-      - **Downloadable Tickets**: Easy local storage and offline access.
+      - Direct ABA Pay Integration: Secure, fast participant payments.
+      - e-BIB Generation: Auto-generated race bibs tailored to race distance.
+      - Telegram Integration: Real-time alerts for each booking.
+      - Ticket Sharing: Native sharing via Messenger, Telegram, and more.
+      - Offline Check-in: Operator Mode for seamless on-site validation.
+      - QR Code Privacy: Hide/show option for safe social media sharing.
+      - Downloadable Tickets: Easy local storage and offline access.
 
-      # 📊 Results
+      # Results
 
       ## Ticket Sales Summary
 
@@ -68,29 +68,29 @@ const caseStudiesData: CaseStudy[] = [
       | Virtual & 2025 events | Pending |
       | **Total** | **1,944+** |
 
-      # ⚙️ Operational Highlights
+      # Operational Highlights
 
       ## Check-In Process
 
-      - **Pre-check Validation**: Ticket types verified before entry.
-      - **Offline Scanning**: QR codes scanned without internet dependency.
-      - **BIB Distribution**: Verified runners received bibs + merchandise.
+      - Pre-check Validation: Ticket types verified before entry.
+      - Offline Scanning: QR codes scanned without internet dependency.
+      - BIB Distribution: Verified runners received bibs + merchandise.
 
       ## Crew Enablement
 
       - Hands-on orientation sessions.
       - Clear SOPs for scanning, verification, and troubleshooting.
 
-      # 🔍 Challenges & Lessons Learned
+      # Challenges & Lessons Learned
 
       | Category | Issue | Solution/Recommendation |
       |----------|-------|------------------------|
-      | **Ticket UI** | Early launch UI caused confusion | Improved flow & instructions at launch |
+      | Ticket UI | Early launch UI caused confusion | Improved flow & instructions at launch |
       | **Overbooking** | Real-time inventory sync issues | Introduced better API throttling & queuing |
       | **Customer Support** | Underprepared team for large-scale complaints | Proposed a dedicated support team |
       | **Pre-Event Marketing** | Lack of teaser campaigns & audience warm-up | Suggested phased content strategy with real-time updates |
 
-      # 📈 Recommendations for Future Organizers
+      # Recommendations for Future Organizers
 
       ## 1. Scalability & Payment Solutions
       - Integrate dynamic request thresholds.
@@ -107,7 +107,7 @@ const caseStudiesData: CaseStudy[] = [
       - Pre-event content: teasers, reels, behind-the-scenes.
       - Crisis communication templates for live ticketing events.
 
-      # ✅ Outcome & Conclusion
+      # Outcome & Conclusion
 
       The Run With Sai project showcases how **BookMe+ empowers organizers** to scale across complex, multi-format event series. Despite facing real-time system demands and cross-functional challenges, our platform:
 
@@ -134,24 +134,24 @@ const caseStudiesData: CaseStudy[] = [
 
       # 📊 Overview
 
-      **Client**: Phalitakam Raksamey Hang Meas Video
-      **Event**: The Q – Rise of The Queen – Aok Sokunkanha Solo Concert
-      **Concert Date**: September 14, 2024
-      **Check-in Time**: 9:00 AM to 8:00 PM
-      **Location**: Koh Pich Theater, Phnom Penh
-      **Project Duration**: August 13 to September 14, 2024
+      Client: Phalitakam Raksamey Hang Meas Video
+      Event: The Q – Rise of The Queen – Aok Sokunkanha Solo Concert
+      Concert Date: September 14, 2024
+      Check-in Time: 9:00 AM to 8:00 PM
+      Location: Koh Pich Theater, Phnom Penh
+      Project Duration: August 13 to September 14, 2024
 
       # 🔗 Project Scope & Feature Delivery
 
       ## Customized Platform Features:
 
-      - **Direct ABA Pay Integration**: Seamless payments to Hang Meas Bank.
-      - **Telegram Mini-App**: Ticket purchases enabled via @hang_meas_mobile_bot.
-      - **Seat-Based Check-in Passes**: Included seat number, name, and phone for identity verification.
-      - **Ticket Sharing**: Native support for Telegram, Messenger, and more.
-      - **Offline Ticket Downloads**: For easy local access and printing.
-      - **QR Code Privacy**: Show/hide option for social media sharing.
-      - **Seat Mapping System**: Linked to the Koh Pich Hall layout for ease of navigation.
+      - Direct ABA Pay Integration: Seamless payments to Hang Meas Bank.
+      - Telegram Mini-App: Ticket purchases enabled via @hang_meas_mobile_bot.
+      - Seat-Based Check-in Passes: Included seat number, name, and phone for identity verification.
+      - Ticket Sharing: Native support for Telegram, Messenger, and more.
+      - Offline Ticket Downloads: For easy local access and printing.
+      - QR Code Privacy: Show/hide option for social media sharing.
+      - Seat Mapping System: Linked to the Koh Pich Hall layout for ease of navigation.
 
       ## Ticket Sales Breakdown:
 
@@ -166,7 +166,7 @@ const caseStudiesData: CaseStudy[] = [
       - iOS Users: 78%
       - Top Countries: Cambodia, USA, Thailand, Australia, South Korea
 
-      # 📊 Ticket Summary
+      # Ticket Summary
 
       | Ticket Type | Sold | Checked-In |
       |-------------|------|------------|
@@ -177,29 +177,29 @@ const caseStudiesData: CaseStudy[] = [
       | Standing | 581 | 573 |
       | **Total** | **3539** | **3496** |
 
-      # ⚠️ Ticket Sale Challenges
+      # Ticket Sale Challenges
 
       ## 1. High-Traffic Load & Queueing
 
-      - **Issue**: 2 million+ session attempts caused queue and blank screens.
-      - **Cause**: Server scaled 4 to 20 instances, but payment latency (5 mins) caused blockage.
-      - **Solution**: Temporary fixes applied; some delays still occurred.
+      - Issue: 2 million+ session attempts caused queue and blank screens.
+      - Cause: Server scaled 4 to 20 instances, but payment latency (5 mins) caused blockage.
+      - Solution: Temporary fixes applied; some delays still occurred.
 
       ## 2. Overbooking & Payment Mismatches
 
-      - **Problem**: Users paid but didn't receive tickets.
-      - **Cause**: Sync issues between payment & ticket inventory.
-      - **Solution**: Manual refunds totaling $33,390 across 235 transactions.
+      - Problem: Users paid but didn't receive tickets.
+      - Cause: Sync issues between payment & ticket inventory.
+      - **Solution: Manual refunds totaling $33,390 across 235 transactions.
 
-      # 🏛 Check-in System & Fraud Prevention
+      # Check-in System & Fraud Prevention
 
       ## Crew Preparation:
 
       - ASK Orientation held on Sep 13, 2024 at Raintree.
       - Training on:
-        - **Offline QR Code Scanning** (Operator Mode)
-        - **Pre-check Validations** (phone #, seat color)
-        - **Wristband Distribution** handover to Heng Meas crew
+        - Offline QR Code Scanning (Operator Mode)
+        - Pre-check Validations (phone #, seat color)
+        - Wristband Distribution handover to Heng Meas crew
 
       ## Site Layout:
 
@@ -211,7 +211,7 @@ const caseStudiesData: CaseStudy[] = [
 
       - Staff trained to smile, assist, and remain calm under pressure
 
-      # 🔐 Manual Ticket Verification
+      # Manual Ticket Verification
 
       - **New Ticket Design**: Updated artwork a day before to avoid replication.
       - **Phone Match Rule**: Last 3 digits used to verify identity.
