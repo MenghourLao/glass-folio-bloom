@@ -105,17 +105,17 @@ export const eventCategories = {
   }, {
     title: "UX Fest",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/ux%20fest.jpg?raw=true",
-    location: "Design Studio",
+    location: "Factory Phnom Penh",
     date: "February 22, 2025"
   }, {
-    title: "The State of Graphic Design",
+    title: "The State of Graphic Design in Cambodia : A Global Perspective",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/the%20state%20of%20graphic%20design.jpg?raw=true",
-    location: "Creative Space",
+    location: "Raintree Cambodia",
     date: "March 15, 2025"
   }, {
     title: "Khmer Coder",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/khmer%20coder.jpg?raw=true",
-    location: "Tech Center",
+    location: "Siem Reap",
     date: "April 10, 2025"
   }, {
     title: "Cambodia Blockchain Summit",
