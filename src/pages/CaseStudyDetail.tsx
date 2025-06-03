@@ -1,8 +1,8 @@
-
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 interface CaseStudy {
   id: string;
@@ -16,6 +16,107 @@ interface CaseStudy {
 
 // Mock database of case studies
 const caseStudiesData: CaseStudy[] = [
+  {
+    id: "run-with-sai",
+    title: "Run With Sai",
+    category: "Sports & Events",
+    description: "Enabling scalable race management for hybrid running events across Cambodia with 1,944+ tickets sold across 8 multi-format events.",
+    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/runwithsai_case_study.jpg?raw=true",
+    color: "from-orange-500/20 to-red-500/20",
+    content: `
+      # Case Study: BookMe+ x Run With Sai
+
+      ## Enabling Scalable Race Management for Hybrid Running Events (2023–2025)
+
+      # 📊 Overview
+
+      **Client**: Run With Sai
+      **Project Duration**: August 13, 2023 – September 14, 2024
+      **Event Types**: Road Runs, Trail Runs, Virtual Challenges
+      **Scope**: Ticketing, Check-in, Registration, Payment Integration, Crew Support
+
+      # 🔗 Objective
+
+      To deliver a seamless, scalable solution for managing event registration, payments, ticketing, and check-in for **8 multi-format running events** across Cambodia, while supporting both in-person and virtual participants.
+
+      # 🚀 What We Delivered
+
+      ## Platform Features & Customization
+
+      - **Direct ABA Pay Integration**: Secure, fast participant payments.
+      - **e-BIB Generation**: Auto-generated race bibs tailored to race distance.
+      - **Telegram Integration**: Real-time alerts for each booking.
+      - **Ticket Sharing**: Native sharing via Messenger, Telegram, and more.
+      - **Offline Check-in**: Operator Mode for seamless on-site validation.
+      - **QR Code Privacy**: Hide/show option for safe social media sharing.
+      - **Downloadable Tickets**: Easy local storage and offline access.
+
+      # 📊 Results
+
+      ## Ticket Sales Summary
+
+      | Event | Tickets Sold |
+      |-------|-------------|
+      | Kep Sea Mountain Run | 379 |
+      | Preah Vihear Temple Run 2024 | 497 |
+      | Koh Ker Heritage Trail | 717 |
+      | Koh Kong Independence Marathon | 150 |
+      | Run By Heart Actual Run 2nd Ed. | 201 |
+      | Virtual & 2025 events | Pending |
+      | **Total** | **1,944+** |
+
+      # ⚙️ Operational Highlights
+
+      ## Check-In Process
+
+      - **Pre-check Validation**: Ticket types verified before entry.
+      - **Offline Scanning**: QR codes scanned without internet dependency.
+      - **BIB Distribution**: Verified runners received bibs + merchandise.
+
+      ## Crew Enablement
+
+      - Hands-on orientation sessions.
+      - Clear SOPs for scanning, verification, and troubleshooting.
+
+      # 🔍 Challenges & Lessons Learned
+
+      | Category | Issue | Solution/Recommendation |
+      |----------|-------|------------------------|
+      | **Ticket UI** | Early launch UI caused confusion | Improved flow & instructions at launch |
+      | **Overbooking** | Real-time inventory sync issues | Introduced better API throttling & queuing |
+      | **Customer Support** | Underprepared team for large-scale complaints | Proposed a dedicated support team |
+      | **Pre-Event Marketing** | Lack of teaser campaigns & audience warm-up | Suggested phased content strategy with real-time updates |
+
+      # 📈 Recommendations for Future Organizers
+
+      ## 1. Scalability & Payment Solutions
+      - Integrate dynamic request thresholds.
+      - Add a **standby fintech team** during high-demand launches.
+
+      ## 2. Fraud & Ticket Transfer
+      - Launch a **digital transfer tool** to avoid manual re-verification.
+
+      ## 3. Peak Load UI/UX Enhancements
+      - Real-time alerts for system load status.
+      - Virtual queue system + auto-refresh for live ticket availability.
+
+      ## 4. Marketing Readiness
+      - Pre-event content: teasers, reels, behind-the-scenes.
+      - Crisis communication templates for live ticketing events.
+
+      # ✅ Outcome & Conclusion
+
+      The Run With Sai project showcases how **BookMe+ empowers organizers** to scale across complex, multi-format event series. Despite facing real-time system demands and cross-functional challenges, our platform:
+
+      - Delivered secure ticketing for nearly 2,000+ runners
+      - Enabled hybrid check-in (offline & virtual)
+      - Streamlined BIB and merchandise handovers
+      - Reduced manual errors with smart automation
+      - Positioned BookMe+ as a trusted long-term race partner
+
+      **Result**: A successful multi-year collaboration with enhanced trust, repeat events, and stronger infrastructure for future growth.
+    `
+  },
   {
     id: "harmony-wellness",
     title: "Harmony Wellness Center",
@@ -93,7 +194,6 @@ const caseStudiesData: CaseStudy[] = [
       The agency was able to expand its international client base with confidence, knowing their scheduling system could handle the complexity.
     `
   },
-  // Add more case studies with detailed content as needed
   {
     id: "elite-financial",
     title: "Elite Financial Advisors",
@@ -157,6 +257,99 @@ export default function CaseStudyDetail() {
     );
   }
 
+  const renderContent = (content: string) => {
+    const lines = content.split('\n').filter(line => line.trim());
+    const elements: JSX.Element[] = [];
+    let currentTable: string[][] = [];
+    let inTable = false;
+
+    lines.forEach((line, idx) => {
+      const trimmedLine = line.trim();
+      
+      if (trimmedLine.startsWith('|') && trimmedLine.endsWith('|')) {
+        // Table row
+        if (!inTable) {
+          inTable = true;
+          currentTable = [];
+        }
+        const cells = trimmedLine.split('|').slice(1, -1).map(cell => cell.trim());
+        currentTable.push(cells);
+      } else {
+        // If we were in a table, render it now
+        if (inTable && currentTable.length > 0) {
+          const headers = currentTable[0];
+          const rows = currentTable.slice(2); // Skip header and separator row
+          
+          elements.push(
+            <Table key={`table-${idx}`} className="my-6">
+              <TableHeader>
+                <TableRow>
+                  {headers.map((header, headerIdx) => (
+                    <TableHead key={headerIdx} className="font-semibold">{header}</TableHead>
+                  ))}
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {rows.map((row, rowIdx) => (
+                  <TableRow key={rowIdx}>
+                    {row.map((cell, cellIdx) => (
+                      <TableCell key={cellIdx}>{cell}</TableCell>
+                    ))}
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          );
+          
+          currentTable = [];
+          inTable = false;
+        }
+
+        // Regular content
+        if (trimmedLine.startsWith('# ')) {
+          elements.push(<h2 key={idx} className="text-2xl font-bold mt-8 mb-4">{trimmedLine.replace('# ', '')}</h2>);
+        } else if (trimmedLine.startsWith('## ')) {
+          elements.push(<h3 key={idx} className="text-xl font-semibold mt-6 mb-3">{trimmedLine.replace('## ', '')}</h3>);
+        } else if (trimmedLine.startsWith('- ')) {
+          elements.push(<li key={idx} className="ml-6 mb-2 list-disc">{trimmedLine.replace('- ', '')}</li>);
+        } else if (trimmedLine.startsWith('**') && trimmedLine.endsWith('**')) {
+          elements.push(<p key={idx} className="mb-3 font-semibold">{trimmedLine.replace(/\*\*/g, '')}</p>);
+        } else if (trimmedLine) {
+          elements.push(<p key={idx} className="mb-4">{trimmedLine}</p>);
+        }
+      }
+    });
+
+    // Handle any remaining table
+    if (inTable && currentTable.length > 0) {
+      const headers = currentTable[0];
+      const rows = currentTable.slice(2);
+      
+      elements.push(
+        <Table key="final-table" className="my-6">
+          <TableHeader>
+            <TableRow>
+              {headers.map((header, headerIdx) => (
+                <TableHead key={headerIdx} className="font-semibold">{header}</TableHead>
+              ))}
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {rows.map((row, rowIdx) => (
+              <TableRow key={rowIdx}>
+                {row.map((cell, cellIdx) => (
+                  <TableCell key={cellIdx}>{cell}</TableCell>
+                ))}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      );
+    }
+
+    return elements;
+  };
+
   return (
     <div className="animate-fade-in">
       {/* Hero Section */}
@@ -186,16 +379,7 @@ export default function CaseStudyDetail() {
           </Button>
 
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            {caseStudy.content?.split('\n').map((paragraph, idx) => {
-              if (paragraph.trim().startsWith('# ')) {
-                return <h2 key={idx} className="text-2xl font-bold mt-8 mb-4">{paragraph.replace('# ', '')}</h2>
-              } else if (paragraph.trim().startsWith('- ')) {
-                return <li key={idx} className="ml-6 mb-2">{paragraph.replace('- ', '')}</li>
-              } else if (paragraph.trim()) {
-                return <p key={idx} className="mb-4">{paragraph}</p>
-              }
-              return null;
-            })}
+            {caseStudy.content && renderContent(caseStudy.content)}
           </div>
 
           <div className="mt-12 pt-8 border-t">
