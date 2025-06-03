@@ -3,7 +3,7 @@ export const eventCategories = {
   concert: [{
     title: "The Q - Rise of The Queen - Aok SokunKanha",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/the%20q%20solo%20concert%202.jpg",
-    location: "Koh Pich Hill",
+    location: "Koh Pich Hall",
     date: "July 15, 2024"
   }, {
     title: "The Q -  Rise of The Queen - AOK Sokunkanha Solo Tour Concert",
@@ -13,33 +13,33 @@ export const eventCategories = {
   }, {
     title: "PICH SOLIKAH Twilight The First Concert 2025",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/twilight.jpg",
-    location: "ÆON Mall Mean Chey",
+    location: "AEON Mall Mean Chey",
     date: "August 5, 2024"
   }],
   sport: [{
-    title: "Kep Sea Mountain",
+    title: "Kep Sea-Mountain Run",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/Kep%20Sea%20Mountain.jpg",
     location: "Kep Province",
     date: "September 10, 2024"
   }, {
     title: "Dhamma Century Cup",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/dhamma%20century%20cub.jpg",
-    location: "City Center",
+    location: "Olympic stadium",
     date: "October 1, 2024"
   }, {
-    title: "Koh Ker Run",
+    title: "Koh Ker Heritage Trail",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/koh%20ker%20run.jpg",
     location: "Koh Ker Temple",
     date: "November 15, 2024"
   }, {
-    title: "Koh Kong Run",
+    title: "Koh Kong Independence Run",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Koh%20kong%20Run.jpg?raw=true",
     location: "Koh Kong Province",
     date: "December 5, 2024"
   }, {
-    title: "Padding Run",
+    title: "Paddy Field Trail Running",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/padding%20run.jpg",
-    location: "Sports Complex",
+    location: "Koh Dach",
     date: "January 20, 2025"
   }, {
     title: "Preah Vihear Temple Run",
@@ -54,48 +54,48 @@ export const eventCategories = {
   }, {
     title: "Eco Run",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/eco%20run.jpg",
-    location: "National Park",
+    location: "Koh Norea",
     date: "April 22, 2025"
   }, {
     title: "Valentine Run",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/valentine%20run.jpg",
-    location: "Riverside Park",
+    location: "The Elysee",
     date: "February 14, 2025"
   }, {
-    title: "Wonderland Run",
+    title: "Woonderland Environment,Tourism and CSR",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/wonderland.jpg",
-    location: "Adventure Park",
+    location: "Siem Reap",
     date: "May 10, 2025"
   }],
   workshop: [{
-    title: "TEDx Phnom Penh",
+    title: "TEDxPhnomPenh",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/tex_phnom_penh.jpg?raw=true",
-    location: "Convention Center",
+    location: "AEON SENSOK",
     date: "July 25, 2024"
   }, {
-    title: "Architecture Trends in Cambodia",
+    title: "INNEX : Architecture Trends in Cambodia",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/architecture%20trends%20in%20cambodia.jpg?raw=true",
-    location: "Design Hub",
+    location: "Techno Institute Hall",
     date: "August 12, 2024"
   }, {
-    title: "INNEX Architecture Tour",
+    title: "INNEX: Architecture Tour",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/innex%20architecture%20tour.jpg?raw=true",
-    location: "Architecture Studio",
+    location: "Phnom Penh",
     date: "September 3, 2024"
   }, {
-    title: "The Platform I",
+    title: "The Platform : Navigating Mental Well-Being In Modern Life",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/the%20platform%20i.jpg?raw=true",
-    location: "Innovation Lab",
+    location: "Major Cineplex By Smart",
     date: "October 8, 2024"
   }, {
     title: "Phnom Penh Connect",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/penh%20penh%20connect.jpg?raw=true",
-    location: "Business Center",
+    location: "The Desk Flagship Duan Penh",
     date: "November 12, 2024"
   }, {
     title: "Kampucheer",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/kampucheer.jpg?raw=true",
-    location: "Cultural Center",
+    location: "Kandal",
     date: "December 15, 2024"
   }, {
     title: "The Future of E-commerce",
