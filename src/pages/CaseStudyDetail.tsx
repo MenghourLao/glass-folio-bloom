@@ -33,10 +33,10 @@ const caseStudiesData: CaseStudy[] = [
 
       # Overview
 
-      **Client**: Run With Sai
-      **Project Duration**: August 13, 2023 – September 14, 2024
-      **Event Types**: Road Runs, Trail Runs, Virtual Challenges
-      **Scope**: Ticketing, Check-in, Registration, Payment Integration, Crew Support
+      Client: Run With Sai
+      Project Duration: August 13, 2023 – September 14, 2024
+      Event Types: Road Runs, Trail Runs, Virtual Challenges
+      Scope: Ticketing, Check-in, Registration, Payment Integration, Crew Support
 
       # Objective
 
@@ -66,7 +66,7 @@ const caseStudiesData: CaseStudy[] = [
       | Koh Kong Independence Marathon | 150 |
       | Run By Heart Actual Run 2nd Ed. | 201 |
       | Virtual & 2025 events | Pending |
-      | **Total** | **1,944+** |
+      | Total | 1,944+ |
 
       # Operational Highlights
 
@@ -86,18 +86,18 @@ const caseStudiesData: CaseStudy[] = [
       | Category | Issue | Solution/Recommendation |
       |----------|-------|------------------------|
       | Ticket UI | Early launch UI caused confusion | Improved flow & instructions at launch |
-      | **Overbooking** | Real-time inventory sync issues | Introduced better API throttling & queuing |
-      | **Customer Support** | Underprepared team for large-scale complaints | Proposed a dedicated support team |
-      | **Pre-Event Marketing** | Lack of teaser campaigns & audience warm-up | Suggested phased content strategy with real-time updates |
+      | Overbooking | Real-time inventory sync issues | Introduced better API throttling & queuing |
+      | Customer Support | Underprepared team for large-scale complaints | Proposed a dedicated support team |
+      | Pre-Event Marketing | Lack of teaser campaigns & audience warm-up | Suggested phased content strategy with real-time updates |
 
       # Recommendations for Future Organizers
 
       ## 1. Scalability & Payment Solutions
       - Integrate dynamic request thresholds.
-      - Add a **standby fintech team** during high-demand launches.
+      - Add a standby fintech team during high-demand launches.
 
       ## 2. Fraud & Ticket Transfer
-      - Launch a **digital transfer tool** to avoid manual re-verification.
+      - Launch a digital transfer tool to avoid manual re-verification.
 
       ## 3. Peak Load UI/UX Enhancements
       - Real-time alerts for system load status.
@@ -109,7 +109,7 @@ const caseStudiesData: CaseStudy[] = [
 
       # Outcome & Conclusion
 
-      The Run With Sai project showcases how **BookMe+ empowers organizers** to scale across complex, multi-format event series. Despite facing real-time system demands and cross-functional challenges, our platform:
+      The Run With Sai project showcases how BookMe+ empowers organizers to scale across complex, multi-format event series. Despite facing real-time system demands and cross-functional challenges, our platform:
 
       - Delivered secure ticketing for nearly 2,000+ runners
       - Enabled hybrid check-in (offline & virtual)
@@ -117,7 +117,7 @@ const caseStudiesData: CaseStudy[] = [
       - Reduced manual errors with smart automation
       - Positioned BookMe+ as a trusted long-term race partner
 
-      **Result**: A successful multi-year collaboration with enhanced trust, repeat events, and stronger infrastructure for future growth.
+      Result: A successful multi-year collaboration with enhanced trust, repeat events, and stronger infrastructure for future growth.
     `
   },
   {
@@ -175,7 +175,7 @@ const caseStudiesData: CaseStudy[] = [
       | Standard | 1286 | 1259 |
       | Standard+ | 422 | 420 |
       | Standing | 581 | 573 |
-      | **Total** | **3539** | **3496** |
+      | Total | 3539 | 3496 |
 
       # Ticket Sale Challenges
 
@@ -189,7 +189,7 @@ const caseStudiesData: CaseStudy[] = [
 
       - Problem: Users paid but didn't receive tickets.
       - Cause: Sync issues between payment & ticket inventory.
-      - **Solution: Manual refunds totaling $33,390 across 235 transactions.
+      - Solution: Manual refunds totaling $33,390 across 235 transactions.
 
       # Check-in System & Fraud Prevention
 
@@ -213,16 +213,16 @@ const caseStudiesData: CaseStudy[] = [
 
       # Manual Ticket Verification
 
-      - **New Ticket Design**: Updated artwork a day before to avoid replication.
-      - **Phone Match Rule**: Last 3 digits used to verify identity.
-      - **Side Effect**: Some delays due to attendees not knowing the rule.
+      - New Ticket Design: Updated artwork a day before to avoid replication.
+      - Phone Match Rule: Last 3 digits used to verify identity.
+      - Side Effect: Some delays due to attendees not knowing the rule.
 
       # 📍 Final Preparations
 
-      - **CCTV**: Installed 1 day before for fraud deterrence
-      - **Crew Training**: Rushed but covered essentials; future events require longer lead time
+      - CCTV: Installed 1 day before for fraud deterrence
+      - Crew Training: Rushed but covered essentials; future events require longer lead time
 
-      # 🚫 Service & Marketing Limitations
+      # Service & Marketing Limitations
 
       ## Customer Support:
 
@@ -236,7 +236,7 @@ const caseStudiesData: CaseStudy[] = [
         - Teasers, BTS content, live updates during ticketing
         - Real-time social media crisis messaging
 
-      # 📈 Key Recommendations for Organizers
+      # Key Recommendations for Organizers
 
       ## 1. Infrastructure Scalability
 
@@ -253,7 +253,7 @@ const caseStudiesData: CaseStudy[] = [
       - Virtual queue with estimated wait time
       - Auto-refresh for availability & capacity
 
-      # ✅ Conclusion
+      # Conclusion
 
       The Q – Rise of The Queen was BookMe+'s **largest and most demanding** concert to date. It tested our infrastructure and operations under high traffic and complex logistics.
 
