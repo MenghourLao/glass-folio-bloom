@@ -40,7 +40,7 @@ const caseStudiesData: CaseStudy[] = [
 
       # Objective
 
-      To deliver a seamless, scalable solution for managing event registration, payments, ticketing, and check-in for **8 multi-format running events** across Cambodia, while supporting both in-person and virtual participants.
+      To deliver a seamless, scalable solution for managing event registration, payments, ticketing, and check-in for 8 multi-format running events across Cambodia, while supporting both in-person and virtual participants.
 
       # What We Delivered
 
@@ -132,16 +132,16 @@ const caseStudiesData: CaseStudy[] = [
 
       ## Managing High-Traffic Check-in & Ticketing for a Landmark Solo Concert
 
-      # 📊 Overview
+      # Overview
 
-      Client: Phalitakam Raksamey Hang Meas Video
+      Client: Raksamey Hang Meas 
       Event: The Q – Rise of The Queen – Aok Sokunkanha Solo Concert
       Concert Date: September 14, 2024
       Check-in Time: 9:00 AM to 8:00 PM
       Location: Koh Pich Theater, Phnom Penh
       Project Duration: August 13 to September 14, 2024
 
-      # 🔗 Project Scope & Feature Delivery
+      # Project Scope & Feature Delivery
 
       ## Customized Platform Features:
 
