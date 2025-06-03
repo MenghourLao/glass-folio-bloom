@@ -122,7 +122,7 @@ const caseStudiesData: CaseStudy[] = [
   },
   {
     id: "the-q-concert",
-    title: "The Q Concert",
+    title: "The Q - Rise of The Queen - Aok Sokunkhanha Solo Concert",
     category: "Entertainment & Concerts",
     description: "Managing high-traffic check-in & ticketing for a landmark solo concert with 3,539 tickets sold and 98.7% check-in success rate.",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/The%20q%20solo%20concert_case_study.jpg?raw=true",
