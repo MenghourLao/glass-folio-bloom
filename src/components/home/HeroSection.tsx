@@ -1,3 +1,4 @@
+
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -16,7 +17,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative h-screen px-4 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center mt-0 pt-16"
+      className="relative h-screen w-full px-0 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center mt-0 pt-16"
       style={{
         backgroundImage: `url('https://vrcgccxrfveurwshtsvz.supabase.co/storage/v1/object/public/image//hero_img.png')`,
         backgroundSize: "cover",
@@ -44,7 +45,7 @@ export default function HeroSection() {
         </div>
       </div>
       
-      <div className="container mx-auto relative z-10 my-0">
+      <div className="w-full relative z-10 my-0 px-4 md:px-6 lg:px-8">
         {/* Platform Label */}
         <div className={`flex justify-center mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
           <div className="border border-white/30 rounded-full px-6 py-2 inline-block backdrop-blur-md bg-black/20 hover:bg-black/40 transition-all">
@@ -57,13 +58,13 @@ export default function HeroSection() {
 
         {/* Main Heading */}
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className={`text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 text-white transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+          <h1 className={`text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 text-white transition-all duration-700 delay-200 drop-shadow-lg ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
             EASY TICKETS, SEAMLESS<br />
             <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-300 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient">
               EVENTS
             </span>
           </h1>
-          <p className={`text-lg md:text-xl text-white/90 mb-12 mx-auto max-w-2xl transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+          <p className={`text-lg md:text-xl text-white/90 mb-12 mx-auto max-w-2xl transition-all duration-700 delay-300 drop-shadow ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
             Automate your ticketing effortlessly with BookMe+, giving you more time to
             create unforgettable experiences.
           </p>
