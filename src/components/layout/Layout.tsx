@@ -10,9 +10,9 @@ interface LayoutProps {
 export default function Layout({
   children
 }: LayoutProps) {
-  return <div className="flex flex-col min-h-screen">
+  return <div className="flex flex-col min-h-screen w-full">
       <Header />
-      <main className="flex-grow py-0 flex flex-col">
+      <main className="flex-grow py-0 flex flex-col w-full">
         {children}
       </main>
       <Footer />

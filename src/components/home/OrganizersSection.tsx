@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -61,17 +62,17 @@ export default function OrganizersSection() {
   }, []);
   
   return (
-    <section className="w-full py-16">
-      <h2 ref={headingRef} className="text-xl md:text-2xl font-semibold mb-8 text-center uppercase tracking-tight fade-up">
+    <section className="w-full py-12 sm:py-16">
+      <h2 ref={headingRef} className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 sm:mb-8 text-center uppercase tracking-tight fade-up">
         Our Awesome Organizers
       </h2>
       <div className="relative overflow-hidden w-full">
         <div className="flex w-[90%] mx-auto" ref={carouselRef}>
           {[...partnerLogos, ...partnerLogos].map((partner, index) => (
-            <Link key={index} to={partner.url} className="block flex-none w-[16.666%]">
-              <Card className="h-24 flex items-center justify-center border-0 bg-transparent shadow-none">
-                <CardContent className="p-0 flex items-center justify-center h-full w-full">
-                  <img src={partner.logo} alt={partner.name} className="max-h-16 max-w-full object-contain" />
+            <Link key={index} to={partner.url} className="block flex-none w-[16.666%] min-w-[120px] sm:min-w-[150px]">
+              <Card className="h-20 sm:h-24 flex items-center justify-center border-0 bg-transparent shadow-none">
+                <CardContent className="p-2 sm:p-0 flex items-center justify-center h-full w-full">
+                  <img src={partner.logo} alt={partner.name} className="max-h-12 sm:max-h-16 max-w-full object-contain" />
                 </CardContent>
               </Card>
             </Link>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
@@ -21,22 +22,22 @@ export default function FaqSection() {
   const accordionRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.2 });
   
   return (
-    <section className="container mx-auto py-20 px-4 bg-inherit">
-      <div ref={headingRef} className="text-center mb-16 fade-up">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">YOUR QUESTIONS, ANSWERED</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+    <section className="container mx-auto py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-inherit">
+      <div ref={headingRef} className="text-center mb-12 sm:mb-16 fade-up">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4">YOUR QUESTIONS, ANSWERED</h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-4">
           Find answers to commonly asked questions about BookMe+
         </p>
       </div>
 
-      <div ref={accordionRef} className="max-w-3xl mx-auto glass-card p-8 rounded-3xl scale-up">
+      <div ref={accordionRef} className="max-w-3xl mx-auto glass-card p-6 sm:p-8 rounded-3xl scale-up">
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left text-lg font-medium">
+              <AccordionTrigger className="text-left text-base sm:text-lg font-medium">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
+              <AccordionContent className="text-muted-foreground text-sm sm:text-base">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

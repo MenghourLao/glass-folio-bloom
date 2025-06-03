@@ -1,3 +1,4 @@
+
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 export default function TestimonialSection() {
@@ -21,26 +22,26 @@ export default function TestimonialSection() {
   const testimonialsRef = useScrollAnimation<HTMLDivElement>('visible', {
     threshold: 0.1
   });
-  return <section className="py-16 md:py-24 rounded-sm bg-inherit">
-      <div className="container mx-auto px-4 rounded-3xl">
-        <div ref={headingRef} className="text-center mb-16 fade-up">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">WHAT OUR ORGANIZERS SAY</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+  return <section className="py-12 sm:py-16 lg:py-24 rounded-sm bg-inherit">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 rounded-3xl">
+        <div ref={headingRef} className="text-center mb-12 sm:mb-16 fade-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4">WHAT OUR ORGANIZERS SAY</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-4">
             Don't just take our word for it. Here's what professionals using BookMe+ have to say.
           </p>
         </div>
 
-        <div ref={testimonialsRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
-          {testimonials.map((testimonial, index) => <div key={index} className="glass-card p-6 md:p-8 rounded-3xl">
+        <div ref={testimonialsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 stagger-children">
+          {testimonials.map((testimonial, index) => <div key={index} className="glass-card p-6 sm:p-8 rounded-3xl">
               <div className="flex flex-col h-full">
-                <blockquote className="text-lg italic mb-6 flex-grow">
+                <blockquote className="text-base sm:text-lg italic mb-6 flex-grow">
                   "{testimonial.quote}"
                 </blockquote>
                 <div className="flex items-center">
-                  <img src={testimonial.avatar} alt={testimonial.author} className="w-12 h-12 rounded-full object-cover mr-4" />
+                  <img src={testimonial.avatar} alt={testimonial.author} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-4" />
                   <div>
-                    <p className="font-medium">{testimonial.author}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                    <p className="font-medium text-sm sm:text-base">{testimonial.author}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{testimonial.position}</p>
                   </div>
                 </div>
               </div>
