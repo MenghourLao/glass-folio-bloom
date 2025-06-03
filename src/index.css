@@ -7,13 +7,13 @@
 
 @layer base {
   :root {
-    --background: 0 0% 5.1%; /* Almost Black #0D0D0D */
+    --background: 0 0% 1.2%; /* Almost Black #030202 */
     --foreground: 210 40% 98%;
 
-    --card: 0 0% 5.1%;
+    --card: 0 0% 1.2%;
     --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 0 0% 5.1%;
+    --popover: 0 0% 1.2%;
     --popover-foreground: 222.2 84% 4.9%;
 
     --primary: 248 90% 66%;
@@ -87,13 +87,13 @@
   }
 
   .dark {
-    --background: 0 0% 5.1%; /* Almost Black #0D0D0D */
+    --background: 0 0% 1.2%; /* Almost Black #030202 */
     --foreground: 210 40% 98%;
 
-    --card: 0 0% 5.1%;
+    --card: 0 0% 1.2%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 5.1%;
+    --popover: 0 0% 1.2%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 248 90% 66%;
