@@ -525,10 +525,10 @@ export default function CaseStudyDetail() {
 
   return (
     <div className="animate-fade-in min-h-screen bg-background">
-      {/* Hero Section - Redesigned */}
-      <section className="relative">
-        {/* Image Container */}
-        <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+      {/* Hero Section - Full Width */}
+      <section className="relative w-full">
+        {/* Image Container - Full Width */}
+        <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
           <img 
             src={caseStudy.image} 
             alt={caseStudy.title} 
