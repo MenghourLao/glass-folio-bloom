@@ -525,9 +525,9 @@ export default function CaseStudyDetail() {
 
   return (
     <div className="animate-fade-in min-h-screen bg-background">
-      {/* Hero Section - Full Width */}
-      <section className="relative w-full">
-        {/* Image Container - Full Width */}
+      {/* Hero Section - Full Width Edge to Edge */}
+      <section className="relative w-screen -mx-[50vw] ml-[50%] left-[50%] right-[50%]">
+        {/* Image Container - Full Viewport Width */}
         <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
           <img 
             src={caseStudy.image} 
@@ -535,12 +535,12 @@ export default function CaseStudyDetail() {
             className="w-full h-full object-cover"
           />
           {/* Enhanced gradient overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
         </div>
         
         {/* Hero Content - Positioned absolutely over the image */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
-          <div className="w-full max-w-7xl mx-auto">
+        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16 z-10">
+          <div className="w-full max-w-7xl mx-auto px-4">
             <Badge variant="secondary" className="mb-4 text-sm font-medium backdrop-blur-sm bg-white/20">
               {caseStudy.category}
             </Badge>
