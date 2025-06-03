@@ -13,6 +13,13 @@ export default function CaseStudies() {
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/runwithsai_case_study.jpg?raw=true",
     color: "from-orange-500/20 to-red-500/20"
   }, {
+    id: "the-q-concert",
+    title: "The Q Concert",
+    category: "Entertainment & Concerts",
+    description: "Managing high-traffic check-in & ticketing for a landmark solo concert with 3,539 tickets sold and 98.7% check-in success rate.",
+    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/The%20q%20solo%20concert_case_study.jpg?raw=true",
+    color: "from-purple-500/20 to-pink-500/20"
+  }, {
     id: "harmony-wellness",
     title: "Harmony Wellness Center",
     category: "Health & Wellness",
@@ -56,9 +63,9 @@ export default function CaseStudies() {
     color: "from-cyan-500/20 to-blue-500/20"
   }];
 
-  // Split the case studies into two rows - now with Run With Sai as first featured case
-  const featuredCases = caseStudies.slice(0, 2); // First 2 for featured row (Run With Sai + Harmony)
-  const standardCases = caseStudies.slice(2); // Remaining 5 for standard row
+  // Split the case studies into two rows - now with Run With Sai and The Q Concert as featured cases
+  const featuredCases = caseStudies.slice(0, 2); // First 2 for featured row (Run With Sai + The Q Concert)
+  const standardCases = caseStudies.slice(2); // Remaining 6 for standard row
 
   return (
     <div className="animate-fade-in">
@@ -94,8 +101,8 @@ export default function CaseStudies() {
           ))}
         </div>
         
-        {/* Standard Case Studies - 5 Columns (adjusted for 5 items) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-20 max-w-7xl mx-auto">
+        {/* Standard Case Studies - 6 Columns (adjusted for 6 items) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20 max-w-7xl mx-auto">
           {standardCases.map(study => (
             <Card key={study.id} className="group overflow-hidden border-0 shadow-md h-full flex flex-col">
               <div className="relative">

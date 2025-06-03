@@ -118,6 +118,152 @@ const caseStudiesData: CaseStudy[] = [
     `
   },
   {
+    id: "the-q-concert",
+    title: "The Q Concert",
+    category: "Entertainment & Concerts",
+    description: "Managing high-traffic check-in & ticketing for a landmark solo concert with 3,539 tickets sold and 98.7% check-in success rate.",
+    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/The%20q%20solo%20concert_case_study.jpg?raw=true",
+    color: "from-purple-500/20 to-pink-500/20",
+    content: `
+      # Case Study: BookMe+ x The Q Concert
+
+      ## Managing High-Traffic Check-in & Ticketing for a Landmark Solo Concert
+
+      # 📊 Overview
+
+      **Client**: Phalitakam Raksamey Hang Meas Video
+      **Event**: The Q – Rise of The Queen – Aok Sokunkanha Solo Concert
+      **Concert Date**: September 14, 2024
+      **Check-in Time**: 9:00 AM to 8:00 PM
+      **Location**: Koh Pich Theater, Phnom Penh
+      **Project Duration**: August 13 to September 14, 2024
+
+      # 🔗 Project Scope & Feature Delivery
+
+      ## Customized Platform Features:
+
+      - **Direct ABA Pay Integration**: Seamless payments to Hang Meas Bank.
+      - **Telegram Mini-App**: Ticket purchases enabled via @hang_meas_mobile_bot.
+      - **Seat-Based Check-in Passes**: Included seat number, name, and phone for identity verification.
+      - **Ticket Sharing**: Native support for Telegram, Messenger, and more.
+      - **Offline Ticket Downloads**: For easy local access and printing.
+      - **QR Code Privacy**: Show/hide option for social media sharing.
+      - **Seat Mapping System**: Linked to the Koh Pich Hall layout for ease of navigation.
+
+      ## Ticket Sales Breakdown:
+
+      | Channel | Share |
+      |---------|-------|
+      | Web | 80% |
+      | App | 16.5% |
+      | Telegram BOT | 3.5% |
+
+      ## Device Use:
+
+      - iOS Users: 78%
+      - Top Countries: Cambodia, USA, Thailand, Australia, South Korea
+
+      # 📊 Ticket Summary
+
+      | Ticket Type | Sold | Checked-In |
+      |-------------|------|------------|
+      | VIP | 700 | 697 |
+      | Premium | 550 | 547 |
+      | Standard | 1286 | 1259 |
+      | Standard+ | 422 | 420 |
+      | Standing | 581 | 573 |
+      | **Total** | **3539** | **3496** |
+
+      # ⚠️ Ticket Sale Challenges
+
+      ## 1. High-Traffic Load & Queueing
+
+      - **Issue**: 2 million+ session attempts caused queue and blank screens.
+      - **Cause**: Server scaled 4 to 20 instances, but payment latency (5 mins) caused blockage.
+      - **Solution**: Temporary fixes applied; some delays still occurred.
+
+      ## 2. Overbooking & Payment Mismatches
+
+      - **Problem**: Users paid but didn't receive tickets.
+      - **Cause**: Sync issues between payment & ticket inventory.
+      - **Solution**: Manual refunds totaling $33,390 across 235 transactions.
+
+      # 🏛 Check-in System & Fraud Prevention
+
+      ## Crew Preparation:
+
+      - ASK Orientation held on Sep 13, 2024 at Raintree.
+      - Training on:
+        - **Offline QR Code Scanning** (Operator Mode)
+        - **Pre-check Validations** (phone #, seat color)
+        - **Wristband Distribution** handover to Heng Meas crew
+
+      ## Site Layout:
+
+      - Assigned gates: VIP, Premium, Standard, Standing, Standard+
+      - Crew divided into check-in & pre-check teams with clear roles
+      - Staff briefing at 7:30 AM; staggered lunch breaks
+
+      ## Customer Experience:
+
+      - Staff trained to smile, assist, and remain calm under pressure
+
+      # 🔐 Manual Ticket Verification
+
+      - **New Ticket Design**: Updated artwork a day before to avoid replication.
+      - **Phone Match Rule**: Last 3 digits used to verify identity.
+      - **Side Effect**: Some delays due to attendees not knowing the rule.
+
+      # 📍 Final Preparations
+
+      - **CCTV**: Installed 1 day before for fraud deterrence
+      - **Crew Training**: Rushed but covered essentials; future events require longer lead time
+
+      # 🚫 Service & Marketing Limitations
+
+      ## Customer Support:
+
+      - Understaffed during ticket crisis
+      - Recommendation: Create a dedicated support team for high-pressure moments
+
+      ## Marketing Shortfall:
+
+      - Limited pre-event engagement
+      - Recommendation:
+        - Teasers, BTS content, live updates during ticketing
+        - Real-time social media crisis messaging
+
+      # 📈 Key Recommendations for Organizers
+
+      ## 1. Infrastructure Scalability
+
+      - Notify users in queue of estimated wait times
+      - Coordinate with payment gateway for standby tech support
+
+      ## 2. Fraud & Transfer Solution
+
+      - Enable digital ticket transfers to simplify and secure ownership changes
+
+      ## 3. Peak Traffic UX Enhancements
+
+      - Real-time status indicators
+      - Virtual queue with estimated wait time
+      - Auto-refresh for availability & capacity
+
+      # ✅ Conclusion
+
+      The Q – Rise of The Queen was BookMe+'s **largest and most demanding** concert to date. It tested our infrastructure and operations under high traffic and complex logistics.
+
+      Despite facing system load issues and manual coordination demands, we:
+
+      - Checked in 98.7% of all ticket holders
+      - Recovered from a multi-million session spike
+      - Delivered a secure, fraud-conscious check-in system
+
+      **Result**: BookMe+ emerged as Cambodia's most resilient and capable ticketing platform for high-demand entertainment events. The insights gained now shape our roadmap for even greater reliability and efficiency.
+    `
+  },
+  {
     id: "harmony-wellness",
     title: "Harmony Wellness Center",
     category: "Health & Wellness",
