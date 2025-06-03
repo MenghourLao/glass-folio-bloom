@@ -6,21 +6,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export default function CaseStudies() {
-  const caseStudies = [{
-    id: "run-with-sai",
-    title: "Run With Sai",
-    category: "Sports & Events",
-    description: "Enabling scalable race management for hybrid running events across Cambodia with 1,944+ tickets sold across 8 multi-format events.",
-    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/runwithsai_case_study.jpg?raw=true",
-    color: "from-orange-500/20 to-red-500/20"
-  }, {
-    id: "the-q-concert",
-    title: "The Q Concert",
-    category: "Entertainment & Concerts",
-    description: "Managing high-traffic check-in & ticketing for a landmark solo concert with 3,539 tickets sold and 98.7% check-in success rate.",
-    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/The%20q%20solo%20concert_case_study.jpg?raw=true",
-    color: "from-purple-500/20 to-pink-500/20"
-  }];
+  const caseStudies = [
+    {
+      id: "run-with-sai",
+      title: "Run With Sai",
+      category: "Sports & Events",
+      description: "Enabling scalable race management for hybrid running events across Cambodia with 1,944+ tickets sold across 8 multi-format events.",
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/runwithsai_case_study.jpg?raw=true",
+      color: "from-orange-500/20 to-red-500/20"
+    },
+    {
+      id: "the-q-concert",
+      title: "The Q Concert",
+      category: "Entertainment & Concerts",
+      description: "Managing high-traffic check-in & ticketing for a landmark solo concert with 3,539 tickets sold and 98.7% check-in success rate.",
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/The%20q%20solo%20concert_case_study.jpg?raw=true",
+      color: "from-purple-500/20 to-pink-500/20"
+    }
+  ];
 
   return (
     <div className="animate-fade-in">
@@ -31,16 +34,14 @@ export default function CaseStudies() {
           Discover how businesses across different industries have transformed their booking processes with BookMe+.
         </p>
         
-        {/* Featured Case Studies - 2 Columns with 16:9 Aspect Ratio */}
+        {/* Featured Case Studies - 2 Columns with Fixed Height */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-7xl mx-auto">
           {caseStudies.map(study => (
             <Card key={study.id} className="group overflow-hidden border-0 shadow-lg">
-              <div className="relative">
-                <AspectRatio ratio={16 / 9}>
-                  <div className={`absolute inset-0 bg-gradient-to-br ${study.color} mix-blend-multiply opacity-60 group-hover:opacity-80 transition-opacity duration-300 z-10`}></div>
-                  <img src={study.image} alt={study.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-20"></div>
-                </AspectRatio>
+              <div className="relative h-64 md:h-80">
+                <div className={`absolute inset-0 bg-gradient-to-br ${study.color} mix-blend-multiply opacity-60 group-hover:opacity-80 transition-opacity duration-300 z-10`}></div>
+                <img src={study.image} alt={study.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-20"></div>
               </div>
               <CardContent className="p-8 relative z-10 -mt-24 bg-gradient-to-t from-background via-background/95 to-background/80">
                 <span className="inline-block text-sm font-semibold text-primary mb-3 px-3 py-1 rounded-full bg-primary/10">{study.category}</span>
