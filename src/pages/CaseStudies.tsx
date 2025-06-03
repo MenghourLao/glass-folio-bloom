@@ -7,20 +7,20 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function CaseStudies() {
   const caseStudies = [
     {
-      id: "run-with-sai",
-      title: "Run With Sai",
-      category: "Sports & Events",
-      description: "Enabling scalable race management for hybrid running events across Cambodia with 1,944+ tickets sold across 8 multi-format events.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/runwithsai_case_study.jpg?raw=true",
-      color: "from-orange-500/20 to-red-500/20"
-    },
-    {
       id: "the-q-concert",
       title: "The Q - Rise of The Queen - Aok Sokunkhanha Solo Concert",
       category: "Entertainment & Concerts",
       description: "Managing high-traffic check-in & ticketing for a landmark solo concert with 3,539 tickets sold and 98.7% check-in success rate.",
       image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/The%20q%20solo%20concert_case_study.jpg?raw=true",
       color: "from-purple-500/20 to-pink-500/20"
+    },
+    {
+      id: "run-with-sai",
+      title: "Run With Sai",
+      category: "Sports & Events",
+      description: "Enabling scalable race management for hybrid running events across Cambodia with 1,944+ tickets sold across 8 multi-format events.",
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/runwithsai_case_study.jpg?raw=true",
+      color: "from-orange-500/20 to-red-500/20"
     }
   ];
 
