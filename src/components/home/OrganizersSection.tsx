@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -74,8 +75,12 @@ export default function OrganizersSection() {
           {[...partnerLogos, ...partnerLogos].map((partner, index) => (
             <Link key={index} to={partner.url} className="block flex-none w-[16.666%] min-w-[120px] sm:min-w-[150px]">
               <Card className="h-20 sm:h-24 flex items-center justify-center border-0 bg-transparent shadow-none">
-                <CardContent className="p-2 sm:p-0 flex items-center justify-center h-full w-full">
-                  <img src={partner.logo} alt={partner.name} className="max-h-12 sm:max-h-16 max-w-full object-contain" />
+                <CardContent className="p-2 sm:p-0 flex items-center justify-center h-full w-full transition-opacity duration-1000 hover:opacity-50">
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name} 
+                    className="max-h-12 sm:max-h-16 max-w-full object-contain transition-opacity duration-1000 opacity-70 hover:opacity-100" 
+                  />
                 </CardContent>
               </Card>
             </Link>
