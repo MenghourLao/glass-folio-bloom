@@ -38,7 +38,7 @@ export default function CaseStudies() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-7xl mx-auto">
           {caseStudies.map(study => (
             <Card key={study.id} className="group overflow-hidden border-0 shadow-lg">
-              <div className="relative h-64 md:h-80">
+              <div className="relative h-72 md:h-96">
                 <div className={`absolute inset-0 bg-gradient-to-br ${study.color} mix-blend-multiply opacity-60 group-hover:opacity-80 transition-opacity duration-300 z-10`}></div>
                 <img src={study.image} alt={study.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-20"></div>
