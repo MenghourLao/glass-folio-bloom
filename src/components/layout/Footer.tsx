@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 
@@ -76,7 +77,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-primary shrink-0" />
-                <a href="tel:010318316" className="text-muted-foreground hover:text-primary transition-colors">010 318 316</a>
+                <a href="tel:+855010318316" className="text-muted-foreground hover:text-primary transition-colors">+855 010 318 316</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-primary shrink-0" />
