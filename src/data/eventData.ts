@@ -1,19 +1,19 @@
 
 export const eventCategories = {
   concert: [{
-    title: "The Q Solo Concert 2",
+    title: "The Q - Rise of The Queen - Aok SokunKanha",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/the%20q%20solo%20concert%202.jpg",
-    location: "Central Park",
+    location: "Koh Pich Hill",
     date: "July 15, 2024"
   }, {
-    title: "The Q Solo Concert",
+    title: "The Q -  Rise of The Queen - AOK Sokunkanha Solo Tour Concert",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/the%20q%20solo%20concert.jpg",
-    location: "Blue Note Club",
+    location: "Battambang",
     date: "June 20, 2024"
   }, {
-    title: "Twilight Concert",
+    title: "PICH SOLIKAH Twilight The First Concert 2025",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/twilight.jpg",
-    location: "Madison Square",
+    location: "ÆON Mall Mean Chey",
     date: "August 5, 2024"
   }],
   sport: [{
