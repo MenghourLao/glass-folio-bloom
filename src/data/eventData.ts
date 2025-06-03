@@ -222,7 +222,7 @@ export const eventCategories = {
   fundraising: [{
     title: "Fun Run for Charity",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/fun%20run.jpg?raw=true",
-    location: "City Park",
+    location: "Penh Huot",
     date: "May 15, 2024"
   }, {
     title: "Run by Heart First",
@@ -232,7 +232,7 @@ export const eventCategories = {
   }, {
     title: "ISF Charity Event",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/isf%20charity.jpg?raw=true",
-    location: "Convention Hall",
+    location: "Penh Huot",
     date: "July 20, 2024"
   }, {
     title: "Run with SAI Virtual Run",
