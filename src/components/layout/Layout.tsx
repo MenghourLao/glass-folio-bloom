@@ -12,7 +12,7 @@ export default function Layout({
 }: LayoutProps) {
   return <div className="flex flex-col min-h-screen w-full">
       <Header />
-      <main className="flex-grow py-0 flex flex-col w-full">
+      <main className="flex-grow py-0 flex flex-col w-full scroll-smooth">
         {children}
       </main>
       <Footer />
