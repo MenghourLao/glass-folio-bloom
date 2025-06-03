@@ -1,4 +1,3 @@
-
 import { useState, FormEvent } from "react";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -44,7 +43,7 @@ export default function Contact() {
   };
   return <div className="animate-fade-in">
       <section className="container mx-auto py-16 md:py-24 px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Get In Touch</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center uppercase">GET IN TOUCH</h1>
         <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto text-center">
           Have questions about BookMe+ or want to see how it can work for your business? Reach out to our team.
         </p>
