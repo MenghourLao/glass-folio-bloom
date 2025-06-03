@@ -217,7 +217,7 @@ const caseStudiesData: CaseStudy[] = [
       - Phone Match Rule: Last 3 digits used to verify identity.
       - Side Effect: Some delays due to attendees not knowing the rule.
 
-      # 📍 Final Preparations
+      # Final Preparations
 
       - CCTV: Installed 1 day before for fraud deterrence
       - Crew Training: Rushed but covered essentials; future events require longer lead time
