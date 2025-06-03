@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -34,6 +33,10 @@ const partnerLogos: PartnerLogoProps[] = [{
   name: "CODE-C",
   logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/codec_logo.png",
   url: "#codec"
+}, {
+  name: "OmoHub",
+  logo: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/omohub%20logo.png?raw=true",
+  url: "#omohub"
 }];
 
 export default function OrganizersSection() {
