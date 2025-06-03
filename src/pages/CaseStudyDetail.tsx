@@ -534,20 +534,20 @@ export default function CaseStudyDetail() {
             alt={caseStudy.title} 
             className="w-full h-full object-cover"
           />
-          {/* Subtle gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent"></div>
+          {/* Enhanced gradient overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
         </div>
         
-        {/* Hero Content */}
-        <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
-          <div className="container mx-auto max-w-6xl">
-            <Badge variant="secondary" className="mb-4 text-sm font-medium">
+        {/* Hero Content - Positioned absolutely over the image */}
+        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
+          <div className="w-full max-w-7xl mx-auto">
+            <Badge variant="secondary" className="mb-4 text-sm font-medium backdrop-blur-sm bg-white/20">
               {caseStudy.category}
             </Badge>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-2xl">
               {caseStudy.title}
             </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed drop-shadow">
+            <p className="text-lg md:text-xl text-white/95 max-w-4xl leading-relaxed drop-shadow-lg">
               {caseStudy.description}
             </p>
           </div>
