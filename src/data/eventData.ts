@@ -227,7 +227,7 @@ export const eventCategories = {
   }, {
     title: "Run by Heart First",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/run%20by%20heart%20first.jpg?raw=true",
-    location: "Community Center",
+    location: "Olympic Stadium",
     date: "June 8, 2024"
   }, {
     title: "ISF Charity Event",
