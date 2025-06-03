@@ -1,8 +1,11 @@
+
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 interface CaseStudy {
   id: string;
@@ -427,41 +430,63 @@ export default function CaseStudyDetail() {
           const rows = currentTable.slice(2); // Skip header and separator row
           
           elements.push(
-            <Table key={`table-${idx}`} className="my-6">
-              <TableHeader>
-                <TableRow>
-                  {headers.map((header, headerIdx) => (
-                    <TableHead key={headerIdx} className="font-semibold">{header}</TableHead>
-                  ))}
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {rows.map((row, rowIdx) => (
-                  <TableRow key={rowIdx}>
-                    {row.map((cell, cellIdx) => (
-                      <TableCell key={cellIdx}>{cell}</TableCell>
+            <div key={`table-${idx}`} className="my-8 overflow-x-auto">
+              <Table className="w-full">
+                <TableHeader>
+                  <TableRow>
+                    {headers.map((header, headerIdx) => (
+                      <TableHead key={headerIdx} className="font-semibold text-primary">{header}</TableHead>
                     ))}
                   </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+                </TableHeader>
+                <TableBody>
+                  {rows.map((row, rowIdx) => (
+                    <TableRow key={rowIdx} className="border-b border-border/50">
+                      {row.map((cell, cellIdx) => (
+                        <TableCell key={cellIdx} className="py-3">{cell}</TableCell>
+                      ))}
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
           );
           
           currentTable = [];
           inTable = false;
         }
 
-        // Regular content
+        // Regular content with improved styling
         if (trimmedLine.startsWith('# ')) {
-          elements.push(<h2 key={idx} className="text-2xl font-bold mt-8 mb-4">{trimmedLine.replace('# ', '')}</h2>);
+          elements.push(
+            <h2 key={idx} className="text-3xl md:text-4xl font-bold mt-12 mb-6 text-primary border-b border-primary/20 pb-4">
+              {trimmedLine.replace('# ', '')}
+            </h2>
+          );
         } else if (trimmedLine.startsWith('## ')) {
-          elements.push(<h3 key={idx} className="text-xl font-semibold mt-6 mb-3">{trimmedLine.replace('## ', '')}</h3>);
+          elements.push(
+            <h3 key={idx} className="text-xl md:text-2xl font-semibold mt-8 mb-4 text-foreground">
+              {trimmedLine.replace('## ', '')}
+            </h3>
+          );
         } else if (trimmedLine.startsWith('- ')) {
-          elements.push(<li key={idx} className="ml-6 mb-2 list-disc">{trimmedLine.replace('- ', '')}</li>);
+          elements.push(
+            <li key={idx} className="ml-6 mb-3 list-disc text-muted-foreground leading-relaxed">
+              {trimmedLine.replace('- ', '')}
+            </li>
+          );
         } else if (trimmedLine.startsWith('**') && trimmedLine.endsWith('**')) {
-          elements.push(<p key={idx} className="mb-3 font-semibold">{trimmedLine.replace(/\*\*/g, '')}</p>);
+          elements.push(
+            <p key={idx} className="mb-4 font-semibold text-lg text-foreground">
+              {trimmedLine.replace(/\*\*/g, '')}
+            </p>
+          );
         } else if (trimmedLine) {
-          elements.push(<p key={idx} className="mb-4">{trimmedLine}</p>);
+          elements.push(
+            <p key={idx} className="mb-4 text-muted-foreground leading-relaxed">
+              {trimmedLine}
+            </p>
+          );
         }
       }
     });
@@ -472,24 +497,26 @@ export default function CaseStudyDetail() {
       const rows = currentTable.slice(2);
       
       elements.push(
-        <Table key="final-table" className="my-6">
-          <TableHeader>
-            <TableRow>
-              {headers.map((header, headerIdx) => (
-                <TableHead key={headerIdx} className="font-semibold">{header}</TableHead>
-              ))}
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {rows.map((row, rowIdx) => (
-              <TableRow key={rowIdx}>
-                {row.map((cell, cellIdx) => (
-                  <TableCell key={cellIdx}>{cell}</TableCell>
+        <div key="final-table" className="my-8 overflow-x-auto">
+          <Table className="w-full">
+            <TableHeader>
+              <TableRow>
+                {headers.map((header, headerIdx) => (
+                  <TableHead key={headerIdx} className="font-semibold text-primary">{header}</TableHead>
                 ))}
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHeader>
+            <TableBody>
+              {rows.map((row, rowIdx) => (
+                <TableRow key={rowIdx} className="border-b border-border/50">
+                  {row.map((cell, cellIdx) => (
+                    <TableCell key={cellIdx} className="py-3">{cell}</TableCell>
+                  ))}
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       );
     }
 
@@ -497,47 +524,77 @@ export default function CaseStudyDetail() {
   };
 
   return (
-    <div className="animate-fade-in">
-      {/* Hero Section */}
-      <div className="relative">
-        <div className={`absolute inset-0 bg-gradient-to-br ${caseStudy.color} mix-blend-multiply`}></div>
-        <img 
-          src={caseStudy.image} 
-          alt={caseStudy.title} 
-          className="w-full h-64 md:h-96 object-cover"
-        />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-          <div className="container mx-auto px-4 py-20 text-center text-white">
-            <div className="text-sm md:text-base font-medium text-primary-foreground mb-2">{caseStudy.category}</div>
-            <h1 className="text-3xl md:text-5xl font-bold mb-6">{caseStudy.title}</h1>
+    <div className="animate-fade-in min-h-screen bg-background">
+      {/* Hero Section - Redesigned */}
+      <section className="relative">
+        {/* Image Container */}
+        <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+          <img 
+            src={caseStudy.image} 
+            alt={caseStudy.title} 
+            className="w-full h-full object-cover"
+          />
+          {/* Subtle gradient overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent"></div>
+        </div>
+        
+        {/* Hero Content */}
+        <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
+          <div className="container mx-auto max-w-6xl">
+            <Badge variant="secondary" className="mb-4 text-sm font-medium">
+              {caseStudy.category}
+            </Badge>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+              {caseStudy.title}
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed drop-shadow">
+              {caseStudy.description}
+            </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Case Study Content */}
-      <div className="container mx-auto py-12 px-4">
-        <div className="glass-card p-8 max-w-4xl mx-auto">
-          <Button variant="outline" className="mb-8 rounded-full">
-            <Link to="/case-studies" className="flex items-center gap-2">
-              <ArrowLeft size={16} />
-              Back to Case Studies
-            </Link>
-          </Button>
-
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            {caseStudy.content && renderContent(caseStudy.content)}
-          </div>
-
-          <div className="mt-12 pt-8 border-t">
-            <h3 className="text-xl font-bold mb-4">Ready to see similar results for your business?</h3>
-            <Button size="lg" className="rounded-full">
-              <Link to="/contact" className="flex items-center gap-2">
-                Contact Us Today <ArrowRight size={16} />
+      {/* Main Content */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 max-w-6xl">
+          {/* Navigation */}
+          <div className="mb-12">
+            <Button variant="outline" className="rounded-full hover:bg-primary/10">
+              <Link to="/case-studies" className="flex items-center gap-2">
+                <ArrowLeft size={16} />
+                Back to Case Studies
               </Link>
             </Button>
           </div>
+
+          {/* Content Card */}
+          <Card className="bg-card/50 backdrop-blur-sm border-border/50 shadow-xl">
+            <CardContent className="p-8 md:p-12">
+              {/* Case Study Content */}
+              <div className="prose prose-lg dark:prose-invert max-w-none">
+                {caseStudy.content && renderContent(caseStudy.content)}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* CTA Section */}
+          <Card className="mt-16 bg-primary/5 border-primary/20">
+            <CardContent className="p-8 md:p-12 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
+                Ready to see similar results for your business?
+              </h3>
+              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
+                Join the growing list of businesses that have transformed their operations with BookMe+.
+              </p>
+              <Button size="lg" className="rounded-full text-lg px-8 py-6">
+                <Link to="/contact" className="flex items-center gap-2">
+                  Contact Us Today <ArrowRight size={20} />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
