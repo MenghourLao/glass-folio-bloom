@@ -123,34 +123,34 @@ export const eventCategories = {
     location: "Conference Hall",
     date: "May 5, 2025"
   }, {
-    title: "Global Perspective",
+    title: "Global Perspective on Scaling businesses",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/global%20perspective.jpg?raw=true",
-    location: "International Center",
+    location: "The Desk Flagship",
     date: "June 8, 2025"
   }, {
     title: "Your Finance",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/your%20finance.jpg?raw=true",
-    location: "Financial District",
+    location: "ISI Group Tower",
     date: "July 12, 2025"
   }, {
-    title: "The Potential",
+    title: "The Potential Awakening ",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/the%20potiential.jpg?raw=true",
-    location: "Startup Hub",
+    location: "BDC",
     date: "August 16, 2025"
   }, {
     title: "SAAT Business Forum",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/saat%20business%20forum.jpg?raw=true",
-    location: "Business Plaza",
+    location: "Connexion, Koh Pich",
     date: "September 20, 2025"
   }, {
-    title: "SAAT",
+    title: "SAAT Camp",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/saat.jpg?raw=true",
-    location: "Event Center",
+    location: "Kirirom hill",
     date: "October 25, 2025"
   }, {
-    title: "Business x Reader",
+    title: "Business x Reader Conference Cambodia",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/bussiness%20x%20reader.jpg?raw=true",
-    location: "Library Hall",
+    location: "AEON MALL Phnom Penh",
     date: "November 30, 2025"
   }, {
     title: "AIESEC",
@@ -158,15 +158,15 @@ export const eventCategories = {
     location: "University Campus",
     date: "December 8, 2025"
   }, {
-    title: "Pinnacle Entrepreneur",
+    title: "Pinnacle Entrepreneur Forum",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/pinnacle%20entrepreneur.jpg?raw=true",
-    location: "Entrepreneur Center",
+    location: "Sofital Hotel Phnom Penh",
     date: "January 15, 2026"
   }],
   arts: [{
-    title: "BarCamp BTB 2024",
+    title: "BarCamp Battambang 2024",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/barcamp%20btb%202024.jpg?raw=true",
-    location: "Tech Hub",
+    location: "National University of Battambang",
     date: "March 15, 2024"
   }, {
     title: "Bun Phum MDK",
