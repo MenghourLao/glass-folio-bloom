@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
@@ -7,9 +6,6 @@ export default function FaqSection() {
   const faqs = [{
     question: "How does the booking process work?",
     answer: "Our booking process is simple. Organizers create events, set ticket types and prices, and publish. Attendees can then purchase tickets through the event page, receiving confirmation emails with ticket details."
-  }, {
-    question: "Can I customize the booking page to match my brand?",
-    answer: "Yes! BookMe+ offers extensive customization options including color schemes, logo placement, and custom domains to ensure your booking page perfectly aligns with your brand identity."
   }, {
     question: "How are payments processed and when do I receive funds?",
     answer: "We process payments through secure payment gateways. With our instant payout feature, funds are transferred to your connected bank account immediately after ticket purchases, minus our service fee."
