@@ -263,7 +263,7 @@ const caseStudiesData: CaseStudy[] = [
       - Recovered from a multi-million session spike
       - Delivered a secure, fraud-conscious check-in system
 
-      **Result**: BookMe+ emerged as Cambodia's most resilient and capable ticketing platform for high-demand entertainment events. The insights gained now shape our roadmap for even greater reliability and efficiency.
+      Result: BookMe+ emerged as Cambodia's most resilient and capable ticketing platform for high-demand entertainment events. The insights gained now shape our roadmap for even greater reliability and efficiency.
     `
   },
   {
