@@ -169,54 +169,54 @@ export const eventCategories = {
     location: "National University of Battambang",
     date: "March 15, 2024"
   }, {
-    title: "Bun Phum MDK",
+    title: "BonnPhum on the move",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/bun%20phum%20mdk.jpg?raw=true",
-    location: "Cultural Center",
+    location: "Mondulkiri",
     date: "April 12, 2024"
   }, {
-    title: "Bun Phum Mean Jern",
+    title: "BonnPhum on the move",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/bun%20phum%20mean%20jern.jpg?raw=true",
-    location: "Traditional Venue",
+    location: "Kratié",
     date: "April 18, 2024"
   }, {
-    title: "CAMEX24",
+    title: "CAMEX'24",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/camex24.jpg?raw=true",
-    location: "Exhibition Center",
+    location: "Institute of Technology of Cambodia",
     date: "May 20, 2024"
   }, {
     title: "Celebrating Cambodia",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/celebrating%20cambodia.jpg?raw=true",
-    location: "National Museum",
+    location: "Phnom Penh",
     date: "June 10, 2024"
   }, {
     title: "Code C",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/code%20c.jpg?raw=true",
-    location: "Innovation Hub",
+    location: "CTAD",
     date: "June 25, 2024"
   }, {
     title: "Coastal Festival",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/constal%20festival.jpg?raw=true",
-    location: "Coastal Park",
+    location: "Kep",
     date: "July 8, 2024"
   }, {
     title: "Kampung Film Festival",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/kampung%20film%20festival.jpg?raw=true",
-    location: "Cinema Complex",
+    location: "Koh Kong",
     date: "August 15, 2024"
   }, {
-    title: "Khmer Heritage",
+    title: "ល្ខោននិយាយរឿងកុលាបប៉ៃលិន",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/khmer.jpg?raw=true",
-    location: "Heritage Center",
+    location: "Phnom Penh",
     date: "September 5, 2024"
   }, {
-    title: "Niyey Arts Show",
+    title: "ល្ខោននិយាយ",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/niyey.jpg?raw=true",
-    location: "Art Gallery",
+    location: "Phnom Penh",
     date: "September 22, 2024"
   }, {
     title: "Phnom Penh Plant Exhibition",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/phnom%20penh%20plant.jpg?raw=true",
-    location: "Botanical Garden",
+    location: "Conec",
     date: "October 12, 2024"
   }],
   fundraising: [{
