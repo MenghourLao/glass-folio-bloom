@@ -81,8 +81,8 @@ export default function Contact() {
                   <Phone className="w-5 h-5 text-primary mt-1 mr-3" />
                   <div>
                     <p className="font-medium">Call Us</p>
-                    <a href="tel:010318316" className="text-muted-foreground hover:text-primary transition-colors">
-                      010 318 316
+                    <a href="tel:+855010318316" className="text-muted-foreground hover:text-primary transition-colors">
+                      +855 010 318 316
                     </a>
                   </div>
                 </div>
