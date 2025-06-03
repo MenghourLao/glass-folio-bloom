@@ -24,14 +24,8 @@ export default function HeroSection() {
         backgroundPosition: "center",
       }}
     >
-      {/* Animated dots/particles */}
+      {/* Animated Mouse */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-pulse-slow"></div>
-        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary/70 rounded-full animate-pulse-slow" style={{ animationDelay: "0.5s" }}></div>
-        <div className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-primary/50 rounded-full animate-pulse-slow" style={{ animationDelay: "0.8s" }}></div>
-        <div className="absolute top-2/3 right-1/4 w-2 h-2 bg-primary/60 rounded-full animate-pulse-slow" style={{ animationDelay: "1.2s" }}></div>
-        
-        {/* Animated Mouse */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
