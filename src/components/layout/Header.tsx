@@ -81,8 +81,11 @@ export default function Header() {
           <Button 
             variant="ghost" 
             className="font-medium rounded-full text-white hover:bg-white/10 py-6"
+            asChild
           >
-            Login
+            <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
+              Login
+            </a>
           </Button>
           <Button 
             variant="outline" 
@@ -126,8 +129,11 @@ export default function Header() {
           <Button 
             variant="ghost" 
             className="w-full font-medium justify-start text-white hover:bg-white/10 rounded-full"
+            asChild
           >
-            Login
+            <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
+              Login
+            </a>
           </Button>
           <Button 
             variant="outline" 
