@@ -1,4 +1,3 @@
-
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -90,9 +89,9 @@ export default function Pricing() {
               )}
               
               <Button variant={plan.popular ? "default" : "outline"} className="w-full mt-auto">
-                <Link to="/contact">
+                <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
                   Get Started
-                </Link>
+                </a>
               </Button>
             </div>
           ))}
