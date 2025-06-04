@@ -1,7 +1,6 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function CaseStudies() {
@@ -61,14 +60,6 @@ export default function CaseStudies() {
                 <p className="text-muted-foreground mb-6 text-base md:text-lg leading-relaxed">
                   {study.description}
                 </p>
-                
-                <Button variant="outline" className="rounded-full group/btn relative overflow-hidden border-primary/20 hover:border-primary/80 w-full sm:w-auto">
-                  <Link to={`/case-studies/${study.id}`} className="flex items-center justify-center gap-2 px-4">
-                    <span className="relative z-10">Read Case Study</span>
-                    <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform relative z-10" />
-                    <span className="absolute inset-0 bg-primary/10 transform scale-x-0 group-hover/btn:scale-x-100 origin-left transition-transform"></span>
-                  </Link>
-                </Button>
               </CardContent>
             </Card>
           ))}
@@ -81,9 +72,9 @@ export default function CaseStudies() {
             Join the growing list of businesses that have revolutionized their scheduling with BookMe+.
           </p>
           <Button size="lg" className="rounded-full mx-auto bg-primary hover:bg-primary/90 transition-colors">
-            <Link to="/contact" className="flex items-center gap-2">
+            <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               Contact Us Today <ArrowRight size={16} />
-            </Link>
+            </a>
           </Button>
         </div>
       </section>
