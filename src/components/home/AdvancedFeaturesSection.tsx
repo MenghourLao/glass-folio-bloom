@@ -6,34 +6,34 @@ import useScrollAnimation from '@/hooks/useScrollAnimation';
 export default function AdvancedFeaturesSection() {
   const features = [
     {
-      title: "Smart Ticketing System",
-      description: "Sell, scan, and manage tickets easily.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Smart%20Ticketing%20System.png?raw=true"
+      title: "Sell your ticket on all platforms",
+      description: "Telegram Mini App, Embedded Form on your personal website, app, chatbot on Messenger, IG, and WhatsApp.",
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Multi-Channel%20Sales.png?raw=true"
     }, 
     {
-      title: "Real-Time Reporting",
-      description: "Track sales, attendees, and engagement.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Real-Time%20Reporting.png?raw=true"
+      title: "Post-Purchase Engagement Tools",
+      description: "Stay close to your event-goers with pre-defined, customized flows designed to bring high retention rates and engagement through AI chatbot.",
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/After-Sale%20Support.png?raw=true"
     }, 
     {
-      title: "BookMeBusiness Self-Setup",
-      description: "Self-service dashboard to set up events and manage ticket sales anytime.",
+      title: "E-Commerce Ready",
+      description: "Seamlessly manage merchandise inventory and shipment delivery. Forecast and generate demand before production.",
       image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/BookMeBusiness%20Self-Setup.png?raw=true"
     }, 
     {
-      title: "Multi-Channel Sales",
-      description: "Promote across platforms with shareable links.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Multi-Channel%20Sales.png?raw=true"
-    },
-    {
-      title: "On-site Check-in",
-      description: "QR scan, attendee badge printing, real-time check-in.",
+      title: "Offline Check-In",
+      description: "Fast and smooth check-in process for merchandise collection and physical ticket pickup.",
       image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/On-site%20Check-in.png?raw=true"
     },
     {
-      title: "After-Sale Support",
-      description: "Refund handling, attendee inquiries, and feedback collection.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/After-Sale%20Support.png?raw=true"
+      title: "Self Check-In",
+      description: "Inspired by the STOP COVID user experience, our app enables tech-savvy users to check themselves in using a dynamic QR code.",
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Smart%20Ticketing%20System.png?raw=true"
+    },
+    {
+      title: "Virtualized Dashboard",
+      description: "Forecast and generate demand before production.",
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Real-Time%20Reporting.png?raw=true"
     }
   ];
 
