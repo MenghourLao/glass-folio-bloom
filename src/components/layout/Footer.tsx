@@ -57,13 +57,10 @@ export default function Footer() {
                 <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Pricing</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Contact Us</Link>
-              </li>
-              <li>
                 <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Terms of Service</Link>
+                <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Terms of Use</Link>
               </li>
             </ul>
           </div>

@@ -9,7 +9,9 @@ import Home from "./pages/Home";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Pricing from "./pages/Pricing";
-import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
+import TermsOfUse from "./pages/TermsOfUse";
+import Cookies from "./pages/Cookies";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "./hooks/useTheme";
 
@@ -28,7 +30,9 @@ const App = () => (
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
               <Route path="/pricing" element={<Pricing />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<TermsOfUse />} />
+              <Route path="/cookies" element={<Cookies />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>

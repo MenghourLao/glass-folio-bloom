@@ -1,7 +1,6 @@
 
 import { ArrowRight, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import React from 'react';
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
@@ -22,10 +21,10 @@ export default function CtaBanner() {
             </p>
           </div>
           <div className="lg:w-1/3 flex justify-center lg:justify-end">
-            <Button size="lg" className="rounded-full px-6 py-4 sm:px-8 sm:py-6 text-sm sm:text-base text-white">
-              <Link to="/contact" className="flex items-center gap-2">
+            <Button size="lg" className="rounded-full px-6 py-4 sm:px-8 sm:py-6 text-sm sm:text-base text-white" asChild>
+              <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 Create First Event <Send className="ml-1 h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Zap } from "lucide-react";
@@ -13,8 +14,7 @@ export default function Header() {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Case Studies", path: "/case-studies" },
-    { name: "Pricing", path: "/pricing" },
-    { name: "Contact", path: "/contact" }
+    { name: "Pricing", path: "/pricing" }
   ];
   
   useEffect(() => {
@@ -90,8 +90,11 @@ export default function Header() {
           <Button 
             variant="outline" 
             className="font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black py-6"
+            asChild
           >
-            <Zap className="mr-2 h-4 w-4" /> Create First Event
+            <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
+              <Zap className="mr-2 h-4 w-4" /> Create First Event
+            </a>
           </Button>
         </div>
 
@@ -138,8 +141,11 @@ export default function Header() {
           <Button 
             variant="outline" 
             className="w-full font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
+            asChild
           >
-            <Zap className="mr-2 h-4 w-4" /> Create First Event
+            <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
+              <Zap className="mr-2 h-4 w-4" /> Create First Event
+            </a>
           </Button>
         </nav>
       )}
