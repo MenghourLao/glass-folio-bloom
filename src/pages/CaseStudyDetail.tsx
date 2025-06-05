@@ -22,7 +22,7 @@ const caseStudiesData: CaseStudy[] = [
     id: "code-c-conference",
     title: "The CODE-C Developer Conference and Tech Expo 2024",
     category: "Technology & Conferences",
-    description: "Cambodia's largest developer gathering with 3,000+ participants, featuring innovative self check-in solutions for seamless event management.",
+    description: "As Cambodia's premier tech gathering, CODE-C brought together over 3,000 developers, innovators, and digital leaders to accelerate the nation's digital journey.",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/code_cjpg.jpg?raw=true",
     color: "from-blue-500/20 to-indigo-500/20",
     content: `
@@ -32,27 +32,20 @@ const caseStudiesData: CaseStudy[] = [
 
       # Overview
 
-      Event: The CODE-C Developer Conference and Tech Expo 2024
-      Participants: 3,000+ tech talents, innovators, and creators
-      Scope: Self Check-in Solutions, Event Management, Digital Transformation Support
-      Impact: Cambodia's largest developer gathering accelerating the nation's digital future
+      As Cambodia's premier tech gathering, CODE-C brought together over 3,000 developers, innovators, and digital leaders to accelerate the nation's digital journey. The event played a critical role in Cambodia's digital transformation, showcasing cutting-edge technologies and fostering collaboration within the tech community.
 
-      # The Story
+      # Organizer's Challenge
 
-      The CODE-C Developer Conference and Tech Expo 2024 stands as Cambodia's largest developer gathering—bringing together thousands of tech talents, innovators, and creators to empower the nation's digital transformation. With over 3,000 participants, the event played a critical role in accelerating Cambodia's journey toward a vibrant digital future.
-
-      # The Challenge
-
-      Due to the shortage of check-in crew, managing on-site entry for such a large audience became a logistical concern for the organizing team. Traditional check-in methods would have required:
+      Faced with limited manpower, the team struggled to manage high-volume check-ins efficiently without compromising the attendee experience. Traditional check-in methods would have required:
 
       - Large manpower force for manual verification
       - Extended wait times for participants
       - Potential bottlenecks at entry points
       - Risk of delays affecting the conference schedule
 
-      # The Solution
+      # BookMe+ Solution
 
-      To address this, BookMe+ implemented its **Self Check-in feature**, allowing participants to scan and check in independently using dynamic QR codes. This innovative approach included:
+      BookMe+ deployed a Self Check-in system powered by dynamic QR codes—allowing attendees to check in independently and eliminating bottlenecks at entry points.
 
       ## Key Features Implemented:
 
@@ -61,14 +54,14 @@ const caseStudiesData: CaseStudy[] = [
       - **Real-time Validation**: Instant verification and entry approval
       - **Reduced Manpower Requirements**: Minimal staff needed for oversight only
 
-      # The Impact
+      # Impact
 
       ## Operational Success:
 
-      - **Efficient and scalable check-in process**: 3,000+ participants processed smoothly
-      - **Reduced reliance on on-ground staff**: Minimal crew required for oversight
-      - **Improved attendee satisfaction**: Seamless entry experience with no long queues
-      - **Strengthened BookMe+'s role**: Established as a leader in large-scale tech event management
+      - **Streamlined check-in process**: 3,000+ participants processed smoothly
+      - **Reduced staffing requirements**: Minimal crew required for oversight
+      - **Enhanced operational efficiency**: Seamless entry experience with no long queues
+      - **Elevated attendee experience**: Strengthened BookMe+'s role as a leader in large-scale tech event management
 
       ## Event Outcomes:
 

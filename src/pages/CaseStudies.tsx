@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,7 +8,7 @@ export default function CaseStudies() {
       id: "code-c-conference",
       title: "The CODE-C Developer Conference and Tech Expo 2024",
       category: "Technology & Conferences",
-      description: "Cambodia's largest developer gathering with 3,000+ participants, featuring innovative self check-in solutions for seamless event management.",
+      description: "As Cambodia's premier tech gathering, CODE-C brought together over 3,000 developers, innovators, and digital leaders to accelerate the nation's digital journey.",
       image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/code_cjpg.jpg?raw=true",
       color: "from-blue-500/20 to-indigo-500/20"
     },
