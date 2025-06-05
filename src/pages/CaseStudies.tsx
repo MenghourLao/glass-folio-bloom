@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,7 +9,7 @@ export default function CaseStudies() {
       id: "code-c-conference",
       title: "The CODE-C Developer Conference and Tech Expo 2024",
       category: "Technology & Conferences",
-      description: "As Cambodia's premier tech gathering, CODE-C brought together over 3,000 developers, innovators, and digital leaders to accelerate the nation's digital journey.",
+      description: "As Cambodia's premier tech gathering, CODE-C brought together over 3,000 developers, innovators, and digital leaders to accelerate the nation's digital journey.\n\nOrganizer's Challenge\nFaced with limited manpower, the team struggled to manage high-volume check-ins efficiently without compromising the attendee experience.\n\nBookMe+ Solution\nBookMe+ deployed a Self Check-in system powered by dynamic QR codes—allowing attendees to check in independently and eliminating bottlenecks at entry points.\n\nImpact\n• Streamlined check-in process\n• Reduced staffing requirements\n• Enhanced operational efficiency\n• Elevated attendee experience",
       image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/code_cjpg.jpg?raw=true",
       color: "from-blue-500/20 to-indigo-500/20"
     },
@@ -21,11 +22,11 @@ export default function CaseStudies() {
       color: "from-purple-500/20 to-pink-500/20"
     },
     {
-      id: "run-with-sai",
-      title: "Run With Sai",
+      id: "preah-vihear-temple-run",
+      title: "Preah Vihear Temple Run 2024",
       category: "Sports & Events",
-      description: "Enabling scalable race management for hybrid running events across Cambodia with 1,944+ tickets sold across 8 multi-format events.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/runwithsai_case_study.jpg?raw=true",
+      description: "Set in Cambodia's remote highlands, the event welcomed 1,000 runners from 13 countries—marking a 200% growth in participation over the previous year.\n\nChallenge\nLimited internet connectivity posed a major check-in challenge for organizers.\n\nSolution\nBookMe+ delivered an Offline Check-in & Sync feature, ensuring smooth operations without needing a live connection.\n\nImpact\n• Fast, dependable check-in\n• Hassle-free event execution in remote conditions\n• Widely celebrated as an authentic 'temple run' experience",
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/preah%20vihear%20temple%20run.jpg?raw=true",
       color: "from-orange-500/20 to-red-500/20"
     }
   ];
@@ -39,10 +40,10 @@ export default function CaseStudies() {
           Discover how businesses across different industries have transformed their booking processes with BookMe+.
         </p>
         
-        {/* Featured Case Studies - 3 Columns with Improved Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 max-w-7xl mx-auto">
+        {/* Featured Case Studies - 2 Columns Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
           {caseStudies.map(study => (
-            <Card key={study.id} className="group overflow-hidden border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300">
+            <Card key={study.id} className="group overflow-hidden border-2 border-white/10 shadow-lg bg-card hover:shadow-xl hover:border-primary/30 transition-all duration-300">
               {/* Image Section */}
               <div className="relative h-64 md:h-72 overflow-hidden">
                 <img 
@@ -64,16 +65,16 @@ export default function CaseStudies() {
                   {study.title}
                 </h2>
                 
-                <p className="text-muted-foreground mb-4 text-sm md:text-base leading-relaxed">
+                <div className="text-muted-foreground mb-4 text-sm md:text-base leading-relaxed whitespace-pre-line">
                   {study.description}
-                </p>
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
         {/* CTA Section */}
-        <div className="text-center max-w-3xl mx-auto bg-primary/5 p-8 rounded-2xl">
+        <div className="text-center max-w-3xl mx-auto bg-primary/5 p-8 rounded-2xl border border-white/10">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Want to become our next success story?</h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Join the growing list of businesses that have revolutionized their scheduling with BookMe+.
