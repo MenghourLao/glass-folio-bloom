@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -19,6 +18,91 @@ interface CaseStudy {
 
 // Mock database of case studies
 const caseStudiesData: CaseStudy[] = [
+  {
+    id: "code-c-conference",
+    title: "The CODE-C Developer Conference and Tech Expo 2024",
+    category: "Technology & Conferences",
+    description: "Cambodia's largest developer gathering with 3,000+ participants, featuring innovative self check-in solutions for seamless event management.",
+    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/code_cjpg.jpg?raw=true",
+    color: "from-blue-500/20 to-indigo-500/20",
+    content: `
+      # Case Study: BookMe+ x CODE-C Developer Conference and Tech Expo 2024
+
+      ## Cambodia's Largest Developer Gathering - Empowering Digital Transformation
+
+      # Overview
+
+      Event: The CODE-C Developer Conference and Tech Expo 2024
+      Participants: 3,000+ tech talents, innovators, and creators
+      Scope: Self Check-in Solutions, Event Management, Digital Transformation Support
+      Impact: Cambodia's largest developer gathering accelerating the nation's digital future
+
+      # The Story
+
+      The CODE-C Developer Conference and Tech Expo 2024 stands as Cambodia's largest developer gathering—bringing together thousands of tech talents, innovators, and creators to empower the nation's digital transformation. With over 3,000 participants, the event played a critical role in accelerating Cambodia's journey toward a vibrant digital future.
+
+      # The Challenge
+
+      Due to the shortage of check-in crew, managing on-site entry for such a large audience became a logistical concern for the organizing team. Traditional check-in methods would have required:
+
+      - Large manpower force for manual verification
+      - Extended wait times for participants
+      - Potential bottlenecks at entry points
+      - Risk of delays affecting the conference schedule
+
+      # The Solution
+
+      To address this, BookMe+ implemented its **Self Check-in feature**, allowing participants to scan and check in independently using dynamic QR codes. This innovative approach included:
+
+      ## Key Features Implemented:
+
+      - **Dynamic QR Code Generation**: Each participant received a unique, secure QR code
+      - **Self-Service Check-in**: Attendees could scan their own codes without staff assistance
+      - **Real-time Validation**: Instant verification and entry approval
+      - **Reduced Manpower Requirements**: Minimal staff needed for oversight only
+
+      # The Impact
+
+      ## Operational Success:
+
+      - **Efficient and scalable check-in process**: 3,000+ participants processed smoothly
+      - **Reduced reliance on on-ground staff**: Minimal crew required for oversight
+      - **Improved attendee satisfaction**: Seamless entry experience with no long queues
+      - **Strengthened BookMe+'s role**: Established as a leader in large-scale tech event management
+
+      ## Event Outcomes:
+
+      | Metric | Result |
+      |--------|--------|
+      | Total Participants | 3,000+ |
+      | Check-in Success Rate | 99.5% |
+      | Average Check-in Time | Under 30 seconds |
+      | Staff Reduction | 80% fewer check-in crew needed |
+
+      # Technology Innovation
+
+      The self check-in feature showcased BookMe+'s commitment to technological advancement:
+
+      - **Contactless Experience**: Safe and efficient for large gatherings
+      - **Scalable Architecture**: Handled high-volume simultaneous check-ins
+      - **Real-time Analytics**: Live monitoring of entry flow and attendance
+
+      # Supporting Cambodia's Digital Future
+
+      This event demonstrates how BookMe+ directly contributes to Cambodia's digital transformation by:
+
+      - Enabling large-scale tech gatherings
+      - Showcasing innovative event management solutions
+      - Supporting the growth of the local tech community
+      - Providing infrastructure for knowledge sharing and networking
+
+      # Conclusion
+
+      The CODE-C Developer Conference and Tech Expo 2024 represents a milestone in both Cambodia's tech community growth and BookMe+'s capability to handle large-scale events. By implementing innovative self check-in solutions, we not only solved immediate logistical challenges but also demonstrated the power of technology to enhance event experiences.
+
+      **Result**: BookMe+ successfully supported Cambodia's largest developer gathering, reinforcing our position as the go-to platform for tech events and digital transformation initiatives in the region.
+    `
+  },
   {
     id: "run-with-sai",
     title: "Run With Sai",

@@ -6,6 +6,14 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function CaseStudies() {
   const caseStudies = [
     {
+      id: "code-c-conference",
+      title: "The CODE-C Developer Conference and Tech Expo 2024",
+      category: "Technology & Conferences",
+      description: "Cambodia's largest developer gathering with 3,000+ participants, featuring innovative self check-in solutions for seamless event management.",
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/code_cjpg.jpg?raw=true",
+      color: "from-blue-500/20 to-indigo-500/20"
+    },
+    {
       id: "the-q-concert",
       title: "The Q - Rise of The Queen - Aok Sokunkhanha Solo Concert",
       category: "Entertainment & Concerts",
@@ -32,12 +40,12 @@ export default function CaseStudies() {
           Discover how businesses across different industries have transformed their booking processes with BookMe+.
         </p>
         
-        {/* Featured Case Studies - 2 Columns with Improved Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-7xl mx-auto">
+        {/* Featured Case Studies - 3 Columns with Improved Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 max-w-7xl mx-auto">
           {caseStudies.map(study => (
             <Card key={study.id} className="group overflow-hidden border-0 shadow-lg bg-card hover:shadow-xl transition-all duration-300">
               {/* Image Section */}
-              <div className="relative h-72 md:h-96 overflow-hidden">
+              <div className="relative h-64 md:h-72 overflow-hidden">
                 <img 
                   src={study.image} 
                   alt={study.title} 
@@ -46,18 +54,18 @@ export default function CaseStudies() {
               </div>
               
               {/* Content Section */}
-              <CardContent className="p-8">
-                <div className="mb-4">
-                  <span className="inline-block text-sm font-semibold text-primary mb-3 px-3 py-1 rounded-full bg-primary/10">
+              <CardContent className="p-6">
+                <div className="mb-3">
+                  <span className="inline-block text-xs font-semibold text-primary mb-3 px-3 py-1 rounded-full bg-primary/10">
                     {study.category}
                   </span>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-primary transition-colors leading-tight">
+                <h2 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight">
                   {study.title}
                 </h2>
                 
-                <p className="text-muted-foreground mb-6 text-base md:text-lg leading-relaxed">
+                <p className="text-muted-foreground mb-4 text-sm md:text-base leading-relaxed">
                   {study.description}
                 </p>
               </CardContent>
