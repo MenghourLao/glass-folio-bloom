@@ -95,7 +95,7 @@ export default function CaseStudies() {
                   <img 
                     src="https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/512px-YouTube_full-color_icon_(2017).svg.png?raw=true" 
                     alt="YouTube" 
-                    className="w-full h-48 md:h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                    className="w-3/4 h-32 md:h-32 object-contain mx-auto my-8 transition-transform duration-300 group-hover:scale-105" 
                   />
                   {/* Decorative elements */}
                   <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full"></div>
