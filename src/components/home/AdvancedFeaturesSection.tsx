@@ -60,27 +60,27 @@ export default function AdvancedFeaturesSection() {
       {/* First row - 3 columns on desktop, 1 on mobile, 2 on tablet */}
       <div ref={firstRowRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8 stagger-children">
         {firstRowFeatures.map((feature, index) => (
-          <div key={index} className="glass-card p-6 sm:p-8 rounded-3xl hover:shadow-lg transition-all duration-300 group">
+          <div key={index} className="glass-card rounded-3xl hover:shadow-lg transition-all duration-300 group overflow-hidden">
             <div className="flex flex-col h-full">
-              <div className="mb-4 flex justify-between items-start">
-                <div className="w-full">
-                  <AspectRatio ratio={16 / 9} className="mb-4">
-                    <img 
-                      src={feature.image} 
-                      alt={feature.title} 
-                      className="w-full h-full object-cover rounded-lg" 
-                    />
-                  </AspectRatio>
-                </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-all ml-2 flex-shrink-0">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
+              <div className="relative">
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src={feature.image} 
+                    alt={feature.title} 
+                    className="w-full h-full object-cover" 
+                  />
+                </AspectRatio>
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white drop-shadow-lg">
                     <path d="M5 13L13 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M5 5H13V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">{feature.description}</p>
+              <div className="p-6 sm:p-8">
+                <h3 className="text-lg sm:text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">{feature.description}</p>
+              </div>
             </div>
           </div>
         ))}
@@ -89,27 +89,27 @@ export default function AdvancedFeaturesSection() {
       {/* Second row - 3 columns on desktop, 1 on mobile, 2 on tablet */}
       <div ref={secondRowRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 stagger-children">
         {secondRowFeatures.map((feature, index) => (
-          <div key={index} className="glass-card p-6 sm:p-8 rounded-3xl hover:shadow-lg transition-all duration-300 group">
+          <div key={index} className="glass-card rounded-3xl hover:shadow-lg transition-all duration-300 group overflow-hidden">
             <div className="flex flex-col h-full">
-              <div className="mb-4 flex justify-between items-start">
-                <div className="w-full">
-                  <AspectRatio ratio={16 / 9} className="mb-4">
-                    <img 
-                      src={feature.image} 
-                      alt={feature.title} 
-                      className="w-full h-full object-cover rounded-lg" 
-                    />
-                  </AspectRatio>
-                </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-all ml-2 flex-shrink-0">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
+              <div className="relative">
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src={feature.image} 
+                    alt={feature.title} 
+                    className="w-full h-full object-cover" 
+                  />
+                </AspectRatio>
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white drop-shadow-lg">
                     <path d="M5 13L13 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M5 5H13V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">{feature.description}</p>
+              <div className="p-6 sm:p-8">
+                <h3 className="text-lg sm:text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">{feature.description}</p>
+              </div>
             </div>
           </div>
         ))}
