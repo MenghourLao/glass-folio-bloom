@@ -1,3 +1,4 @@
+
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -90,14 +91,14 @@ export default function Pricing() {
               
               <Button 
                 variant={plan.popular ? "default" : "outline"} 
-                className={`w-full mt-auto hover:scale-105 transition-all duration-200 ${plan.popular ? 'text-white hover:text-white' : ''}`}
+                className="w-full mt-auto hover:scale-105 transition-all duration-200" 
                 asChild
               >
                 <a 
                   href="https://api-production.bookme.plus/organizer/sign_in" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-full h-full"
+                  className="flex items-center justify-center"
                 >
                   Get Started
                 </a>
