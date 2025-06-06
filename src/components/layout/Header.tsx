@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/useTheme";
 
@@ -93,7 +93,7 @@ export default function Header() {
             asChild
           >
             <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
-              <Zap className="mr-2 h-4 w-4" /> Create First Event
+              Create First Event
             </a>
           </Button>
         </div>
@@ -144,7 +144,7 @@ export default function Header() {
             asChild
           >
             <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
-              <Zap className="mr-2 h-4 w-4" /> Create First Event
+              Create First Event
             </a>
           </Button>
         </nav>
