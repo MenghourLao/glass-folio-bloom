@@ -1,11 +1,9 @@
-
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -15,15 +13,6 @@ export default function HeroSection() {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <section
       className="relative h-screen w-full px-0 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center mt-0 pt-12 sm:pt-16 lg:pt-20"
@@ -31,7 +20,6 @@ export default function HeroSection() {
         backgroundImage: `url('https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/heroimage%20copy.jpg?raw=true')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        transform: `translateY(${scrollY * 0.5}px)`,
       }}
     >
       {/* Animated Mouse */}
@@ -43,12 +31,7 @@ export default function HeroSection() {
         </div>
       </div>
       
-      <div 
-        className="w-full relative z-10 my-0 px-4 sm:px-6 lg:px-8"
-        style={{
-          transform: `translateY(${scrollY * -0.3}px)`,
-        }}
-      >
+      <div className="w-full relative z-10 my-0 px-4 sm:px-6 lg:px-8">
         {/* Platform Label */}
         <div className={`flex justify-center mb-6 sm:mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
           <div className="border border-white/30 rounded-full px-4 py-2 sm:px-6 sm:py-2 inline-block backdrop-blur-md bg-black/20 hover:bg-black/40 transition-all">
