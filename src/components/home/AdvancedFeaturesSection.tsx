@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Zap } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 export default function AdvancedFeaturesSection() {
@@ -8,32 +9,32 @@ export default function AdvancedFeaturesSection() {
     {
       title: "Sell your ticket on all platforms",
       description: "Telegram Mini App, Embedded Form on your personal website, app, chatbot on Messenger, IG, and WhatsApp.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Multi-Channel%20Sales.png?raw=true"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Sell%20your%20ticket%20on%20all%20platforms.jpg?raw=true"
     }, 
     {
       title: "Post-Purchase Engagement Tools",
       description: "Stay close to your event-goers with pre-defined, customized flows designed to bring high retention rates and engagement through AI chatbot.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/After-Sale%20Support.png?raw=true"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Post-Purchase%20Engagement%20Tools.jpg?raw=true"
     }, 
     {
       title: "E-Commerce Ready",
       description: "Seamlessly manage merchandise inventory and shipment delivery. Forecast and generate demand before production.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/BookMeBusiness%20Self-Setup.png?raw=true"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/E-Commerce%20Ready.jpg?raw=true"
     }, 
     {
       title: "Offline Check-In",
       description: "Fast and smooth check-in process for merchandise collection and physical ticket pickup.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/On-site%20Check-in.png?raw=true"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Offline%20Check-In.jpg?raw=true"
     },
     {
       title: "Self Check-In",
       description: "Inspired by the STOP COVID user experience, our app enables tech-savvy users to check themselves in using a dynamic QR code.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Smart%20Ticketing%20System.png?raw=true"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Self%20Check-In.jpg?raw=true"
     },
     {
       title: "Virtualized Dashboard",
       description: "Forecast and generate demand before production.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Real-Time%20Reporting.png?raw=true"
+      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Virtualized%20Dashboard.jpg?raw=true"
     }
   ];
 
@@ -62,14 +63,16 @@ export default function AdvancedFeaturesSection() {
           <div key={index} className="glass-card p-6 sm:p-8 rounded-3xl hover:shadow-lg transition-all duration-300 group">
             <div className="flex flex-col h-full">
               <div className="mb-4 flex justify-between items-start">
-                <div className="h-16 w-16 sm:h-20 sm:w-20 flex items-center justify-center">
-                  <img 
-                    src={feature.image} 
-                    alt={feature.title} 
-                    className="w-full h-full object-contain" 
-                  />
+                <div className="w-full">
+                  <AspectRatio ratio={16 / 9} className="mb-4">
+                    <img 
+                      src={feature.image} 
+                      alt={feature.title} 
+                      className="w-full h-full object-cover rounded-lg" 
+                    />
+                  </AspectRatio>
                 </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-all">
+                <div className="opacity-0 group-hover:opacity-100 transition-all ml-2 flex-shrink-0">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
                     <path d="M5 13L13 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M5 5H13V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -89,14 +92,16 @@ export default function AdvancedFeaturesSection() {
           <div key={index} className="glass-card p-6 sm:p-8 rounded-3xl hover:shadow-lg transition-all duration-300 group">
             <div className="flex flex-col h-full">
               <div className="mb-4 flex justify-between items-start">
-                <div className="h-16 w-16 sm:h-20 sm:w-20 flex items-center justify-center">
-                  <img 
-                    src={feature.image} 
-                    alt={feature.title} 
-                    className="w-full h-full object-contain" 
-                  />
+                <div className="w-full">
+                  <AspectRatio ratio={16 / 9} className="mb-4">
+                    <img 
+                      src={feature.image} 
+                      alt={feature.title} 
+                      className="w-full h-full object-cover rounded-lg" 
+                    />
+                  </AspectRatio>
                 </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-all">
+                <div className="opacity-0 group-hover:opacity-100 transition-all ml-2 flex-shrink-0">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
                     <path d="M5 13L13 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M5 5H13V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
