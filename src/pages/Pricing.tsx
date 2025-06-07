@@ -1,3 +1,4 @@
+
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -92,7 +93,7 @@ export default function Pricing() {
               
               <Button 
                 variant={plan.popular ? "default" : "outline"} 
-                className={`w-full mt-auto hover:scale-105 transition-all duration-300 font-semibold h-12 px-4 py-3 ${
+                className={`w-full mt-auto hover:scale-105 transition-all duration-300 font-semibold h-12 px-4 py-3 text-sm ${
                   plan.popular 
                     ? 'bg-primary text-white hover:bg-primary/90 border-primary shadow-lg shadow-primary/25' 
                     : 'border-2 border-primary/30 text-primary hover:border-primary hover:bg-primary/10 hover:text-primary backdrop-blur-sm'
