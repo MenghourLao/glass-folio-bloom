@@ -1,30 +1,31 @@
-
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 export default function Pricing() {
-  const plans = [{
-    name: "FREE",
-    price: "Free",
-    description: "For getting started",
-    features: ["Ads on E-Ticket", "Sell on Social Networks", "QR Code Check-in Feature", "Attendee Self Check-in", "Offline Check-in Feature", "BM+ Organizer App", "Customizable Event Pages"],
-    addons: ["Tutorial Videos on How to Check-in Attendance for Crews"]
-  }, {
-    name: "GROWTH",
-    price: "10%",
-    description: "Per ticket or min $0.25 service fee",
-    subPrice: "or min $150 fixed fee per event",
-    features: ["All Features in FREE Plan", "E-Ticket Ads Free", "Instant Payout", "Organizer Landing Page", "Business Intelligence Reports"],
-    addons: ["Video Tutorial on How to Book and Pay", "Technical Support: $30 per crew/day", "Telegram & Messenger Broadcasting ($50/month per 500 contacts)"],
-    popular: true
-  }, {
-    name: "ENTERPRISE",
-    price: "Custom",
-    description: "Contact us for custom pricing",
-    features: ["All Features in GROWTH Plan", "Walk-in Ticket Issuing", "Multiple Sessions Check-in", "Telegram Bot Integration with Customized Post-Purchase Flow", "App & Website White Label"]
-  }];
+  const plans = [
+    {
+      name: "FREE",
+      price: "Free",
+      description: "For getting started",
+      features: ["Ads on E-Ticket", "Sell on Social Networks", "QR Code Check-in Feature", "Attendee Self Check-in", "Offline Check-in Feature", "BM+ Organizer App", "Customizable Event Pages"],
+      addons: ["Tutorial Videos on How to Check-in Attendance for Crews"]
+    }, {
+      name: "GROWTH",
+      price: "10%",
+      description: "Per ticket or min $0.25 service fee",
+      subPrice: "or min $150 fixed fee per event",
+      features: ["All Features in FREE Plan", "E-Ticket Ads Free", "Instant Payout", "Organizer Landing Page", "Business Intelligence Reports"],
+      addons: ["Video Tutorial on How to Book and Pay", "Technical Support: $30 per crew/day", "Telegram & Messenger Broadcasting ($50/month per 500 contacts)"],
+      popular: true
+    }, {
+      name: "ENTERPRISE",
+      price: "Custom",
+      description: "Contact us for custom pricing",
+      features: ["All Features in GROWTH Plan", "Walk-in Ticket Issuing", "Multiple Sessions Check-in", "Telegram Bot Integration with Customized Post-Purchase Flow", "App & Website White Label"]
+    }
+  ];
   
   const headingRef = useScrollAnimation<HTMLDivElement>('visible');
   const plansRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
@@ -91,7 +92,7 @@ export default function Pricing() {
               
               <Button 
                 variant={plan.popular ? "default" : "outline"} 
-                className={`w-full mt-auto hover:scale-105 transition-all duration-300 font-semibold h-12 ${
+                className={`w-full mt-auto hover:scale-105 transition-all duration-300 font-semibold h-12 px-4 py-3 ${
                   plan.popular 
                     ? 'bg-primary text-white hover:bg-primary/90 border-primary shadow-lg shadow-primary/25' 
                     : 'border-2 border-primary/30 text-primary hover:border-primary hover:bg-primary/10 hover:text-primary backdrop-blur-sm'
@@ -102,7 +103,7 @@ export default function Pricing() {
                   href="https://api-production.bookme.plus/organizer/sign_in" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-full h-full py-3"
+                  className="flex items-center justify-center w-full h-full leading-none"
                 >
                   Get Started
                 </a>
