@@ -2,7 +2,7 @@
 export default function Privacy() {
   return (
     <div className="animate-fade-in">
-      <section className="container mx-auto py-16 md:py-24 px-4">
+      <section className="container mx-auto py-32 md:py-36 px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center uppercase">Privacy Policy</h1>
         
         <div className="glass-card p-8 md:p-12 max-w-5xl mx-auto">

@@ -1,3 +1,4 @@
+
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -31,7 +32,7 @@ export default function Pricing() {
   return (
     <div className="animate-fade-in">
       {/* Pricing Hero */}
-      <section className="container mx-auto py-16 md:py-24 px-4">
+      <section className="container mx-auto py-32 md:py-36 px-4">
         <div ref={headingRef} className="text-center mb-16 fade-up">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">BOOKME+ PRICING PLANS</h1>
           <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto">
