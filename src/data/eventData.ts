@@ -216,7 +216,7 @@ export const eventCategories = {
   }, {
     title: "Phnom Penh Plant Exhibition",
     image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/phnom%20penh%20plant.jpg?raw=true",
-    location: "Conec",
+    location: "Connexion Koh Pich",
     date: "October 12, 2024"
   }],
   fundraising: [{
