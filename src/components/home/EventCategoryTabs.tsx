@@ -13,33 +13,33 @@ export default function EventCategoryTabs({ activeTab }: EventCategoryTabsProps)
       <TabsList className="inline-flex flex-wrap h-auto p-2 gap-2 bg-muted/50 backdrop-blur-sm border border-border/50 rounded-2xl shadow-lg">
         <TabsTrigger 
           value="concert" 
-          className="text-sm md:text-base px-4 md:px-6 py-3 whitespace-nowrap rounded-xl font-medium transition-all duration-300 hover:scale-105 data-[state=active]:shadow-md data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          className="text-sm md:text-base px-4 md:px-6 py-3 whitespace-nowrap rounded-xl font-medium transition-all duration-300 hover:scale-105 data-[state=active]:shadow-md data-[state=active]:bg-primary data-[state=active]:text-white"
         >
-          🎵 Concert
+          Concert
         </TabsTrigger>
         <TabsTrigger 
           value="sport" 
-          className="text-sm md:text-base px-4 md:px-6 py-3 whitespace-nowrap rounded-xl font-medium transition-all duration-300 hover:scale-105 data-[state=active]:shadow-md data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          className="text-sm md:text-base px-4 md:px-6 py-3 whitespace-nowrap rounded-xl font-medium transition-all duration-300 hover:scale-105 data-[state=active]:shadow-md data-[state=active]:bg-primary data-[state=active]:text-white"
         >
-          ⚽ Sport
+          Sport
         </TabsTrigger>
         <TabsTrigger 
           value="workshop" 
-          className="text-sm md:text-base px-4 md:px-6 py-3 whitespace-nowrap rounded-xl font-medium transition-all duration-300 hover:scale-105 data-[state=active]:shadow-md data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          className="text-sm md:text-base px-4 md:px-6 py-3 whitespace-nowrap rounded-xl font-medium transition-all duration-300 hover:scale-105 data-[state=active]:shadow-md data-[state=active]:bg-primary data-[state=active]:text-white"
         >
-          🛠️ Workshop & Meetup
+          Workshop & Meetup
         </TabsTrigger>
         <TabsTrigger 
           value="arts" 
-          className="text-sm md:text-base px-4 md:px-6 py-3 whitespace-nowrap rounded-xl font-medium transition-all duration-300 hover:scale-105 data-[state=active]:shadow-md data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          className="text-sm md:text-base px-4 md:px-6 py-3 whitespace-nowrap rounded-xl font-medium transition-all duration-300 hover:scale-105 data-[state=active]:shadow-md data-[state=active]:bg-primary data-[state=active]:text-white"
         >
-          🎨 Arts & Exhibition
+          Arts & Exhibition
         </TabsTrigger>
         <TabsTrigger 
           value="fundraising" 
-          className="text-sm md:text-base px-4 md:px-6 py-3 whitespace-nowrap rounded-xl font-medium transition-all duration-300 hover:scale-105 data-[state=active]:shadow-md data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          className="text-sm md:text-base px-4 md:px-6 py-3 whitespace-nowrap rounded-xl font-medium transition-all duration-300 hover:scale-105 data-[state=active]:shadow-md data-[state=active]:bg-primary data-[state=active]:text-white"
         >
-          💝 Fundraising Events
+          Fundraising Events
         </TabsTrigger>
       </TabsList>
     </div>
