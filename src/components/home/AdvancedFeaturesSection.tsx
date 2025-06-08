@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Zap } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
@@ -17,8 +16,8 @@ export default function AdvancedFeaturesSection() {
       image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Post-Purchase%20Engagement%20Tools.jpg?raw=true"
     }, 
     {
-      title: "E-Commerce Ready",
-      description: "Seamlessly manage merchandise inventory and shipment delivery. Forecast and generate demand before production.",
+      title: "Online Merchandise Sale Ready",
+      description: "Sell event merchandise with tools to manage inventory, delivery, and forecast demand before production.",
       image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/E-Commerce%20Ready.jpg?raw=true"
     }, 
     {
