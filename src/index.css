@@ -6,96 +6,13 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-
-    --primary: 248 90% 66%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-
-    --accent: 248 90% 66%;
-    --accent-foreground: 240 5.9% 10%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-
-    --radius: 1.5rem;
-
-    --sidebar-background: 240 4.8% 95.9%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  /* Light theme (fallback) */
-  html.light,
-  .light,
-  :root.light,
-  [data-theme="light"] {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-
-    --primary: 248 90% 66%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-
-    --accent: 248 90% 66%;
-    --accent-foreground: 240 5.9% 10%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-
-    --sidebar-background: 240 4.8% 95.9%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  /* Dark theme - Enhanced for Safari */
+  :root,
+  html,
+  body,
   html.dark,
   .dark,
   :root.dark,
   [data-theme="dark"],
-  /* Safari-specific selectors */
   html[data-theme="dark"],
   body[data-theme="dark"] {
     color-scheme: dark !important;
@@ -135,6 +52,8 @@
     --sidebar-accent-foreground: 240 4.8% 95.9% !important;
     --sidebar-border: 240 3.7% 15.9% !important;
     --sidebar-ring: 217.2 91.2% 59.8% !important;
+
+    --radius: 1.5rem;
   }
 
   /* Safari-specific dark mode enforcement */
@@ -146,31 +65,23 @@
       color: rgb(248, 250, 252) !important;
     }
     
-    html.dark,
-    body.dark,
-    html[data-theme="dark"],
-    body[data-theme="dark"] {
-      background-color: rgb(0, 0, 0) !important;
-      color: rgb(248, 250, 252) !important;
-    }
-    
     /* Ensure cards work properly in Safari */
-    .dark .bg-card,
+    .bg-card,
     [data-theme="dark"] .bg-card {
       background-color: rgb(0, 0, 0) !important;
     }
     
-    .dark .text-card-foreground,
+    .text-card-foreground,
     [data-theme="dark"] .text-card-foreground {
       color: rgb(248, 250, 252) !important;
     }
     
-    .dark .text-foreground,
+    .text-foreground,
     [data-theme="dark"] .text-foreground {
       color: rgb(248, 250, 252) !important;
     }
     
-    .dark .bg-background,
+    .bg-background,
     [data-theme="dark"] .bg-background {
       background-color: rgb(0, 0, 0) !important;
     }
@@ -184,21 +95,11 @@
   
   html {
     scroll-behavior: smooth;
-    color-scheme: dark; /* Force dark for Safari */
+    color-scheme: dark !important;
   }
   
   body {
     @apply bg-background text-foreground font-poppins;
-    /* Safari fallback with important */
-    background-color: hsl(var(--background)) !important;
-    color: hsl(var(--foreground)) !important;
-  }
-  
-  /* Ensure dark mode is applied to body in Safari */
-  html.dark body,
-  body.dark,
-  html[data-theme="dark"] body,
-  body[data-theme="dark"] {
     background-color: rgb(0, 0, 0) !important;
     color: rgb(248, 250, 252) !important;
   }
@@ -214,7 +115,7 @@
 
 @layer components {
   .glass {
-    @apply backdrop-blur-lg bg-black/80 dark:bg-black/80 border border-white/20 dark:border-white/10;
+    @apply backdrop-blur-lg bg-black/80 border border-white/20;
   }
   
   .glass-card {
