@@ -1,11 +1,20 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#000000" />
+    
+    <!-- Browser-specific meta tags for better compatibility -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-navbutton-color" content="#000000" />
+    
     <title>BookMe+ | Simple Booking Solutions for Modern Businesses</title>
     <meta name="description" content="BookMe+ streamlines your scheduling process with an intuitive platform designed for professionals who value their time and client experience." />
     <meta name="author" content="BookMe+" />
@@ -29,9 +38,24 @@
     
     <!-- Favicon for better browser support -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <!-- Force dark mode styling for immediate loading -->
+    <style>
+      html, body {
+        background-color: #000000 !important;
+        color: #f8fafc !important;
+        color-scheme: dark !important;
+      }
+      
+      /* Prevent flash of light content */
+      * {
+        background-color: inherit;
+        color: inherit;
+      }
+    </style>
   </head>
 
-  <body>
+  <body class="dark">
     <div id="root"></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
