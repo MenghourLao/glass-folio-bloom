@@ -30,6 +30,29 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   };
 
+  const applyThemeToDocument = (themeToApply: 'dark' | 'light') => {
+    if (typeof document === 'undefined') return;
+    
+    // Remove all theme classes
+    document.documentElement.classList.remove('light', 'dark');
+    document.body.classList.remove('light', 'dark');
+    
+    // Add the new theme class to both html and body for Safari
+    document.documentElement.classList.add(themeToApply);
+    document.body.classList.add(themeToApply);
+    
+    // Safari-specific: Also set the theme as an attribute
+    document.documentElement.setAttribute('data-theme', themeToApply);
+    
+    // Force Safari to repaint by triggering a layout recalculation
+    if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+      const body = document.body;
+      body.style.display = 'none';
+      body.offsetHeight; // Trigger reflow
+      body.style.display = '';
+    }
+  };
+
   useEffect(() => {
     const updateResolvedTheme = () => {
       let newResolvedTheme: 'dark' | 'light';
@@ -41,10 +64,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       }
       
       setResolvedTheme(newResolvedTheme);
-      
-      // Update document class based on resolved theme
-      document.documentElement.classList.remove('light', 'dark');
-      document.documentElement.classList.add(newResolvedTheme);
+      applyThemeToDocument(newResolvedTheme);
       
       // Save theme preference to localStorage
       localStorage.setItem('theme', theme);
@@ -63,8 +83,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       if (theme === 'system') {
         const newSystemTheme = getSystemTheme();
         setResolvedTheme(newSystemTheme);
-        document.documentElement.classList.remove('light', 'dark');
-        document.documentElement.classList.add(newSystemTheme);
+        applyThemeToDocument(newSystemTheme);
       }
     };
     
