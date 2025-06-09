@@ -129,14 +129,28 @@
 @layer base {
   * {
     @apply border-border;
+    /* Cross-browser box-sizing */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   
   html {
     scroll-behavior: smooth;
+    /* Safari smooth scrolling fallback */
+    -webkit-scroll-behavior: smooth;
+    /* IE/Edge fallback for font rendering */
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
   }
   
   body {
     @apply bg-background text-foreground font-poppins;
+    /* Cross-browser font smoothing */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* IE/Edge text rendering */
+    text-rendering: optimizeLegibility;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -146,11 +160,31 @@
   p, span, div, li, a {
     @apply font-poppins;
   }
+
+  /* Cross-browser input styling */
+  input, textarea, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  /* Remove IE clear button */
+  input::-ms-clear {
+    display: none;
+  }
+
+  /* Remove Safari search cancel button */
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
 }
 
 @layer components {
   .glass {
     @apply backdrop-blur-lg bg-black/80 dark:bg-black/80 border border-white/20 dark:border-white/10;
+    /* Safari backdrop-filter fallback */
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
   }
   
   .glass-card {
@@ -183,25 +217,44 @@
     }
   }
   
+  /* Cross-browser keyframes */
+  @-webkit-keyframes carousel {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+  
   .animate-carousel {
     animation: carousel 30s linear infinite;
+    -webkit-animation: carousel 30s linear infinite;
   }
 
-  /* Enhanced scroll animation classes */
+  /* Enhanced scroll animation classes with cross-browser support */
   .fade-up {
     opacity: 0;
     transform: translateY(40px);
+    -webkit-transform: translateY(40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    -webkit-transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
+    -moz-transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   
   .fade-up.visible {
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
   }
   
   .fade-in {
     opacity: 0;
     transition: opacity 0.8s ease-out;
+    -webkit-transition: opacity 0.8s ease-out;
+    -moz-transition: opacity 0.8s ease-out;
   }
   
   .fade-in.visible {
@@ -211,87 +264,148 @@
   .slide-in-left {
     opacity: 0;
     transform: translateX(-40px);
+    -webkit-transform: translateX(-40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    -webkit-transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
+    -moz-transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   
   .slide-in-left.visible {
     opacity: 1;
     transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
 
   .slide-in-right {
     opacity: 0;
     transform: translateX(40px);
+    -webkit-transform: translateX(40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    -webkit-transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
+    -moz-transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   
   .slide-in-right.visible {
     opacity: 1;
     transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
 
   .scale-up {
     opacity: 0;
     transform: scale(0.9);
+    -webkit-transform: scale(0.9);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    -webkit-transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
+    -moz-transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   
   .scale-up.visible {
     opacity: 1;
     transform: scale(1);
+    -webkit-transform: scale(1);
   }
 
   .stagger-children > * {
     opacity: 0;
     transform: translateY(30px);
+    -webkit-transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    -webkit-transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+    -moz-transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
 
   .stagger-children.visible > *:nth-child(1) {
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
     transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
   }
 
   .stagger-children.visible > *:nth-child(2) {
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
     transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
   }
 
   .stagger-children.visible > *:nth-child(3) {
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
     transition-delay: 0.3s;
+    -webkit-transition-delay: 0.3s;
   }
 
   .stagger-children.visible > *:nth-child(4) {
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
     transition-delay: 0.4s;
+    -webkit-transition-delay: 0.4s;
   }
 
   .stagger-children.visible > *:nth-child(5) {
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
     transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
   }
 
   .stagger-children.visible > *:nth-child(6) {
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
     transition-delay: 0.6s;
+    -webkit-transition-delay: 0.6s;
   }
 
   .stagger-children.visible > *:nth-child(7) {
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
     transition-delay: 0.7s;
+    -webkit-transition-delay: 0.7s;
   }
 
   .stagger-children.visible > *:nth-child(8) {
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
     transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s;
+  }
+
+  /* IE flexbox fixes */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .flex {
+      display: -ms-flexbox;
+      display: flex;
+    }
+    
+    .flex-col {
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+    
+    .items-center {
+      -ms-flex-align: center;
+      align-items: center;
+    }
+    
+    .justify-center {
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+  }
+
+  /* Firefox specific fixes */
+  @-moz-document url-prefix() {
+    .glass {
+      background: rgba(0, 0, 0, 0.8);
+    }
   }
 }
