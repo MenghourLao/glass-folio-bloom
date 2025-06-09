@@ -13,14 +13,19 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Get from localStorage or default to system
+    // For Safari, always default to dark mode
+    if (typeof window !== 'undefined' && navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+      return 'dark';
+    }
+    
+    // Get from localStorage or default to system for other browsers
     if (typeof window !== 'undefined') {
       const savedTheme = localStorage.getItem('theme') as Theme;
       if (savedTheme && ['dark', 'light', 'system'].includes(savedTheme)) {
         return savedTheme;
       }
     }
-    return 'system'; // Default to system preference
+    return 'system';
   });
 
   const [resolvedTheme, setResolvedTheme] = useState<'dark' | 'light'>('dark');
@@ -30,26 +35,41 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   };
 
+  const isSafari = () => {
+    if (typeof navigator === 'undefined') return false;
+    return navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome');
+  };
+
   const applyThemeToDocument = (themeToApply: 'dark' | 'light') => {
     if (typeof document === 'undefined') return;
     
-    // Remove all theme classes
+    // For Safari, force dark mode regardless of the theme parameter
+    const finalTheme = isSafari() ? 'dark' : themeToApply;
+    
+    // Remove all theme classes first
     document.documentElement.classList.remove('light', 'dark');
     document.body.classList.remove('light', 'dark');
     
-    // Add the new theme class to both html and body for Safari
-    document.documentElement.classList.add(themeToApply);
-    document.body.classList.add(themeToApply);
+    // Add the theme class to both html and body elements
+    document.documentElement.classList.add(finalTheme);
+    document.body.classList.add(finalTheme);
     
-    // Safari-specific: Also set the theme as an attribute
-    document.documentElement.setAttribute('data-theme', themeToApply);
+    // Set data attribute for additional CSS targeting
+    document.documentElement.setAttribute('data-theme', finalTheme);
+    document.body.setAttribute('data-theme', finalTheme);
     
-    // Force Safari to repaint by triggering a layout recalculation
-    if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+    // Safari-specific: Force styles by setting inline styles as fallback
+    if (isSafari()) {
+      document.documentElement.style.colorScheme = 'dark';
+      document.body.style.backgroundColor = 'rgb(0, 0, 0)';
+      document.body.style.color = 'rgb(248, 250, 252)';
+      
+      // Force repaint in Safari
       const body = document.body;
+      const display = body.style.display;
       body.style.display = 'none';
       body.offsetHeight; // Trigger reflow
-      body.style.display = '';
+      body.style.display = display || '';
     }
   };
 
@@ -57,7 +77,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     const updateResolvedTheme = () => {
       let newResolvedTheme: 'dark' | 'light';
       
-      if (theme === 'system') {
+      // For Safari, always use dark mode
+      if (isSafari()) {
+        newResolvedTheme = 'dark';
+        setTheme('dark'); // Ensure theme state is also dark for Safari
+      } else if (theme === 'system') {
         newResolvedTheme = getSystemTheme();
       } else {
         newResolvedTheme = theme;
@@ -66,16 +90,18 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       setResolvedTheme(newResolvedTheme);
       applyThemeToDocument(newResolvedTheme);
       
-      // Save theme preference to localStorage
-      localStorage.setItem('theme', theme);
+      // Save theme preference to localStorage (except for Safari forced dark mode)
+      if (!isSafari()) {
+        localStorage.setItem('theme', theme);
+      }
     };
 
     updateResolvedTheme();
   }, [theme]);
 
-  // Listen for system theme changes
+  // Listen for system theme changes (not applicable for Safari since it's forced dark)
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || isSafari()) return;
     
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     
