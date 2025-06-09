@@ -1,4 +1,3 @@
-
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
 type Theme = 'dark' | 'light';
@@ -12,58 +11,50 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Always default to dark mode, ignore system preference
+    // Get from localStorage by default
     if (typeof window !== 'undefined') {
       const savedTheme = localStorage.getItem('theme') as Theme;
       if (savedTheme) {
         return savedTheme;
       }
+      
+      // Otherwise check system preference
+      return window.matchMedia('(prefers-color-scheme: dark)').matches 
+        ? 'dark' 
+        : 'light';
     }
     
-    return 'dark'; // Always default to dark mode
+    return 'dark'; // Default fallback
   });
 
   useEffect(() => {
-    // Cross-browser dark mode implementation
-    const root = document.documentElement;
-    const body = document.body;
-    
-    if (theme === 'dark') {
-      // Add dark class to html and body for maximum compatibility
-      root.classList.add('dark');
-      root.classList.remove('light');
-      body.classList.add('dark');
-      body.classList.remove('light');
-      
-      // Set CSS custom properties for cross-browser support
-      root.style.setProperty('color-scheme', 'dark');
-      
-      // Store preference
-      localStorage.setItem('theme', 'dark');
-    } else {
-      root.classList.add('light');
-      root.classList.remove('dark');
-      body.classList.add('light');
-      body.classList.remove('dark');
-      
-      root.style.setProperty('color-scheme', 'light');
+    // Update document class based on theme
+    if (theme === 'light') {
+      document.documentElement.classList.add('light');
+      document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
+      localStorage.setItem('theme', 'dark');
     }
   }, [theme]);
 
-  // Force dark mode on initial load for all browsers
+  // Listen for system theme changes
   useEffect(() => {
-    const root = document.documentElement;
-    const body = document.body;
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     
-    // Ensure dark mode is applied immediately
-    root.classList.add('dark');
-    body.classList.add('dark');
-    root.style.setProperty('color-scheme', 'dark');
+    const handleChange = () => {
+      if (!localStorage.getItem('theme')) {
+        setTheme(mediaQuery.matches ? 'dark' : 'light');
+      }
+    };
     
-    // Remove any light mode classes that might exist
-    root.classList.remove('light');
-    body.classList.remove('light');
+    mediaQuery.addEventListener('change', handleChange);
+    
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
   }, []);
 
   return (
