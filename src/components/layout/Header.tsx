@@ -63,9 +63,7 @@ export default function Header() {
                     className={`font-poppins text-sm font-medium transition-colors hover:text-primary ${
                       location.pathname === item.path 
                         ? "text-primary" 
-                        : theme === "light" 
-                          ? "text-black" 
-                          : "text-white"
+                        : "text-white"
                     }`}
                   >
                     {item.name}
