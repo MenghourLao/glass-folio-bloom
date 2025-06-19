@@ -1,9 +1,40 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import useScrollAnimation from "@/hooks/useScrollAnimation";
-import { Leaf, QrCode, CreditCard, FileText, TreePine, Car } from "lucide-react";
+import { Leaf, QrCode, Ban, FileText, TreePine, Car } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
+// Counter animation hook
+const useCounter = (endValue: number, duration: number = 2000, isVisible: boolean = false) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime: number;
+    const startValue = 0;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      const currentCount = Math.floor(progress * endValue);
+      setCount(currentCount);
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [endValue, duration, isVisible]);
+
+  return count;
+};
+
 export default function GoGreenSection() {
+  const [isStatsVisible, setIsStatsVisible] = useState(false);
+
   const greenFeatures = [
     {
       icon: <QrCode className="h-12 w-12 text-green-400" />,
@@ -12,7 +43,7 @@ export default function GoGreenSection() {
       bgColor: "bg-green-900/20"
     },
     {
-      icon: <CreditCard className="h-12 w-12 text-green-400" />,
+      icon: <Ban className="h-12 w-12 text-green-400" />,
       title: "No plastic badges",
       description: "Mobile check-ins only",
       bgColor: "bg-green-900/20"
@@ -27,35 +58,69 @@ export default function GoGreenSection() {
 
   const impactStats = [
     {
-      number: "255,720+",
+      endValue: 255720,
+      suffix: "+",
       label: "Printed Tickets Saved",
       color: "text-green-400"
     },
     {
-      number: "42,130+",
+      endValue: 42130,
+      suffix: "+",
       label: "Plastic Badges Saved",
       color: "text-green-400"
     },
     {
-      number: "11,045+",
+      endValue: 11045,
+      suffix: "+",
       label: "Paper Brochures Saved",
       color: "text-green-400"
     },
     {
-      number: "53",
+      endValue: 53,
+      suffix: "",
       label: "Trees Saved",
       color: "text-green-400"
     },
     {
-      number: "1,385 kg",
+      endValue: 1385,
+      suffix: " kg",
       label: "CO₂ Emissions Saved",
       color: "text-green-400"
     }
   ];
+
+  // Custom hook for stats visibility
+  const statsRef = useScrollAnimation<HTMLDivElement>('visible', { 
+    threshold: 0.1,
+    animateOnce: true
+  });
+
+  // Watch for stats visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsStatsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, []);
   
   const headingRef = useScrollAnimation<HTMLDivElement>('visible');
   const featuresRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
-  const statsRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
   const quoteRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
   
   return (
@@ -86,16 +151,20 @@ export default function GoGreenSection() {
         <div ref={statsRef} className="border border-gray-800 rounded-2xl p-8 mb-12 fade-up">
           <h3 className="text-2xl font-bold text-center mb-8 text-white uppercase">Our Environmental Impact</h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {impactStats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`text-2xl md:text-3xl font-bold ${stat.color} mb-2`}>
-                  {stat.number}
+            {impactStats.map((stat, index) => {
+              const count = useCounter(stat.endValue, 2000, isStatsVisible);
+              
+              return (
+                <div key={index} className="text-center">
+                  <div className={`text-2xl md:text-3xl font-bold ${stat.color} mb-2`}>
+                    {count.toLocaleString()}{stat.suffix}
+                  </div>
+                  <div className="text-sm text-gray-300 leading-tight">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-sm text-gray-300 leading-tight">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
