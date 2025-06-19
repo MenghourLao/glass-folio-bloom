@@ -168,7 +168,7 @@ export default function GoGreenSection() {
         </div>
 
         <div ref={quoteRef} className="relative overflow-hidden rounded-2xl fade-up">
-          <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-[#5D54D9] p-8 md:p-12 text-center relative">
+          <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-gray-800 p-8 md:p-12 text-center relative">
             <div className="absolute inset-0 bg-[#5D54D9]/5 rounded-2xl"></div>
             <div className="relative z-10">
               <div className="flex items-center justify-center mb-6">
@@ -178,7 +178,7 @@ export default function GoGreenSection() {
                 </div>
               </div>
               <p className="text-white text-xl md:text-2xl font-semibold max-w-4xl mx-auto leading-relaxed">
-                "That's like taking <span className="text-white font-bold">3 cars</span> off Phnom Penh roads for a <span className="text-white font-bold">whole month</span>."
+                "That's like taking <span className="text-[#5D54D9] font-bold">3 cars</span> off Phnom Penh roads for a <span className="text-[#5D54D9] font-bold">whole month</span>."
               </p>
             </div>
           </div>
