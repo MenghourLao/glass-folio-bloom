@@ -151,7 +151,7 @@ export default function GoGreenSection() {
                 </div>
               </div>
               <p className="text-white text-xl md:text-2xl font-semibold max-w-4xl mx-auto leading-relaxed">
-                "That's like taking <span className="text-[#5D54D9] font-bold">3 cars</span> off Phnom Penh roads for a <span className="text-[#5D54D9] font-bold">whole month</span>."
+                "That's like taking <span className="font-bold text-slate-50">3 cars</span> off Phnom Penh roads for a <span className="text-[#5D54D9] font-bold">whole month</span>."
               </p>
             </div>
           </div>
