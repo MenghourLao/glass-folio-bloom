@@ -1,4 +1,3 @@
-
 import React from 'react';
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { Leaf, QrCode, CreditCard, FileText, TreePine, Car } from "lucide-react";
@@ -70,7 +69,6 @@ export default function GoGreenSection() {
           <p className="text-gray-300 max-w-2xl mx-auto text-lg font-medium">
             100% Digital Events. Better for Cambodia.
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-400 to-blue-500 mx-auto mt-4 rounded-full"></div>
         </div>
 
         <div ref={featuresRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 stagger-children">
