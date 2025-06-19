@@ -172,16 +172,15 @@ export default function GoGreenSection() {
             <div className="absolute inset-0 bg-[#5D54D9]/5 rounded-2xl"></div>
             <div className="relative z-10">
               <div className="flex items-center justify-center mb-6">
-                <div className="flex items-center space-x-3 bg-gray-800/50 px-4 py-2 rounded-full border border-[#5D54D9]/30">
+                <div className="flex items-center space-x-3 bg-gray-800/50 px-4 py-2 rounded-full border border-[#5D54D9]">
                   <Car className="h-6 w-6 text-[#5D54D9]" />
                   <span className="text-gray-400">vs</span>
                   <TreePine className="h-6 w-6 text-green-400" />
                 </div>
               </div>
               <p className="text-white text-xl md:text-2xl font-semibold max-w-4xl mx-auto leading-relaxed">
-                "That's like taking <span className="text-[#5D54D9] font-bold">3 cars</span> off Phnom Penh roads for a <span className="text-green-400 font-bold">whole month</span>."
+                "That's like taking <span className="text-white font-bold">3 cars</span> off Phnom Penh roads for a <span className="text-white font-bold">whole month</span>."
               </p>
-              <div className="mt-4 w-24 h-1 bg-gradient-to-r from-[#5D54D9] to-green-400 mx-auto rounded-full"></div>
             </div>
           </div>
         </div>
