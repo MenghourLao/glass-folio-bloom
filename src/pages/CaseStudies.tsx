@@ -1,4 +1,3 @@
-
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -27,24 +26,24 @@ export default function CaseStudies() {
   const youtubeVideos = [
     {
       id: "video1",
-      title: "BookMe+ Platform Demo",
+      title: "BookMe+ Ticketing Solution and CheckIn Management for Pich Solika Twilight Concert",
       videoId: "V4vVBy3ax7Y",
       thumbnail: `https://img.youtube.com/vi/V4vVBy3ax7Y/maxresdefault.jpg`,
-      description: "Complete walkthrough of the BookMe+ platform and its features."
+      description: "First Pich Solika Solo Concert. BookMe+ is proud to be part of her concert contributing to the huge success of her first ever concert as a solo artist. We hope to empower more artists and organizer in making their event memorable and most engaging by leveraging our powerful ticketing Solution and check-in management."
     },
     {
       id: "video2", 
-      title: "Event Management Made Easy",
+      title: "BookMe+ Concert Ticketing and CheckIn Management Project for the Q Solo Concert 2024",
       videoId: "nWfrw7N4aKk",
       thumbnail: `https://img.youtube.com/vi/nWfrw7N4aKk/maxresdefault.jpg`,
-      description: "Learn how to manage your events efficiently with BookMe+."
+      description: "Throwback to our first ever concert ticketing and check-in management project. In this project, we partnered with Rasmey Hang Meas in providing ticket distribution to fandom of Aok Sokunkanha and managing the QR Ticket check-in experience of the concert go-ers smoothly. This marks us one of the historical concert in the country because of its fan engagement and high value ticket price. BookMe+ team is very proud of this partnership."
     },
     {
       id: "video3",
-      title: "Success Stories from Our Clients",
+      title: "BookMePlus Introduction Video - Explore More, Experience Life",
       videoId: "_NWXdIb8H1M",
       thumbnail: `https://img.youtube.com/vi/_NWXdIb8H1M/maxresdefault.jpg`,
-      description: "Real testimonials and success stories from BookMe+ users."
+      description: "A recap of BookMe+ success and activities throughout 2024 in empowering Cambodia's event organizers from marathon to concert event."
     }
   ];
 
