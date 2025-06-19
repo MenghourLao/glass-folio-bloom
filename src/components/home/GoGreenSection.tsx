@@ -1,79 +1,114 @@
 
 import React from 'react';
 import useScrollAnimation from "@/hooks/useScrollAnimation";
-import { Leaf, TreePine, Recycle, Wind } from "lucide-react";
+import { Leaf, QrCode, CreditCard, FileText, TreePine, Car } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function GoGreenSection() {
   const greenFeatures = [
     {
-      icon: <Leaf className="h-8 w-8 text-green-400" />,
-      title: "Digital Tickets Only",
-      description: "100% paperless ticketing system reduces paper waste and carbon footprint.",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80"
+      icon: <QrCode className="h-12 w-12 text-green-500" />,
+      title: "No printed tickets",
+      description: "100% digital QR codes",
+      bgColor: "bg-green-100"
     },
     {
-      icon: <TreePine className="h-8 w-8 text-green-400" />,
-      title: "Carbon Neutral Events",
-      description: "Track and offset your event's environmental impact with our sustainability tools.",
-      image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80"
+      icon: <CreditCard className="h-12 w-12 text-green-500" />,
+      title: "No plastic badges",
+      description: "Mobile check-ins only",
+      bgColor: "bg-green-100"
     },
     {
-      icon: <Recycle className="h-8 w-8 text-green-400" />,
-      title: "Waste Reduction",
-      description: "Smart analytics help minimize event waste and promote recycling initiatives.",
-      image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80"
+      icon: <FileText className="h-12 w-12 text-green-500" />,
+      title: "No paper brochures",
+      description: "Digital event guides",
+      bgColor: "bg-green-100"
+    }
+  ];
+
+  const impactStats = [
+    {
+      number: "255,720+",
+      label: "Printed Tickets Saved",
+      color: "text-green-500"
     },
     {
-      icon: <Wind className="h-8 w-8 text-green-400" />,
-      title: "Green Partnerships",
-      description: "Connect with eco-friendly vendors and sustainable event suppliers.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80"
+      number: "42,130+",
+      label: "Plastic Badges Saved",
+      color: "text-green-500"
+    },
+    {
+      number: "11,045+",
+      label: "Paper Brochures Saved",
+      color: "text-green-500"
+    },
+    {
+      number: "53",
+      label: "Trees Saved",
+      color: "text-green-500"
+    },
+    {
+      number: "1,385 kg",
+      label: "CO₂ Emissions Saved",
+      color: "text-green-500"
     }
   ];
   
   const headingRef = useScrollAnimation<HTMLDivElement>('visible');
   const featuresRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
+  const statsRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
+  const quoteRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
   
   return (
-    <section className="container mx-auto py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-green-950/20 to-black">
+    <section className="container mx-auto py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div ref={headingRef} className="text-center mb-12 sm:mb-16 fade-up">
         <div className="flex items-center justify-center mb-4">
-          <Leaf className="h-8 w-8 text-green-400 mr-3" />
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-green-400">GO GREEN WITH BOOKME+</h2>
-          <Leaf className="h-8 w-8 text-green-400 ml-3" />
+          <Leaf className="h-8 w-8 text-green-500 mr-3" />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-black">Go Green with BookMe+</h2>
         </div>
-        <p className="text-muted-foreground max-w-3xl mx-auto text-sm sm:text-base px-4">
-          Join the sustainable event revolution. BookMe+ helps you create memorable events while protecting our planet through innovative eco-friendly solutions.
+        <p className="text-gray-600 max-w-2xl mx-auto text-lg font-medium">
+          100% Digital Events. Better for Cambodia.
         </p>
+        <div className="w-20 h-1 bg-gradient-to-r from-green-400 to-blue-500 mx-auto mt-4 rounded-full"></div>
       </div>
 
-      <div ref={featuresRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 stagger-children">
+      <div ref={featuresRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 stagger-children">
         {greenFeatures.map((feature, index) => (
-          <Card key={index} className="glass-card border-green-400/20 hover:border-green-400/50 transition-all group overflow-hidden">
-            <div className="h-40 sm:h-48 overflow-hidden relative">
-              <img 
-                src={feature.image} 
-                alt={feature.title} 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-              <div className="absolute top-4 right-4 p-2 rounded-full bg-green-400/20 backdrop-blur-sm">
-                {feature.icon}
-              </div>
+          <div key={index} className="text-center">
+            <div className={`w-20 h-20 ${feature.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
+              {feature.icon}
             </div>
-            <CardContent className="p-4 sm:p-6">
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-green-400">{feature.title}</h3>
-              <p className="text-muted-foreground text-sm">{feature.description}</p>
-            </CardContent>
-          </Card>
+            <h3 className="text-xl font-bold mb-2 text-black">{feature.title}</h3>
+            <p className="text-gray-600">{feature.description}</p>
+          </div>
         ))}
       </div>
 
-      <div className="text-center mt-12 sm:mt-16">
-        <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-400/10 border border-green-400/30">
-          <Recycle className="h-5 w-5 text-green-400 mr-2" />
-          <span className="text-green-400 font-medium">Making Every Event Count for the Planet</span>
+      <div ref={statsRef} className="bg-green-50 rounded-2xl p-8 mb-12 fade-up">
+        <h3 className="text-2xl font-bold text-center mb-8 text-black">Our Environmental Impact</h3>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          {impactStats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className={`text-2xl md:text-3xl font-bold ${stat.color} mb-2`}>
+                {stat.number}
+              </div>
+              <div className="text-sm text-gray-600 leading-tight">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div ref={quoteRef} className="relative overflow-hidden rounded-2xl fade-up">
+        <div className="bg-gradient-to-r from-green-500 to-blue-600 p-8 text-center">
+          <div className="flex items-center justify-center mb-4">
+            <Car className="h-6 w-6 text-white mr-2" />
+            <TreePine className="h-6 w-6 text-white" />
+          </div>
+          <p className="text-white text-lg md:text-xl font-medium max-w-3xl mx-auto">
+            "That's like taking 3 cars off Phnom Penh roads for a whole month."
+          </p>
         </div>
       </div>
     </section>
