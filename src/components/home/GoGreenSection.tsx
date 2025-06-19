@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { Leaf, QrCode, Ban, FileText, TreePine, Car } from "lucide-react";
@@ -129,7 +128,7 @@ export default function GoGreenSection() {
         <div ref={headingRef} className="text-center mb-12 sm:mb-16 fade-up">
           <div className="flex items-center justify-center mb-4">
             <Leaf className="h-8 w-8 text-green-400 mr-3" />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white uppercase">Go Green with BookMe+</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold bg-gradient-to-r from-green-400 via-purple-500 to-green-400 bg-clip-text text-transparent animate-gradient bg-[length:200%_200%] uppercase">Go Green with BookMe+</h2>
           </div>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg font-medium">
             100% Digital Events. Better for Cambodia.
@@ -174,7 +173,7 @@ export default function GoGreenSection() {
               <Car className="h-6 w-6 text-white mr-2" />
               <TreePine className="h-6 w-6 text-white" />
             </div>
-            <p className="text-white text-lg md:text-xl font-medium max-w-3xl mx-auto">
+            <p className="text-green-400 text-lg md:text-xl font-medium max-w-3xl mx-auto">
               "That's like taking 3 cars off Phnom Penh roads for a whole month."
             </p>
           </div>
