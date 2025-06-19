@@ -142,7 +142,7 @@ export default function GoGreenSection() {
 
         <div ref={quoteRef} className="relative overflow-hidden rounded-2xl fade-up">
           <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-gray-800 p-8 md:p-12 text-center relative">
-            <div className="absolute inset-0 rounded-2xl bg-gray-950"></div>
+            <div className="absolute inset-0 rounded-2xl bg-slate-950"></div>
             <div className="relative z-10">
               <div className="flex items-center justify-center mb-6">
                 <div className="flex items-center space-x-4">
