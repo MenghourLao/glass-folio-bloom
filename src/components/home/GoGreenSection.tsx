@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { Leaf, QrCode, Ban, FileText, TreePine, Car } from "lucide-react";
@@ -36,22 +37,22 @@ export default function GoGreenSection() {
 
   const greenFeatures = [
     {
-      icon: <QrCode className="h-12 w-12 text-green-400" />,
+      icon: <QrCode className="h-12 w-12 text-[#5D54D9]" />,
       title: "No printed tickets",
       description: "100% digital QR codes",
-      bgColor: "bg-green-900/20"
+      bgColor: "bg-[#5D54D9]/20"
     },
     {
-      icon: <Ban className="h-12 w-12 text-green-400" />,
+      icon: <Ban className="h-12 w-12 text-[#5D54D9]" />,
       title: "No plastic badges",
       description: "Mobile check-ins only",
-      bgColor: "bg-green-900/20"
+      bgColor: "bg-[#5D54D9]/20"
     },
     {
-      icon: <FileText className="h-12 w-12 text-green-400" />,
+      icon: <FileText className="h-12 w-12 text-[#5D54D9]" />,
       title: "No paper brochures",
       description: "Digital event guides",
-      bgColor: "bg-green-900/20"
+      bgColor: "bg-[#5D54D9]/20"
     }
   ];
 
@@ -60,31 +61,31 @@ export default function GoGreenSection() {
       endValue: 255720,
       suffix: "+",
       label: "Printed Tickets Saved",
-      color: "text-green-400"
+      color: "text-[#5D54D9]"
     },
     {
       endValue: 42130,
       suffix: "+",
       label: "Plastic Badges Saved",
-      color: "text-green-400"
+      color: "text-[#5D54D9]"
     },
     {
       endValue: 11045,
       suffix: "+",
       label: "Paper Brochures Saved",
-      color: "text-green-400"
+      color: "text-[#5D54D9]"
     },
     {
       endValue: 53,
       suffix: "",
       label: "Trees Saved",
-      color: "text-green-400"
+      color: "text-[#5D54D9]"
     },
     {
       endValue: 1385,
       suffix: " kg",
       label: "CO₂ Emissions Saved",
-      color: "text-green-400"
+      color: "text-[#5D54D9]"
     }
   ];
 
@@ -127,8 +128,8 @@ export default function GoGreenSection() {
       <div className="max-w-7xl mx-auto">
         <div ref={headingRef} className="text-center mb-12 sm:mb-16 fade-up">
           <div className="flex items-center justify-center mb-4">
-            <Leaf className="h-8 w-8 text-green-400 mr-3" />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-green-400 uppercase">Go Green with BookMe+</h2>
+            <Leaf className="h-8 w-8 text-[#5D54D9] mr-3" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-[#5D54D9] uppercase">Go Green with BookMe+</h2>
           </div>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg font-medium">
             100% Digital Events. Better for Cambodia.
@@ -168,12 +169,12 @@ export default function GoGreenSection() {
         </div>
 
         <div ref={quoteRef} className="relative overflow-hidden rounded-2xl fade-up">
-          <div className="bg-gradient-to-l from-green-500 to-purple-600 p-8 text-center">
+          <div className="bg-gray-900 border border-[#5D54D9] p-8 text-center">
             <div className="flex items-center justify-center mb-4">
-              <Car className="h-6 w-6 text-white mr-2" />
-              <TreePine className="h-6 w-6 text-white" />
+              <Car className="h-6 w-6 text-gray-300 mr-2" />
+              <TreePine className="h-6 w-6 text-gray-300" />
             </div>
-            <p className="text-white text-lg md:text-xl font-medium max-w-3xl mx-auto">
+            <p className="text-gray-300 text-lg md:text-xl font-medium max-w-3xl mx-auto">
               "That's like taking 3 cars off Phnom Penh roads for a whole month."
             </p>
           </div>
