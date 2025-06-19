@@ -172,9 +172,8 @@ export default function GoGreenSection() {
             <div className="absolute inset-0 bg-[#5D54D9]/5 rounded-2xl"></div>
             <div className="relative z-10">
               <div className="flex items-center justify-center mb-6">
-                <div className="flex items-center space-x-3 bg-gray-800/50 px-4 py-2 rounded-full border border-[#5D54D9]">
+                <div className="flex items-center space-x-4">
                   <Car className="h-6 w-6 text-[#5D54D9]" />
-                  <span className="text-gray-400">vs</span>
                   <TreePine className="h-6 w-6 text-green-400" />
                 </div>
               </div>
