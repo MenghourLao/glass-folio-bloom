@@ -147,7 +147,7 @@ export default function GoGreenSection() {
               <div className="flex items-center justify-center mb-6">
                 <div className="flex items-center space-x-4">
                   <Car className="h-6 w-6 text-[#5D54D9]" />
-                  <TreePine className="h-6 w-6 text-green-400" />
+                  
                 </div>
               </div>
               <p className="text-white text-xl md:text-2xl font-semibold max-w-4xl mx-auto leading-relaxed">
