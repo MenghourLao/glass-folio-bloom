@@ -28,22 +28,22 @@ export default function CaseStudies() {
     {
       id: "video1",
       title: "BookMe+ Platform Demo",
-      videoId: "dQw4w9WgXcQ", // Replace with actual video ID
-      thumbnail: `https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
+      videoId: "V4vVBy3ax7Y",
+      thumbnail: `https://img.youtube.com/vi/V4vVBy3ax7Y/maxresdefault.jpg`,
       description: "Complete walkthrough of the BookMe+ platform and its features."
     },
     {
       id: "video2", 
       title: "Event Management Made Easy",
-      videoId: "dQw4w9WgXcQ", // Replace with actual video ID
-      thumbnail: `https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
+      videoId: "nWfrw7N4aKk",
+      thumbnail: `https://img.youtube.com/vi/nWfrw7N4aKk/maxresdefault.jpg`,
       description: "Learn how to manage your events efficiently with BookMe+."
     },
     {
       id: "video3",
       title: "Success Stories from Our Clients",
-      videoId: "dQw4w9WgXcQ", // Replace with actual video ID
-      thumbnail: `https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
+      videoId: "_NWXdIb8H1M",
+      thumbnail: `https://img.youtube.com/vi/_NWXdIb8H1M/maxresdefault.jpg`,
       description: "Real testimonials and success stories from BookMe+ users."
     }
   ];
