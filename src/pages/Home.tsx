@@ -15,8 +15,8 @@ import useScrollAnimation from "@/hooks/useScrollAnimation";
 export default function Home() {
   const heroRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
   const organizersRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
-  const goGreenRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
   const featuresRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
+  const goGreenRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
   const eventTypesRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
   const eventBannerRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
   const workflowRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
@@ -34,13 +34,15 @@ export default function Home() {
         <div ref={organizersRef} className="fade-up">
           <OrganizersSection />
         </div>
-        <div ref={goGreenRef} className="fade-up">
-          <GoGreenSection />
-        </div>
       </div>
       
       <div ref={featuresRef} className="fade-up">
         <AdvancedFeaturesSection />
+      </div>
+      <div className="bg-black">
+        <div ref={goGreenRef} className="fade-up">
+          <GoGreenSection />
+        </div>
       </div>
       <div ref={eventTypesRef} className="fade-up">
         <EventTypesSection />
