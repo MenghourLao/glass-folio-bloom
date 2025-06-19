@@ -129,7 +129,7 @@ export default function GoGreenSection() {
         <div ref={headingRef} className="text-center mb-12 sm:mb-16 fade-up">
           <div className="flex items-center justify-center mb-4">
             <Leaf className="h-8 w-8 text-green-400 mr-3" />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white uppercase">Go Green with BookMe+</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-green-400 uppercase">Go Green with BookMe+</h2>
           </div>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg font-medium">
             100% Digital Events. Better for Cambodia.
@@ -169,7 +169,7 @@ export default function GoGreenSection() {
         </div>
 
         <div ref={quoteRef} className="relative overflow-hidden rounded-2xl fade-up">
-          <div className="bg-gradient-to-r from-green-500 to-blue-600 p-8 text-center">
+          <div className="bg-green-600 p-8 text-center">
             <div className="flex items-center justify-center mb-4">
               <Car className="h-6 w-6 text-white mr-2" />
               <TreePine className="h-6 w-6 text-white" />
