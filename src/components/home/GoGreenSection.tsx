@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { Leaf, QrCode, Ban, FileText, TreePine, Car } from "lucide-react";
@@ -169,7 +168,7 @@ export default function GoGreenSection() {
         </div>
 
         <div ref={quoteRef} className="relative overflow-hidden rounded-2xl fade-up">
-          <div className="bg-green-600 p-8 text-center">
+          <div className="bg-gradient-to-l from-green-500 to-purple-600 p-8 text-center">
             <div className="flex items-center justify-center mb-4">
               <Car className="h-6 w-6 text-white mr-2" />
               <TreePine className="h-6 w-6 text-white" />
