@@ -1,5 +1,5 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -23,6 +23,31 @@ export default function CaseStudies() {
     }
   ];
 
+  // YouTube videos from BookMe Cambodia channel
+  const youtubeVideos = [
+    {
+      id: "video1",
+      title: "BookMe+ Platform Demo",
+      videoId: "dQw4w9WgXcQ", // Replace with actual video ID
+      thumbnail: `https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
+      description: "Complete walkthrough of the BookMe+ platform and its features."
+    },
+    {
+      id: "video2", 
+      title: "Event Management Made Easy",
+      videoId: "dQw4w9WgXcQ", // Replace with actual video ID
+      thumbnail: `https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
+      description: "Learn how to manage your events efficiently with BookMe+."
+    },
+    {
+      id: "video3",
+      title: "Success Stories from Our Clients",
+      videoId: "dQw4w9WgXcQ", // Replace with actual video ID
+      thumbnail: `https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
+      description: "Real testimonials and success stories from BookMe+ users."
+    }
+  ];
+
   // Function to render description with bold text
   const renderDescription = (text: string) => {
     return text.split('\n').map((line, index) => {
@@ -41,6 +66,10 @@ export default function CaseStudies() {
         </span>
       );
     });
+  };
+
+  const openYouTubeVideo = (videoId: string) => {
+    window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
   };
 
   return (
@@ -83,6 +112,38 @@ export default function CaseStudies() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* YouTube Videos Section */}
+        <div className="mb-16 max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Video Case Studies</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {youtubeVideos.map(video => (
+              <Card key={video.id} className="group overflow-hidden border-2 border-white/10 shadow-lg bg-card hover:shadow-xl hover:border-primary/30 transition-all duration-300 cursor-pointer" onClick={() => openYouTubeVideo(video.videoId)}>
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={video.thumbnail} 
+                    alt={video.title} 
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" 
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-red-600 rounded-full p-4">
+                      <Play className="w-8 h-8 text-white fill-white" />
+                    </div>
+                  </div>
+                </div>
+                
+                <CardContent className="p-4">
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">
+                    {video.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {video.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* YouTube Promotional Card */}
