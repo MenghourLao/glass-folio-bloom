@@ -1,3 +1,4 @@
+
 import { useState, FormEvent } from "react";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -59,9 +60,9 @@ export default function Contact() {
                   <div>
                     <p className="font-medium">Location</p>
                     <address className="not-italic text-muted-foreground">
-                      The Fortune Tower (C7), Olympia City, SH-19,<br />
-                      Sangkat Veal Vong, Khan 7 Makara,<br />
-                      Phnom Penh, Cambodia, 12309
+                      A23 A, One Park Shop House Street,<br />
+                      Sangkat Srah Chak, Khan Daun Penh,<br />
+                      Phnom Penh, Cambodia
                     </address>
                   </div>
                 </div>
@@ -156,3 +157,4 @@ export default function Contact() {
       </section>
     </div>;
 }
+
