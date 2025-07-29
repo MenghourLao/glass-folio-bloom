@@ -9,7 +9,7 @@ export default function CaseStudies() {
       title: "The CODE-C Developer Conference and Tech Expo 2024",
       category: "Technology & Conferences",
       description: "As Cambodia's premier tech gathering, CODE-C brought together over 3,000 developers, innovators, and digital leaders to accelerate the nation's digital journey.\n\n**Organizer's Challenge**\nFaced with limited manpower, the team struggled to manage high-volume check-ins efficiently without compromising the attendee experience.\n\n**BookMe+ Solution**\nBookMe+ deployed a Self Check-in system powered by dynamic QR codes—allowing attendees to check in independently and eliminating bottlenecks at entry points.\n\n**Impact**\n• Streamlined check-in process\n• Reduced staffing requirements\n• Enhanced operational efficiency\n• Elevated attendee experience",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/code_cjpg.jpg?raw=true",
+      image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/code_c_image.jpg",
       color: "from-blue-500/20 to-indigo-500/20"
     },
     {
@@ -17,7 +17,7 @@ export default function CaseStudies() {
       title: "Preah Vihear Temple Run 2024",
       category: "Sports & Events",
       description: "Set in Cambodia's remote highlands, the event welcomed 1,000 runners from 13 countries—marking a 200% growth in participation over the previous year.\n\n**Challenge**\nLimited internet connectivity posed a major check-in challenge for organizers.\n\n**Solution**\nBookMe+ delivered an Offline Check-in & Sync feature, ensuring smooth operations without needing a live connection.\n\n**Impact**\n• Fast, dependable check-in\n• Hassle-free event execution in remote conditions\n• Widely celebrated as an authentic 'temple run' experience",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/runwithsai_case_study.jpg?raw=true",
+      image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/runwithsai_case_study.jpg",
       color: "from-orange-500/20 to-red-500/20"
     }
   ];
@@ -153,7 +153,7 @@ export default function CaseStudies() {
                 {/* YouTube Banner Section */}
                 <div className="w-full md:w-1/3 relative overflow-hidden">
                   <img 
-                    src="https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/512px-YouTube_full-color_icon_(2017).svg.png?raw=true" 
+                    src="https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/512px-YouTube_full-color_icon_(2017).svg.png" 
                     alt="YouTube" 
                     className="w-3/4 h-32 md:h-32 object-contain mx-auto my-8 transition-transform duration-300 group-hover:scale-105" 
                   />
