@@ -6,17 +6,17 @@ export default function TestimonialSection() {
     quote: "Organizing workshops has never been easier since we started using BookMe+. The platform's intuitive design and customizable event pages have streamlined our registration process, making it hassle-free for both our team and participants.",
     author: "Bill Sokhy CHEA",
     position: "Director of TEDxPhnomPenh & Startup Grind Cambodia",
-    avatar: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/chea-bill.jpg"
+    avatar: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/chea-bill.jpg"
   }, {
     quote: "Partnering with BookMe+ has streamlined our marathon events, enabling efficient ticket, merch, and bundle sales. The offline check-in functionality ensures smooth bib distribution even in a remote area like Preah Vihear temple, and the instant payout feature truly supports our cash flow needs.",
     author: "SAI",
     position: "Founder of RunWithSai",
-    avatar: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/sai.jpg"
+    avatar: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/sai.jpg"
   }, {
     quote: "Partnering with BookMe+ has streamlined the registration process for our diverse audience of students, professionals, and government officers at Cambodia's biggest tech expo. The Organizer App's self-check-in feature significantly reduces manpower needs and eliminates long queues.",
     author: "Chantra Be",
     position: "Organizer of Code-C",
-    avatar: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/be-chantra.jpg"
+    avatar: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/be-chantra.jpg"
   }];
   const headingRef = useScrollAnimation<HTMLDivElement>('visible');
   const testimonialsRef = useScrollAnimation<HTMLDivElement>('visible', {

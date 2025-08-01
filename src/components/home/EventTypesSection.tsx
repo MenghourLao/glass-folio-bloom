@@ -4,25 +4,25 @@ import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 export default function EventTypesSection() {
   const eventTypes = [{
-    icon: <img src="/lovable-uploads/a9987c12-b5b0-4ba7-82b0-dda7b2dd5b12.png" alt="Concert" className="h-8 w-8 sm:h-10 sm:w-10" />,
+    icon: <img src="https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/concert_icon.png" alt="Concert" className="h-8 w-8 sm:h-10 sm:w-10" />,
     title: "Concert",
-    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/concert.jpg?raw=true"
+    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/concert.jpg"
   }, {
-    icon: <img src="/lovable-uploads/f97e5d93-45c8-4503-a3d1-04ad9874c842.png" alt="Sports" className="h-8 w-8 sm:h-10 sm:w-10" />,
+    icon: <img src="https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/sport_icon.png" alt="Sports" className="h-8 w-8 sm:h-10 sm:w-10" />,
     title: "Sports",
-    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/sport.jpg?raw=true"
+    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/sport.jpg"
   }, {
-    icon: <img src="/lovable-uploads/06b52250-d4b9-4578-a3fa-4076a2c64174.png" alt="Workshop" className="h-8 w-8 sm:h-10 sm:w-10" />,
+    icon: <img src="https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/workshop_icon.png" alt="Workshop" className="h-8 w-8 sm:h-10 sm:w-10" />,
     title: "Workshop & Meetup",
-    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Workshop%20&%20Meetup.jpg?raw=true"
+    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/workshop_and_meetup.jpg"
   }, {
-    icon: <img src="/lovable-uploads/493cf6b4-ad9b-486f-b4c4-11a9fc3464b2.png" alt="Arts" className="h-8 w-8 sm:h-10 sm:w-10" />,
+    icon: <img src="https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/art_icon.png" alt="Arts" className="h-8 w-8 sm:h-10 sm:w-10" />,
     title: "Arts & Exhibitions",
-    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Arts%20&%20Exhibitions.jpg?raw=true"
+    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/arts_exhibitions.jpg"
   }, {
-    icon: <img src="/lovable-uploads/c47c180f-3b81-41e2-ae4f-9a9459e11d85.png" alt="Fundraising" className="h-8 w-8 sm:h-10 sm:w-10" />,
+    icon: <img src="https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/fundraising_evnts_icon.png" alt="Fundraising" className="h-8 w-8 sm:h-10 sm:w-10" />,
     title: "Fundraising Events",
-    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Fundraising%20Events.jpg?raw=true"
+    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/fundraising_events.jpg"
   }];
   
   const headingRef = useScrollAnimation<HTMLDivElement>('visible');

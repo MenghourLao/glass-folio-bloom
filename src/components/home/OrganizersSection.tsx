@@ -12,31 +12,31 @@ type PartnerLogoProps = {
 
 const partnerLogos: PartnerLogoProps[] = [{
   name: "TEDx",
-  logo: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/ted_logo.png?raw=true",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/ted_logo.png",
   url: "#tedx"
 }, {
   name: "RUN SAI",
-  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/rws_logo.png",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/rws_logo.png",
   url: "#runsai"
 }, {
   name: "The Platform",
-  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/platform_logo.png",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/platform_logo.png",
   url: "#platform"
 }, {
   name: "Sabay",
-  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/sabay_logo.png",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/sabay_logo.png",
   url: "#sabay"
 }, {
   name: "Celebrating Cambodia",
-  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/celebrating_logo.png",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/celebrating_logo.png",
   url: "#celebrating-cambodia"
 }, {
   name: "CODE-C",
-  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/codec_logo.png",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/codec_logo.png",
   url: "#codec"
 }, {
   name: "OmoHub",
-  logo: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/omohub%20logo.png?raw=true",
+  logo: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/omohub_logo.png",
   url: "#omohub"
 }];
 
