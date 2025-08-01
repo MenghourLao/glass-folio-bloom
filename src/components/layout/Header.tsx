@@ -77,15 +77,6 @@ export default function Header() {
         {/* Right side buttons - Login & Create Account */}
         <div className="hidden md:flex items-center space-x-3">
           <Button 
-            variant="ghost" 
-            className="font-medium rounded-full text-white hover:bg-white/10 py-6"
-            asChild
-          >
-            <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
-              Login
-            </a>
-          </Button>
-          <Button 
             variant="outline" 
             className="font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black py-6"
             asChild
