@@ -23,7 +23,7 @@ const caseStudiesData: CaseStudy[] = [
     title: "The CODE-C Developer Conference and Tech Expo 2024",
     category: "Technology & Conferences",
     description: "As Cambodia's premier tech gathering, CODE-C brought together over 3,000 developers, innovators, and digital leaders to accelerate the nation's digital journey.",
-    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/code_cjpg.jpg?raw=true",
+    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/code_c_image.jpg",
     color: "from-blue-500/20 to-indigo-500/20",
     content: `
       # Case Study: BookMe+ x CODE-C Developer Conference and Tech Expo 2024
@@ -101,7 +101,7 @@ const caseStudiesData: CaseStudy[] = [
     title: "Run With Sai",
     category: "Sports & Events",
     description: "Enabling scalable race management for hybrid running events across Cambodia with 1,944+ tickets sold across 8 multi-format events.",
-    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/runwithsai_case_study.jpg?raw=true",
+    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/runwithsai_case_study.jpg",
     color: "from-orange-500/20 to-red-500/20",
     content: `
       # Case Study: BookMe+ x Run With Sai
@@ -202,7 +202,7 @@ const caseStudiesData: CaseStudy[] = [
     title: "The Q - Rise of The Queen - Aok Sokunkhanha Solo Concert",
     category: "Entertainment & Concerts",
     description: "Managing high-traffic check-in & ticketing for a landmark solo concert with 3,539 tickets sold and 98.7% check-in success rate.",
-    image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/The%20q%20solo%20concert_case_study.jpg?raw=true",
+    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/the_q_solo_concert_case_study.jpg",
     color: "from-purple-500/20 to-pink-500/20",
     content: `
       # Case Study: BookMe+ x The Q Concert

@@ -9,32 +9,32 @@ export default function AdvancedFeaturesSection() {
     {
       title: "Sell your ticket on all platforms",
       description: "Telegram Mini App, Embedded Form on your personal website, app, chatbot on Messenger, IG, and WhatsApp.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Sell%20your%20ticket%20on%20all%20platforms.jpg?raw=true"
+      image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/sell_your_ticket_on_all_platforms.jpg"
     }, 
     {
       title: "Post-Purchase Engagement Tools",
       description: "Stay close to your event-goers with pre-defined, customized flows designed to bring high retention rates and engagement through AI chatbot.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Post-Purchase%20Engagement%20Tools.jpg?raw=true"
+      image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/post_purchase_engagement_tools.jpg"
     }, 
     {
       title: "Online Merchandise Sale Ready",
       description: "Sell event merchandise with tools to manage inventory, delivery, and forecast demand before production.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/E-Commerce%20Ready.jpg?raw=true"
+      image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/e_commerce_ready.jpg"
     }, 
     {
       title: "Offline Check-In",
       description: "Fast and smooth check-in process for merchandise collection and physical ticket pickup.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Offline%20Check-In.jpg?raw=true"
+      image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/offline_check_in.jpg"
     },
     {
       title: "Self Check-In",
       description: "Inspired by the STOP COVID user experience, our app enables tech-savvy users to check themselves in using a dynamic QR code.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Self%20Check-In.jpg?raw=true"
+      image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/self_check_in.jpg"
     },
     {
       title: "Virtualized Dashboard",
       description: "Forecast and generate demand before production.",
-      image: "https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/Virtualized%20Dashboard.jpg?raw=true"
+      image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/virtualized_dashboard.jpg"
     }
   ];
 

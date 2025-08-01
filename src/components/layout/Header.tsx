@@ -42,7 +42,7 @@ export default function Header() {
         }`}>
         <Link to="/" className="flex items-center gap-2">
           <img 
-            src="https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/refs/heads/main/public/lovable-uploads/bmplus%2Blogo.png" 
+            src="https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/bmplus%2Blogo.png" 
             alt="BookMe+ Logo" 
             className="h-7 md:h-8" 
           />

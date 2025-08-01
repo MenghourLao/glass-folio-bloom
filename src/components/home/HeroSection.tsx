@@ -18,7 +18,7 @@ export default function HeroSection() {
     <section
       className="relative h-screen w-full px-0 mx-0 rounded-none overflow-hidden bg-cover bg-center flex items-center mt-0 pt-12 sm:pt-16 lg:pt-20"
       style={{
-        backgroundImage: `url('https://github.com/MenghourLao/glass-folio-bloom/blob/main/public/lovable-uploads/heroimage%20copy.jpg?raw=true')`,
+        backgroundImage: `url('https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/heroimage.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
