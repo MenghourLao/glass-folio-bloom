@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useScrollAnimation from "@/hooks/useScrollAnimation";
+import { useDynamicStats } from "@/hooks/useDynamicStats";
 import { Leaf, QrCode, Ban, FileText, TreePine, Car } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -25,6 +26,8 @@ const useCounter = (endValue: number, duration: number = 2000, isVisible: boolea
 };
 export default function GoGreenSection() {
   const [isStatsVisible, setIsStatsVisible] = useState(false);
+  const dynamicStats = useDynamicStats();
+  
   const greenFeatures = [{
     icon: <QrCode className="h-12 w-12 text-[#5D54D9]" />,
     title: "No printed tickets",
@@ -42,27 +45,27 @@ export default function GoGreenSection() {
     bgColor: "bg-[#5D54D9]/20"
   }];
   const impactStats = [{
-    endValue: 255720,
+    endValue: dynamicStats.printedTickets,
     suffix: "+",
     label: "Printed Tickets Saved",
     color: "text-[#5D54D9]"
   }, {
-    endValue: 42130,
+    endValue: dynamicStats.plasticBadges,
     suffix: "+",
     label: "Plastic Badges Saved",
     color: "text-[#5D54D9]"
   }, {
-    endValue: 11045,
+    endValue: dynamicStats.paperBrochures,
     suffix: "+",
     label: "Paper Brochures Saved",
     color: "text-[#5D54D9]"
   }, {
-    endValue: 53,
+    endValue: dynamicStats.treesSaved,
     suffix: "",
     label: "Trees Saved",
     color: "text-[#5D54D9]"
   }, {
-    endValue: 1385,
+    endValue: dynamicStats.co2Saved,
     suffix: " kg",
     label: "CO₂ Emissions Saved",
     color: "text-[#5D54D9]"
