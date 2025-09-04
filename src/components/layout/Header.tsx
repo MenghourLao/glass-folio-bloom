@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/useTheme";
 
@@ -74,8 +74,23 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Right side buttons - Login & Create Account */}
+        {/* Right side buttons - Telegram, Login & Create Account */}
         <div className="hidden md:flex items-center space-x-3">
+          <Button 
+            variant="ghost" 
+            size="icon"
+            className="rounded-full text-white hover:bg-white/10 h-12 w-12"
+            asChild
+          >
+            <a 
+              href="https://t.me/bookmeplusbusiness" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Join Latest Releases on Telegram"
+            >
+              <Send className="h-5 w-5" />
+            </a>
+          </Button>
           <Button 
             variant="ghost" 
             className="font-medium rounded-full text-white hover:bg-white/10 py-6"
@@ -97,7 +112,22 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation Toggle */}
-        <div className="flex items-center md:hidden">
+        <div className="flex items-center space-x-2 md:hidden">
+          <Button 
+            variant="ghost" 
+            size="icon"
+            className="rounded-full text-white hover:bg-white/10 h-10 w-10"
+            asChild
+          >
+            <a 
+              href="https://t.me/bookmeplusbusiness" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Join Latest Releases on Telegram"
+            >
+              <Send className="h-5 w-5" />
+            </a>
+          </Button>
           <Button 
             variant="ghost" 
             size="icon" 
