@@ -78,17 +78,17 @@ export default function Header() {
         <div className="hidden md:flex items-center space-x-3">
           <Button 
             variant="ghost" 
-            size="icon"
-            className="rounded-full text-white hover:bg-white/10 h-12 w-12"
+            className="rounded-full text-white hover:bg-white/10 px-4 py-3 h-auto"
             asChild
           >
             <a 
               href="https://t.me/bookmeplusbusiness" 
               target="_blank" 
               rel="noopener noreferrer"
-              aria-label="Join Latest Releases on Telegram"
+              className="flex items-center space-x-2"
             >
               <Send className="h-5 w-5" />
+              <span className="text-sm font-medium">Join Latest Releases</span>
             </a>
           </Button>
           <Button 
