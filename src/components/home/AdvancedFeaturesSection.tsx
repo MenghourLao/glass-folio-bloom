@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { Zap } from 'lucide-react';
+import { Zap, Send } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Button } from '@/components/ui/button';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 export default function AdvancedFeaturesSection() {
@@ -90,7 +91,7 @@ export default function AdvancedFeaturesSection() {
       </div>
       
       {/* Second row - 3 columns on desktop, 1 on mobile, 2 on tablet */}
-      <div ref={secondRowRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 stagger-children">
+      <div ref={secondRowRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 stagger-children">
         {secondRowFeatures.map((feature, index) => (
           <div key={index} className="glass-card rounded-3xl hover:shadow-2xl hover:border-primary/30 hover:-translate-y-2 transition-all duration-500 group overflow-hidden cursor-pointer">
             <div className="flex flex-col h-full">
@@ -119,6 +120,25 @@ export default function AdvancedFeaturesSection() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Telegram CTA */}
+      <div className="text-center">
+        <Button 
+          variant="outline" 
+          className="glass rounded-full text-foreground bg-transparent border-primary/30 hover:bg-primary hover:text-primary-foreground px-6 py-3 h-auto"
+          asChild
+        >
+          <a 
+            href="https://t.me/bookmeplusbusiness" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2"
+          >
+            <Send className="h-5 w-5" />
+            <span className="text-sm font-medium">Join our Telegram Channel for more amazing features</span>
+          </a>
+        </Button>
       </div>
     </section>
   );
