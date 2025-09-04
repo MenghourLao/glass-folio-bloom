@@ -95,7 +95,7 @@ export default function Pricing() {
                 asChild
               >
                 <a 
-                  href="https://api-production.bookme.plus/organizer/sign_in" 
+                  href="https://business.bookme.plus/organizer/sign_in" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center"

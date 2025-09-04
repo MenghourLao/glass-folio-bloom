@@ -22,7 +22,7 @@ export default function CtaBanner() {
           </div>
           <div className="lg:w-1/3 flex justify-center lg:justify-end">
             <Button size="lg" className="rounded-full px-6 py-4 sm:px-8 sm:py-6 text-sm sm:text-base text-white" asChild>
-              <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <a href="https://business.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 Create First Event <Send className="ml-1 h-4 w-4" />
               </a>
             </Button>
