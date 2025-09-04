@@ -96,7 +96,7 @@ export default function Header() {
             className="font-medium rounded-full text-white hover:bg-white/10 py-6"
             asChild
           >
-            <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
+            <a href="https://business.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
               Login
             </a>
           </Button>
@@ -105,7 +105,7 @@ export default function Header() {
             className="font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black py-6"
             asChild
           >
-            <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
+            <a href="https://business.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
               Create First Event
             </a>
           </Button>
@@ -162,7 +162,7 @@ export default function Header() {
             className="w-full font-medium justify-start text-white hover:bg-white/10 rounded-full"
             asChild
           >
-            <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
+            <a href="https://business.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
               Login
             </a>
           </Button>
@@ -171,7 +171,7 @@ export default function Header() {
             className="w-full font-medium rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
             asChild
           >
-            <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
+            <a href="https://business.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
               Create First Event
             </a>
           </Button>

@@ -192,7 +192,7 @@ export default function CaseStudies() {
             Join the growing list of businesses that have revolutionized their scheduling with BookMe+.
           </p>
           <Button size="lg" className="rounded-full mx-auto bg-primary hover:bg-primary/90 text-white transition-colors">
-            <a href="https://api-production.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <a href="https://business.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               Contact Us Today <ArrowRight size={16} />
             </a>
           </Button>
