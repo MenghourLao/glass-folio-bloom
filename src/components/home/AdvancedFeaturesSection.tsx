@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Zap, Send } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
+import seatSelectionImage from '@/assets/seat_selection.jpg';
 
 export default function AdvancedFeaturesSection() {
   const features = [
@@ -36,12 +36,17 @@ export default function AdvancedFeaturesSection() {
       title: "Virtualized Dashboard",
       description: "Forecast and generate demand before production.",
       image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/virtualized_dashboard.jpg"
+    },
+    {
+      title: "Seat Selection Made Simple",
+      description: "Enable attendees to choose their preferred seats with an interactive seating map. Manage seat zones, pricing, and availability directly within your event setup for a seamless and organized booking experience.",
+      image: seatSelectionImage
     }
   ];
 
   // Split features into two rows of 3
   const firstRowFeatures = features.slice(0, 3);
-  const secondRowFeatures = features.slice(3, 6);
+  const secondRowFeatures = features.slice(3);
   
   const headingRef = useScrollAnimation<HTMLDivElement>('visible');
   const firstRowRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
