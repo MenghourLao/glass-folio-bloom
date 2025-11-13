@@ -23,7 +23,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/about">
+        <BrowserRouter>
           <ScrollToTop />
           <Layout>
             <Routes>
