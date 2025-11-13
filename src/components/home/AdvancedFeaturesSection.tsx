@@ -8,6 +8,11 @@ import seatSelectionImage from '@/assets/seat_selection.jpg';
 export default function AdvancedFeaturesSection() {
   const features = [
     {
+      title: "Seat Selection Made Simple",
+      description: "Enable attendees to choose their preferred seats with an interactive seating map. Manage seat zones, pricing, and availability directly within your event setup for a seamless and organized booking experience.",
+      image: seatSelectionImage
+    },
+    {
       title: "Sell your ticket on all platforms",
       description: "Telegram Mini App, Embedded Form on your personal website, app, chatbot on Messenger, IG, and WhatsApp.",
       image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/sell_your_ticket_on_all_platforms.jpg"
@@ -36,11 +41,6 @@ export default function AdvancedFeaturesSection() {
       title: "Virtualized Dashboard",
       description: "Forecast and generate demand before production.",
       image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/virtualized_dashboard.jpg"
-    },
-    {
-      title: "Seat Selection Made Simple",
-      description: "Enable attendees to choose their preferred seats with an interactive seating map. Manage seat zones, pricing, and availability directly within your event setup for a seamless and organized booking experience.",
-      image: seatSelectionImage
     }
   ];
 
