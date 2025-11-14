@@ -1,9 +1,8 @@
-
-import { useEffect, useRef } from "react";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
-
 type PartnerLogoProps = {
   name: string;
   logo: string;
@@ -41,51 +40,63 @@ const partnerLogos: PartnerLogoProps[] = [{
 }];
 
 export default function OrganizersSection() {
-  const carouselRef = useRef<HTMLDivElement>(null);
   const headingRef = useScrollAnimation<HTMLHeadingElement>('visible', { threshold: 0.5 });
-  
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    if (!carousel) return;
-    
-    let animationFrameId: number;
-    let position = 0;
-    
-    const animate = () => {
-      position -= 0.03;
-      if (position <= -100) position = 100;
-      carousel.style.transform = `translateX(${position}%)`;
-      animationFrameId = requestAnimationFrame(animate);
-    };
-    
-    animate();
-    
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
   
   return (
     <section className="w-full py-12 sm:py-16">
       <h2 ref={headingRef} className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 sm:mb-8 text-center uppercase tracking-tight fade-up">
         Our Awesome Organizers
       </h2>
-      <div className="relative overflow-hidden w-full">
-        <div className="flex w-[90%] mx-auto" ref={carouselRef}>
-          {[...partnerLogos, ...partnerLogos].map((partner, index) => (
-            <Link key={index} to={partner.url} className="block flex-none w-[16.666%] min-w-[120px] sm:min-w-[150px]">
-              <Card className="h-20 sm:h-24 flex items-center justify-center border-0 bg-transparent shadow-none">
-                <CardContent className="p-2 sm:p-0 flex items-center justify-center h-full w-full transition-opacity duration-1000 hover:opacity-50">
-                  <img 
-                    src={partner.logo} 
-                    alt={partner.name} 
-                    className="max-h-12 sm:max-h-16 max-w-full object-contain transition-opacity duration-1000 opacity-70 hover:opacity-100" 
-                  />
-                </CardContent>
-              </Card>
-            </Link>
+      <div className="relative w-full max-w-7xl mx-auto px-4">
+        <Splide
+          options={{
+            type: 'loop',
+            drag: 'free',
+            focus: 'center',
+            perPage: 6,
+            perMove: 1,
+            gap: '2rem',
+            autoplay: true,
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            interval: 2000,
+            speed: 1500,
+            arrows: false,
+            pagination: false,
+            resetProgress: false,
+            breakpoints: {
+              1024: {
+                perPage: 4,
+                gap: '1.5rem',
+              },
+              768: {
+                perPage: 3,
+                gap: '1rem',
+              },
+              640: {
+                perPage: 2,
+                gap: '1rem',
+              },
+            },
+          }}
+          aria-label="Our Awesome Organizers"
+        >
+          {partnerLogos.map((partner, index) => (
+            <SplideSlide key={index}>
+              <Link to={partner.url} className="block">
+                <Card className="h-24 sm:h-28 flex items-center justify-center border-0 bg-transparent shadow-none transition-transform hover:scale-105">
+                  <CardContent className="p-4 flex items-center justify-center h-full w-full">
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.name} 
+                      className="max-h-16 sm:max-h-20 max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300" 
+                    />
+                  </CardContent>
+                </Card>
+              </Link>
+            </SplideSlide>
           ))}
-        </div>
+        </Splide>
       </div>
     </section>
   );
