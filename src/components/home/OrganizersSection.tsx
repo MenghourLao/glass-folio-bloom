@@ -53,9 +53,9 @@ export default function OrganizersSection() {
         </h2>
         
         <div className="relative w-full max-w-7xl mx-auto px-4">
-          {/* Enhanced gradient fade overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-48 md:w-64 bg-gradient-to-r from-background via-background/80 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-48 md:w-64 bg-gradient-to-l from-background via-background/80 to-transparent z-10 pointer-events-none" />
+          {/* Enhanced gradient fade overlays with smooth blending */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-48 md:w-64 bg-[linear-gradient(to_right,hsl(var(--background))_0%,hsl(var(--background))_20%,hsl(var(--background)/0.9)_40%,hsl(var(--background)/0.5)_70%,transparent_100%)] z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-48 md:w-64 bg-[linear-gradient(to_left,hsl(var(--background))_0%,hsl(var(--background))_20%,hsl(var(--background)/0.9)_40%,hsl(var(--background)/0.5)_70%,transparent_100%)] z-10 pointer-events-none" />
           
           <Splide
             options={{
