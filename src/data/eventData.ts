@@ -164,6 +164,36 @@ export const eventCategories = {
     date: "January 15, 2026"
   }],
   arts: [{
+    title: "Chaktomuk Short Film Festival",
+    image: "/images/chaktomuk_short_film_festival.jpg",
+    location: "Chaktomuk Hall",
+    date: "October 17-20, 2025"
+  }, {
+    title: "ពិព័រណ៏សិល្បៈភពផែនដី - Earth Art Exhibition",
+    image: "/images/earth_art_exhibition.jpg",
+    location: "Koh Pich City Hall",
+    date: "October 24-25, 2025"
+  }, {
+    title: "Steps & Stories: Khmer Dance Experience",
+    image: "/images/steps_stories_khmer_dance.jpg",
+    location: "Phnom Penh",
+    date: "October 18, 2025"
+  }, {
+    title: "របាំសហសម័យ នៃគម្រោងចតុ - Chakto Contemporary Dance",
+    image: "/images/chakto_contemporary_dance.jpg",
+    location: "Phnom Penh",
+    date: "October 4, 2025"
+  }, {
+    title: "សាទរកម្ពុជា - Sator Cambodia Festival",
+    image: "/images/sator_cambodia_festival.jpg",
+    location: "The Kampus",
+    date: "October 14, 2025"
+  }, {
+    title: "គំនូសវិញ្ញាណ - Spirit Painting",
+    image: "/images/komnos_vinhean.jpg",
+    location: "Phnom Penh",
+    date: "October 20-21, 2025"
+  }, {
     title: "BarCamp Battambang 2024",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/barcamp_btb_2024.jpg",
     location: "National University of Battambang",
