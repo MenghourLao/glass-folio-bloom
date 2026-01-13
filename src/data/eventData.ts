@@ -133,6 +133,31 @@ export const eventCategories = {
     date: "May 10, 2025"
   }],
   workshop: [{
+    title: "Asian Coffee Selection - Specialty Coffee Workshop",
+    image: "/images/asian_coffee_workshop.jpg",
+    location: "Kaifun Artisans Angkor, Siem Reap",
+    date: "May 3, 2025"
+  }, {
+    title: "Basecamp Meetup by FirstWave",
+    image: "/images/basecamp_meetup.jpg",
+    location: "Connexion, Koh Pich",
+    date: "June 6, 2025"
+  }, {
+    title: "TEDx Phnom Penh: Resilience & Reinvention",
+    image: "/images/tedx_phnom_penh.jpg",
+    location: "Canadian International School (CIS)",
+    date: "October 12, 2025"
+  }, {
+    title: "Whisking Journey - Matcha Workshop",
+    image: "/images/matcha_workshop.jpg",
+    location: "Mariko Matcha Co",
+    date: "November 29, 2025"
+  }, {
+    title: "Plug and Play Cambodia Launch",
+    image: "/images/plug_and_play.jpg",
+    location: "AUPP Technology Center",
+    date: "June 24, 2025"
+  }, {
     title: "TEDxPhnomPenh",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/tex_phnom_penh.jpg",
     location: "AEON SENSOK",
