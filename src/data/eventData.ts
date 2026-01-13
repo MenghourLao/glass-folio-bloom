@@ -32,6 +32,41 @@ export const eventCategories = {
     date: "August 5, 2024"
   }],
   sport: [{
+    title: "Castor Friday Night Run",
+    image: "/images/castor_friday_night_run.jpg",
+    location: "Coconut Park, Koh Pich",
+    date: "June 6, 2025"
+  }, {
+    title: "Castor Halloween Night Run",
+    image: "/images/castor_halloween_night_run.jpg",
+    location: "Phnom Penh",
+    date: "October 31, 2025"
+  }, {
+    title: "Mobi Pilates Festival",
+    image: "/images/mobi_pilates_festival.png",
+    location: "Coconut Park, Koh Pich",
+    date: "December 13, 2025"
+  }, {
+    title: "Rebel The Road: Phnom Penh Run Takeover",
+    image: "/images/rebel_the_road_run.jpg",
+    location: "Aeon Mall 1, Koh Pich",
+    date: "July 27, 2025"
+  }, {
+    title: "Run. Pilates. Matcha.",
+    image: "/images/run_pilates_matcha.jpg",
+    location: "Koh Norea",
+    date: "September 14, 2025"
+  }, {
+    title: "Vattanac Legends Championship",
+    image: "/images/vattanac_legends_championship.jpg",
+    location: "Vattanac Golf Resort",
+    date: "November 21-23, 2025"
+  }, {
+    title: "Vattanac Legends Legacy Edition",
+    image: "/images/vattanac_legends_legacy.jpg",
+    location: "Vattanac Golf Resort",
+    date: "November 26-28, 2025"
+  }, {
     title: "Bon Phnom - Kirirom Mountain Festival",
     image: "/images/bonphnom_kirirom.jpg",
     location: "Kirirom National Park",
