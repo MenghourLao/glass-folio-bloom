@@ -1,6 +1,21 @@
 
 export const eventCategories = {
   concert: [{
+    title: "Carnival Youth x Japan Guitar Shop Live",
+    image: "/images/carnival_youth_siem_reap.jpg",
+    location: "The Labyrinth Restaurant, Siem Reap",
+    date: "November 8, 2025"
+  }, {
+    title: "Blue Hour - Pich Solikah First Fan Meet 2025",
+    image: "/images/blue_hour_pich_solikah.jpg",
+    location: "The Bay Boeung Kak",
+    date: "November 11, 2025"
+  }, {
+    title: "KESORR Fairytale - Live Music Gig",
+    image: "/images/kesorr_fairytale.jpg",
+    location: "Blue Chilli",
+    date: "September 12, 2025"
+  }, {
     title: "The Q - Rise of The Queen - Aok SokunKanha",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/rise_of_the_queen.jpg",
     location: "Koh Pich Hall",
@@ -17,6 +32,31 @@ export const eventCategories = {
     date: "August 5, 2024"
   }],
   sport: [{
+    title: "Bon Phnom - Kirirom Mountain Festival",
+    image: "/images/bonphnom_kirirom.jpg",
+    location: "Kirirom National Park",
+    date: "February 15-16, 2025"
+  }, {
+    title: "GRC Charity Run 5K/10K",
+    image: "/images/grc_charity_run.jpg",
+    location: "Eden Garden, Phnom Penh",
+    date: "December 21, 2025"
+  }, {
+    title: "Pedal for the Planet",
+    image: "/images/pedal_for_planet.jpg",
+    location: "Koh Norea, Coconut Park 2",
+    date: "November 30, 2025"
+  }, {
+    title: "Preah Vihear Temple Run 3rd Edition",
+    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/preah_vihear_temple_run.jpg",
+    location: "Preah Vihear Temple",
+    date: "July 6, 2025"
+  }, {
+    title: "Romduol Children Fun Run",
+    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/romduol_children.jpg",
+    location: "Koh Pich, Elysee",
+    date: "April 6, 2025"
+  }, {
     title: "Kep Sea-Mountain Run",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/kep_sea_mountain.jpg",
     location: "Kep Province",
@@ -41,16 +81,6 @@ export const eventCategories = {
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/padding_run.jpg",
     location: "Koh Dach",
     date: "January 20, 2025"
-  }, {
-    title: "Preah Vihear Temple Run",
-    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/preah_vihear_temple_run.jpg",
-    location: "Preah Vihear Temple",
-    date: "February 14, 2025"
-  }, {
-    title: "Romduol Children Run",
-    image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/romduol_children.jpg",
-    location: "Community Park",
-    date: "March 8, 2025"
   }, {
     title: "Eco Run",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/eco_run.jpg",
@@ -250,6 +280,16 @@ export const eventCategories = {
     date: "October 12, 2024"
   }],
   fundraising: [{
+    title: "2025 Run for Children's Smiles - Kampot Charity Run",
+    image: "/images/kampot_charity_run.jpg",
+    location: "Seahorses, Kampot",
+    date: "June 29, 2025"
+  }, {
+    title: "Khmer Greatness Charity Concert",
+    image: "/images/hanuman_charity_concert.jpg",
+    location: "Koh Pich",
+    date: "May 30, 2025"
+  }, {
     title: "Fun Run for Charity",
     image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/fun_run.jpg",
     location: "Penh Huot",
