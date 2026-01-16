@@ -35,7 +35,6 @@ export default function FaqSection() {
     {
       category: "Payments & Payouts",
       faqs: [
-        { question: "Does the platform charge a service fee?", answer: "Yes. Applicable service fees are transparently displayed before publishing an event." },
         { question: "When will I receive my payout?", answer: "Following the conclusion of the event, BookMe+ will provide a settlement report within 3–7 days for organizer review. Upon confirmation, the payout will be processed manually by BookMe+ not included transfer fee according to the bank." }
       ]
     },
