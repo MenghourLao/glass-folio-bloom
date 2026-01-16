@@ -54,7 +54,7 @@ export default function FaqSection() {
   return (
     <section className="container mx-auto py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-inherit">
       <div ref={headingRef} className="text-center mb-12 sm:mb-16 fade-up">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4">HELP & SUPPORT</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4">Frequently Asked Questions (FAQs)</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-4">
           Find answers to commonly asked questions about BookMe+
         </p>
