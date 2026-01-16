@@ -64,7 +64,7 @@ export default function FaqSection() {
         <div className="space-y-8">
           {helpSupportCategories.map((category, catIndex) => (
             <div key={catIndex}>
-              <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4">{category.category}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-primary mb-4">{category.category}</h3>
               <Accordion type="single" collapsible className="w-full">
                 {category.faqs.map((faq, faqIndex) => (
                   <AccordionItem key={faqIndex} value={`cat-${catIndex}-item-${faqIndex}`}>
