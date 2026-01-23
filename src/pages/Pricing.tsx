@@ -5,12 +5,22 @@ import { Link } from "react-router-dom";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 export default function Pricing() {
-  const plans = [{
+  const plans: Array<{
+    name: string;
+    price: string;
+    description: string;
+    features: string[];
+    addons?: string[];
+    subPrice?: string;
+    popular?: boolean;
+    note?: string;
+  }> = [{
     name: "FREE",
     price: "Free",
     description: "For getting started",
     features: ["Ads on E-Ticket", "Sell on Social Networks", "QR Code Check-in Feature", "Attendee Self Check-in", "Offline Check-in Feature", "BM+ Organizer App", "Customizable Event Pages"],
-    addons: ["Tutorial Videos on How to Check-in Attendance for Crews"]
+    addons: ["Tutorial Videos on How to Check-in Attendance for Crews"],
+    note: "The free plan applies to an organizer's first event and is limited to a maximum of 100 participants."
   }, {
     name: "GROWTH",
     price: "10%",
@@ -87,6 +97,11 @@ export default function Pricing() {
                     ))}
                   </ul>
                 </>
+              )}
+              
+              {/* Note if available */}
+              {plan.note && (
+                <p className="text-sm text-muted-foreground italic mb-6">{plan.note}</p>
               )}
               
               <Button 
