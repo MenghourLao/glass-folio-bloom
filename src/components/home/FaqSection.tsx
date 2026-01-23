@@ -50,8 +50,8 @@ export default function FaqSection() {
   }, {
     category: "Payments & Payouts",
     faqs: [{
-      question: "When will I receive my payout?",
-      answer: "Following the conclusion of the event, BookMe+ will provide a settlement report within 3–7 days for organizer review. Upon confirmation, the payout will be processed manually by BookMe+ not included transfer fee according to the bank."
+      question: "When will my settlement be processed?",
+      answer: "Following the conclusion of the event, BookMe+ will provide a settlement report within 3–7 working days for organizer review. Once confirmed, the settlement will be processed manually by BookMe+.\n\nBank transfer fees are not included and may vary depending on the bank."
     }]
   }, {
     category: "Orders, Check-in & Support",
