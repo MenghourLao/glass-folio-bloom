@@ -136,7 +136,7 @@ export default function Pricing() {
             </div>
             <div className="glass-card p-6">
               <h3 className="text-xl font-bold mb-2">Do you offer discounts for non-profits?</h3>
-              <p className="text-muted-foreground">Yes, we offer special pricing for non-profit organizations. Please contact our sales team for more information.</p>
+              <p className="text-muted-foreground">Yes, we offer special pricing for non-profit organizations. Please contact our sales team at <a href="mailto:hello@bookme.plus" className="text-primary hover:underline">hello@bookme.plus</a> for more information.</p>
             </div>
           </div>
         </div>
