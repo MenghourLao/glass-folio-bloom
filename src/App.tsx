@@ -13,6 +13,7 @@ import Pricing from "./pages/Pricing";
 import Privacy from "./pages/Privacy";
 import TermsOfUse from "./pages/TermsOfUse";
 import NotFound from "./pages/NotFound";
+import CambodiaEventPlatform from "./pages/CambodiaEventPlatform";
 import { ThemeProvider } from "./hooks/useTheme";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<TermsOfUse />} />
+              <Route path="/cambodia-event-platform" element={<CambodiaEventPlatform />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </Layout>
