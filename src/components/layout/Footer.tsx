@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +13,10 @@ export default function Footer() {
               <img 
                 src="https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/bmplus%2Blogo.png" 
                 alt="BookMe+ Logo" 
-                className="h-6 sm:h-8 mb-2" 
+                className="h-6 sm:h-8 mb-2"
+                loading="lazy"
+                width="120"
+                height="32"
               />
             </div>
             <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
@@ -27,43 +30,36 @@ export default function Footer() {
                 <Instagram size={18} className="sm:w-5 sm:h-5" />
               </a>
               <a href="https://www.tiktok.com/@bookme.plus" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-muted-foreground hover:text-primary transition-colors">
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  strokeWidth="0"
-                  viewBox="0 0 24 24"
-                  height="18"
-                  width="18"
-                  className="sm:w-5 sm:h-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="18" width="18" className="sm:w-5 sm:h-5" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"></path>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@bookmeplus" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-primary transition-colors">
+                <Youtube size={18} className="sm:w-5 sm:h-5" />
+              </a>
+              <a href="https://www.linkedin.com/company/bookmeplus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin size={18} className="sm:w-5 sm:h-5" />
+              </a>
+              <a href="https://x.com/bookmeplus" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-muted-foreground hover:text-primary transition-colors">
+                <svg viewBox="0 0 24 24" fill="currentColor" height="18" width="18" className="sm:w-5 sm:h-5" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <nav aria-label="Quick links">
             <h3 className="font-poppins font-bold text-base sm:text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2 sm:space-y-3">
-              <li>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Home</Link>
-              </li>
-              <li>
-                <Link to="/case-studies" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Case Studies</Link>
-              </li>
-              <li>
-                <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Pricing</Link>
-              </li>
-              <li>
-                <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Terms of Use</Link>
-              </li>
+              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Home</Link></li>
+              <li><Link to="/case-studies" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Case Studies</Link></li>
+              <li><Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Pricing</Link></li>
+              <li><Link to="/cambodia-event-platform" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Cambodia Event Platform</Link></li>
+              <li><Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base">Terms of Use</Link></li>
             </ul>
-          </div>
+          </nav>
 
           {/* Contact Info */}
           <div>
