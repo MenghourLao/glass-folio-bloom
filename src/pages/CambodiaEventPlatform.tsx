@@ -1,6 +1,6 @@
 
 import { useEffect } from "react";
-import { ArrowRight, Send, QrCode, Smartphone, BarChart3, Wifi, WifiOff, UserCheck, LayoutGrid, Globe, CheckCircle2, Ticket, TrendingUp, ShieldCheck, HeadphonesIcon, ClipboardList, Megaphone, ChartBar } from "lucide-react";
+import { ArrowRight, Send, QrCode, Smartphone, BarChart3, Wifi, WifiOff, UserCheck, LayoutGrid, Globe, Ticket, TrendingUp, ShieldCheck, HeadphonesIcon, ClipboardList, Megaphone, ChartBar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
