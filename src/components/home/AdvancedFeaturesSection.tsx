@@ -4,6 +4,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 import seatSelectionImage from '@/assets/seat_selection.jpg';
+import liveVotingImage from '@/assets/live_voting.jpg';
 
 export default function AdvancedFeaturesSection() {
   const features = [
@@ -45,7 +46,7 @@ export default function AdvancedFeaturesSection() {
     {
       title: "Live Voting",
       description: "Boost audience interaction with real-time voting experiences during your event. Live Voting allows attendees to participate instantly through session-based voting, audience polls, and competitive leaderboards. Organizers can create more engaging and interactive moments while increasing audience participation both online and onsite.",
-      image: "/placeholder.svg"
+      image: liveVotingImage
     }
   ];
 
@@ -135,7 +136,7 @@ export default function AdvancedFeaturesSection() {
       </div>
 
       {/* Third row - 2 columns on desktop, centered */}
-      <div ref={thirdRowRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto mb-12 stagger-children">
+      <div ref={thirdRowRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 stagger-children">
         {thirdRowFeatures.map((feature, index) => (
           <div key={index} className="glass-card rounded-3xl hover:shadow-2xl hover:border-primary/30 hover:-translate-y-2 transition-all duration-500 group overflow-hidden cursor-pointer">
             <div className="flex flex-col h-full">
