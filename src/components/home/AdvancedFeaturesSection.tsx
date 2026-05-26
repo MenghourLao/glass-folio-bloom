@@ -49,13 +49,15 @@ export default function AdvancedFeaturesSection() {
     }
   ];
 
-  // Split features into two rows of 3
+  // Split features into three rows: 3, 3, 2
   const firstRowFeatures = features.slice(0, 3);
-  const secondRowFeatures = features.slice(3);
+  const secondRowFeatures = features.slice(3, 6);
+  const thirdRowFeatures = features.slice(6);
   
   const headingRef = useScrollAnimation<HTMLDivElement>('visible');
   const firstRowRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
   const secondRowRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
+  const thirdRowRef = useScrollAnimation<HTMLDivElement>('visible', { threshold: 0.1 });
 
   return (
     <section className="container mx-auto py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-inherit">
