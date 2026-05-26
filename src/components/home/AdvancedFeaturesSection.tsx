@@ -134,6 +134,38 @@ export default function AdvancedFeaturesSection() {
         ))}
       </div>
 
+      {/* Third row - 2 columns on desktop, centered */}
+      <div ref={thirdRowRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto mb-12 stagger-children">
+        {thirdRowFeatures.map((feature, index) => (
+          <div key={index} className="glass-card rounded-3xl hover:shadow-2xl hover:border-primary/30 hover:-translate-y-2 transition-all duration-500 group overflow-hidden cursor-pointer">
+            <div className="flex flex-col h-full">
+              <div className="relative overflow-hidden">
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src={feature.image} 
+                    alt={feature.title} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" 
+                  />
+                </AspectRatio>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/70 transition-all duration-500"></div>
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                  <div className="bg-primary/20 backdrop-blur-sm rounded-full p-2">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                      <path d="M5 13L13 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M5 5H13V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6 sm:p-8 group-hover:bg-background/50 transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                <p className="text-muted-foreground text-sm sm:text-base group-hover:text-foreground/80 transition-colors duration-300">{feature.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
       {/* Telegram CTA */}
       <div className="text-center">
         <Button 
