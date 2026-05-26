@@ -63,7 +63,7 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-white hover:text-white/90 transition-colors"
               >
-                Create first event <ArrowRight size={16} />
+                Create event for free <ArrowRight size={16} />
               </a>
             </Button>
           </div>
