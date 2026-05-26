@@ -41,6 +41,11 @@ export default function AdvancedFeaturesSection() {
       title: "Virtualized Dashboard",
       description: "Forecast and generate demand before production.",
       image: "https://raw.githubusercontent.com/MenghourLao/glass-folio-bloom/main/public/images/virtualized_dashboard.jpg"
+    },
+    {
+      title: "Live Voting",
+      description: "Boost audience interaction with real-time voting experiences during your event. Live Voting allows attendees to participate instantly through session-based voting, audience polls, and competitive leaderboards. Organizers can create more engaging and interactive moments while increasing audience participation both online and onsite.",
+      image: "/placeholder.svg"
     }
   ];
 
