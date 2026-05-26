@@ -56,16 +56,18 @@ export default function HeroSection() {
             create unforgettable experiences.
           </p>
           <div className={`flex justify-center transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-            <Button size="lg" className="rounded-full px-6 py-4 sm:px-8 sm:py-6 text-sm sm:text-base bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-primary shadow-lg shadow-primary/25 border-0 hover:scale-105 transition-all duration-300" asChild>
-              <a
-                href="https://business.bookme.plus/organizer/sign_in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white hover:text-white/90 transition-colors"
-              >
-                Create event for free <ArrowRight size={16} />
-              </a>
-            </Button>
+            <div className="neon-ring-btn">
+              <Button size="lg" className="rounded-full px-6 py-4 sm:px-8 sm:py-6 text-sm sm:text-base bg-[#5D54D9] hover:bg-[#4a43b0] border-0 shadow-lg shadow-[#5D54D9]/25 hover:scale-105 transition-all duration-300" asChild>
+                <a
+                  href="https://business.bookme.plus/organizer/sign_in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-white hover:text-white/90 transition-colors"
+                >
+                  Create event for free <ArrowRight size={16} />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
