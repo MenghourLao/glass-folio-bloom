@@ -15,7 +15,7 @@ export default function PricingSection() {
     price: "10%",
     description: "Per ticket or min $0.25 service fee",
     subPrice: "or min $150 fixed fee per event",
-    features: ["All Features in FREE Plan", "E-Ticket Ads Free", "Instant Payout", "Organizer Landing Page", "Business Intelligence Reports"],
+    features: ["All Features in FREE Plan", "E-Ticket Ads Free", "Instant Payout", "Organizer Landing Page", "Business Intelligence Reports", "Live Voting Feature"],
     addons: ["Video Tutorial on How to Book and Pay", "Technical Support: $30 per crew/day", "Telegram & Messenger Broadcasting ($50/month per 500 contacts)"],
     popular: true
   }, {

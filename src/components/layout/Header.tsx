@@ -97,7 +97,7 @@ export default function Header() {
             asChild
           >
             <a href="https://business.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
-              Create event for free.
+              Create event for FREE
             </a>
           </Button>
         </div>
@@ -163,7 +163,7 @@ export default function Header() {
             asChild
           >
             <a href="https://business.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer">
-              Create event for free.
+              Create event for FREE
             </a>
           </Button>
         </nav>

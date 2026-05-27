@@ -24,7 +24,7 @@ export default function CtaBanner() {
             <div className="neon-ring-btn">
               <Button size="lg" className="rounded-full px-6 py-4 sm:px-8 sm:py-6 text-sm sm:text-base bg-[#5D54D9] hover:bg-[#4a43b0] border-0 text-white" asChild>
                 <a href="https://business.bookme.plus/organizer/sign_in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  Create event for free. <Send className="ml-1 h-4 w-4" />
+                  Create event for FREE <Send className="ml-1 h-4 w-4" />
                 </a>
               </Button>
             </div>
